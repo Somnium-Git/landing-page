@@ -1,4 +1,12 @@
 @import "tailwindcss";
+@font-face{
+  font-family: KantumruyPro;
+  src: url('../assets/fonts/KantumruyPro-Regular.ttf') format('truetype');
+}
+@theme{
+  --font-KantumruyPro: KantumruyPro, "sans-serif", ;
+}
+
 
 :root{
   --background: #000;
