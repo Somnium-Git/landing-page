@@ -15,6 +15,7 @@ export default function Header() {
   const [currentScreen, setCurrentScreen] = useState("home");
   const [position, setPosition] = useState(0);
   const [linePosition, setLinePosition] = useState(0);
+  const [width, setWidth] = useState(0)
 
   useEffect(() => {
     const updateLinePosition = () => {
@@ -29,27 +30,32 @@ export default function Header() {
     updateLinePosition();
   }, []);
   
+  var teste = 40
 
   const changeScreen = async (screen: string) => {
     if(screen === "home") {
       if(homeRef.current) {
-        setPosition(Math.round(homeRef.current.getBoundingClientRect().x));
+        setPosition(Math.round(homeRef.current.getBoundingClientRect().x)); 
       }
     }else if(screen === "about") {
       if(aboutRef.current) {
         setPosition(Math.round(aboutRef.current.getBoundingClientRect().x));
+        setWidth(Math.round(aboutRef.current.clientWidth - teste))
       }
     }else if(screen === "projects") {
       if(projectsRef.current) {
         setPosition(Math.round(projectsRef.current.getBoundingClientRect().x));
+        setWidth(Math.round(projectsRef.current.clientWidth - teste))
       }
     }else if(screen === "partners") {
       if(partnersRef.current) {
         setPosition(Math.round(partnersRef.current.getBoundingClientRect().x));
+        setWidth(Math.round(partnersRef.current.clientWidth - teste))
       }
     }else if(screen === "contact") {
       if(contactRef.current) {
         setPosition(Math.round(contactRef.current.getBoundingClientRect().x));
+        setWidth(Math.round(contactRef.current.clientWidth - teste))
       }
     }
 
@@ -64,6 +70,7 @@ export default function Header() {
   useEffect(() => {
     console.log("position", position + 'px')
     console.log("linePosition", linePosition + 'px')
+    console.log("width", width)
   }, [position])
 
   return (
@@ -79,7 +86,7 @@ export default function Header() {
           <div ref={partnersRef} className={currentScreen === 'partners' ? styles.on : styles.off} onClick={() => {changeScreen("partners")}}>Parceiros</div>
           <div ref={contactRef} className={currentScreen === 'contact' ? styles.on : styles.off} onClick={() => {changeScreen("contact")}}>Contato</div>
         </section>
-        <div ref={lineRef} style={{ transform: `${currentScreen != 'home' ? `translateX(${position - linePosition }px)` : ''}` }} className={`${styles.line} bg-[#C77DFF] w-[40px] h-[2px]`}></div>
+        <div ref={lineRef} style={{ transform: `${currentScreen != 'home' ? `translateX(${position - linePosition + width / 2}px)` : ''}` }} className={`${styles.line} bg-[#C77DFF] w-[40px] h-[2px]`}></div>
       </section>
       <div
       className="w-[50px] h-[50px] rounded-full bg-[rgba(60,9,108,0.2)] flex justify-center items-center cursor-pointer font-medium text-xl border-1 border-[#737373]"
