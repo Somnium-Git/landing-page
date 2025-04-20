@@ -28,8 +28,6 @@ export default function Header() {
     updateLinePosition();
   }, []);
   
-
-
   const changeScreen = async (screen: string) => {
     if(screen === "home") {
       if(homeRef.current) {
