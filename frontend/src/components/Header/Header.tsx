@@ -2,6 +2,7 @@
 
 import styles from "./Header.module.css";
 import { useRef, useState, useEffect } from "react";
+import Text from "../Text/Text";
  
 export default function Header() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -72,21 +73,47 @@ export default function Header() {
 
   return (
     <header 
-    className="text-white font-KantumruyPro text-2xl font-bold w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
+    className="text-white font-KantumruyPro font-bold w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
     >
-      <div className="cursor-pointer">Som<span className="text-[#C77DFF]">nium</span></div>
-      <section className="flex flex-col text-base ">
-        <section className="flex gap-[3dvw] text-base">
-          <div ref={homeRef} className={currentScreen === 'home' ? styles.on : styles.off} onClick={() => {changeScreen("home")}}>Inicio</div>
-          <div ref={aboutRef} className={currentScreen === 'about' ? styles.on : styles.off}  onClick={() => {changeScreen("about")}}>Sobre</div>
-          <div ref={projectsRef} className={currentScreen === 'projects' ? styles.on : styles.off} onClick={() => {changeScreen("projects")}}>Projetos</div>
-          <div ref={partnersRef} className={currentScreen === 'partners' ? styles.on : styles.off} onClick={() => {changeScreen("partners")}}>Parceiros</div>
-          <div ref={contactRef} className={currentScreen === 'contact' ? styles.on : styles.off} onClick={() => {changeScreen("contact")}}>Contato</div>
+      <div className="cursor-pointer flex"><Text text="Som" color="#FFFFFF" size="1.5rem"></Text><Text text="nium" isGradient={true} size="1.5rem"></Text></div>
+      <section className="flex flex-col">
+        <section className="flex gap-[3dvw] ">
+          <div ref={homeRef} className={currentScreen === 'home' ? "cursor-pointer translate-y-[-5px] transition-all duration-200" 
+            : "cursor-pointer translate-y-[0px] transition-all duration-200"
+            } onClick={() => {changeScreen("home")}}>
+            <Text text="Inicio" color={currentScreen === "home" ? "#FFFFFF" : "#A8AFC1"} size="1rem"></Text>
+          </div>
+          <div ref={aboutRef} className={currentScreen === 'about' ? 
+            "cursor-pointer translate-y-[-5px] transition-all duration-200" : "cursor-pointer translate-y-[0px] transition-all duration-200"
+            }  onClick={() => {changeScreen("about")}}>
+            <Text text="Sobre" color={currentScreen === "about" ? "#FFFFFF" : "#A8AFC1"} size="1rem"></Text>
+          </div>
+          <div ref={projectsRef} className={currentScreen === 'projects' ? 
+            "cursor-pointer translate-y-[-5px] transition-all duration-200" : "cursor-pointer translate-y-[0px] transition-all duration-200"
+            } onClick={() => {changeScreen("projects")}}>
+            <Text text="Projetos" color={currentScreen === "projects" ? "#FFFFFF" : "#A8AFC1"} size="1rem"></Text>
+          </div>
+          <div ref={partnersRef} className={currentScreen === 'partners' ? 
+            "cursor-pointer translate-y-[-5px] transition-all duration-200" : "cursor-pointer translate-y-[0px] transition-all duration-200"
+            } onClick={() => {changeScreen("partners")}}>
+            <Text text="Parceiros" color={currentScreen === "partners" ? "#FFFFFF" : "#A8AFC1"} size="1rem"></Text>
+          </div>
+          <div ref={contactRef} className={currentScreen === 'contact' ? 
+            "cursor-pointer translate-y-[-5px] transition-all duration-200" : "cursor-pointer translate-y-[0px] transition-all duration-200"
+            } onClick={() => {changeScreen("contact")}}>
+            <Text text="Contato" color={currentScreen === "contact" ? "#FFFFFF" : "#A8AFC1"} size="1rem"></Text>
+          </div>
         </section>
-        <div ref={lineRef} style={{ transform: `${currentScreen != 'home' ? `translateX(${position - linePosition}px)` : ''}`, width: `${width}px` }} className={`${styles.line} bg-[#C77DFF] w-[40px] h-[2px]`}></div>
+        <div ref={lineRef} 
+        style={{ transform: `${currentScreen != 'home' ? `translateX(${position - linePosition}px)` : ''}`, width: `${width}px` }} 
+        className={"transition-all duration-200 ease-in-out bg-[#C77DFF] w-[40px] h-[2px]"}
+        ></div>
       </section>
       <div
-      className="w-[50px] h-[50px] rounded-full bg-[rgba(60,9,108,0.2)] flex justify-center items-center cursor-pointer font-medium text-xl border-1 border-[#737373]"
+      className="
+      w-[50px] h-[50px] rounded-full bg-[rgba(60,9,108,0.2)]
+       flex justify-center items-center cursor-pointer font-medium text-xl border-1 border-[#737373]
+        hover:bg-[rgba(60,9,108,1)] hover:border-[#C77DFF] transition-all duration-200"
       >
         ?
       </div>

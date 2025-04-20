@@ -12,11 +12,10 @@ type TextProps = {
 function Text({ text, color, size, isGradient }: TextProps) {
 
     return (
-        <div style={{color: `${color}`, fontSize: `${size}`}} className={isGradient ? styles.text : ""}>
+        <div style={{color: `${color}`, fontSize: `${size}`}} className={isGradient ? "text-gradient" : ""}>
             {text}
         </div>
     )
-    
 }
 
 Text.defaultProps = {

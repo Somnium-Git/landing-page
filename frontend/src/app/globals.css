@@ -7,6 +7,14 @@
   --font-KantumruyPro: KantumruyPro, "sans-serif", ;
 }
 
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(-69deg,#774B99,#9F64CC, #C77DFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 :root{
   --background: #000;
   --foreground: #fff;
