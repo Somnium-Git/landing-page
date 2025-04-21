@@ -17,13 +17,17 @@ function Button({
         width: "100px",
         height: "30px",
         backgroundColor: "#FFFFFF",
-        color: "#000000"
+        color: "#000000",
+        borderRadius: "4px",
+        border: "2px solid #398b8c"
     },
     styleHover = {
         width: "100px",
         height: "30px",
         backgroundColor: "#898b8c",
-        color: "#000000"
+        color: "#000000",
+        borderRadius: "4px",
+        border: "2px solid #398b8c"
     },
     classCommon = "",
     classHover = "",

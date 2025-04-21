@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div>
-      <Button styleCommon={{width: "100px", height: "100px", backgroundColor:"pink", transition: "0.1s"}} styleHover={{border:"5px solid red", backgroundColor:"blue"}}>
+      <Button>
         
       </Button>
 

@@ -17,12 +17,16 @@ function Button({ styleCommon = {
     width: "100px",
     height: "30px",
     backgroundColor: "#FFFFFF",
-    color: "#000000"
+    color: "#000000",
+    borderRadius: "4px",
+    border: "2px solid #398b8c"
 }, styleHover = {
     width: "100px",
     height: "30px",
     backgroundColor: "#898b8c",
-    color: "#000000"
+    color: "#000000",
+    borderRadius: "4px",
+    border: "2px solid #398b8c"
 }, classCommon = "", classHover = "", click = ()=>console.log('mouseover'), children }) {
     const [styleCssCommon, setStyleCssCommon] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(styleCommon);
     const [styleCssHover, setStyleCssHover] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(styleHover);
@@ -68,7 +72,7 @@ function Button({ styleCommon = {
             children: children
         }, void 0, false, {
             fileName: "[project]/src/components/Button/Button.tsx",
-            lineNumber: 91,
+            lineNumber: 95,
             columnNumber: 13
         }, this)
     }, void 0, false);
@@ -93,18 +97,7 @@ function Home() {
         alert('oi');
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Button$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-            styleCommon: {
-                width: "100px",
-                height: "100px",
-                backgroundColor: "pink",
-                transition: "0.1s"
-            },
-            styleHover: {
-                border: "5px solid red",
-                backgroundColor: "blue"
-            }
-        }, void 0, false, {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Button$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
             fileName: "[project]/src/app/page.tsx",
             lineNumber: 13,
             columnNumber: 7
