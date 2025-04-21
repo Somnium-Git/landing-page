@@ -14,7 +14,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var _s = __turbopack_context__.k.signature();
 'use client';
 ;
-//              estilo comum, estilo com hover, função 
 function Button({ styleCommon = {
     width: "100px",
     height: "30px",
@@ -27,8 +26,20 @@ function Button({ styleCommon = {
     color: "#000000"
 }, click = ()=>console.log('mouseover'), children }) {
     _s();
-    const styleCssCommon = styleCommon;
-    const styleCssHover = styleHover;
+    const [styleCssCommon, setStyleCssCommon] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(styleCommon);
+    const [styleCssHover, setStyleCssHover] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(styleHover);
+    function mesclarObjetos(obj1, obj2) {
+        return {
+            ...obj1,
+            ...obj2
+        };
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Button.useEffect": ()=>{
+            console.log("Componente foi renderizado!");
+            setStyleCssHover(mesclarObjetos(styleCssCommon, styleCssHover));
+        }
+    }["Button.useEffect"], []);
     const [StyleCss, setStyle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(styleCssCommon);
     const changeStyle = ()=>{
         var a = JSON.stringify(styleCssCommon);
@@ -54,12 +65,12 @@ function Button({ styleCommon = {
             children: children
         }, void 0, false, {
             fileName: "[project]/src/components/Button/Button.tsx",
-            lineNumber: 67,
+            lineNumber: 81,
             columnNumber: 13
         }, this)
     }, void 0, false);
 }
-_s(Button, "PbHIdmEMpOsXmmDN7Q5gOAXUbEg=");
+_s(Button, "XdTJDMDuqQoBRggGAmHMZ5Uv7O4=");
 _c = Button;
 const __TURBOPACK__default__export__ = Button;
 var _c;
@@ -93,8 +104,7 @@ function Home() {
                 backgroundColor: "pink"
             },
             styleHover: {
-                width: "100px",
-                height: "100px",
+                border: "5px solid red",
                 backgroundColor: "blue"
             }
         }, void 0, false, {

@@ -1,6 +1,6 @@
 'use client'
 
-import { Children, useState } from "react";
+import { Children, useEffect, useState } from "react";
 
 type ButtonProps = {
     styleCommon?: object;
@@ -9,7 +9,7 @@ type ButtonProps = {
     children?: React.ReactNode;
 };
 
-//              estilo comum, estilo com hover, função 
+
 function Button({
     styleCommon = {
         width: "100px",
@@ -26,12 +26,26 @@ function Button({
     click = () => console.log('mouseover'),
     children
 }: ButtonProps) {
-    
 
-    const styleCssCommon = styleCommon;
-    const styleCssHover = styleHover;
     
- 
+    const [styleCssCommon, setStyleCssCommon] = useState(styleCommon);
+    const [styleCssHover, setStyleCssHover] = useState(styleHover);
+    
+    function mesclarObjetos(obj1, obj2) {
+        return { ...obj1, ...obj2 };
+    }
+
+    useEffect(() => {
+        console.log("Componente foi renderizado!");
+        setStyleCssHover(mesclarObjetos(styleCssCommon, styleCssHover))
+        
+        
+        
+      }, []);
+
+    
+    
+    
     
     const [ StyleCss , setStyle] = useState<Object>(styleCssCommon);
     
