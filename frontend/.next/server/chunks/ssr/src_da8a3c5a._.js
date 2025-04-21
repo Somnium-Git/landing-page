@@ -23,9 +23,11 @@ function Button({ styleCommon = {
     height: "30px",
     backgroundColor: "#898b8c",
     color: "#000000"
-}, click = ()=>console.log('mouseover'), children }) {
+}, classCommon = "", classHover = "", click = ()=>console.log('mouseover'), children }) {
     const [styleCssCommon, setStyleCssCommon] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(styleCommon);
     const [styleCssHover, setStyleCssHover] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(styleHover);
+    const [classCssCommon, setClassCssCommon] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(classCommon);
+    const [classCssHover, setClassCssHover] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(classHover);
     function mesclarObjetos(obj1, obj2) {
         return {
             ...obj1,
@@ -36,32 +38,37 @@ function Button({ styleCommon = {
         console.log("Componente foi renderizado!");
         setStyleCssHover(mesclarObjetos(styleCssCommon, styleCssHover));
     }, []);
-    const [StyleCss, setStyle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(styleCssCommon);
-    const changeStyle = ()=>{
+    const [StyleCss, setStyleCss] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(styleCssCommon);
+    const [ClassCss, setClassCss] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(classCssCommon);
+    const hover = ()=>{
         var a = JSON.stringify(styleCssCommon);
         var b = JSON.stringify(styleCssHover);
         var c = JSON.stringify(StyleCss);
         if (c == a) {
             // hover
-            setStyle(styleCssHover);
+            setStyleCss(styleCssHover);
+            setClassCss(classCssHover);
         } else if (c == b) {
             // leave
-            setStyle(styleCssCommon);
+            setStyleCss(styleCssCommon);
+            setClassCss(classCssCommon);
         } else {
             // else
-            setStyle(styleCssCommon);
+            setStyleCss(styleCssCommon);
+            setClassCss(classCssCommon);
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
             style: StyleCss,
-            onMouseEnter: changeStyle,
-            onMouseLeave: changeStyle,
+            className: ClassCss,
+            onMouseEnter: hover,
+            onMouseLeave: hover,
             onClick: click,
             children: children
         }, void 0, false, {
             fileName: "[project]/src/components/Button/Button.tsx",
-            lineNumber: 81,
+            lineNumber: 91,
             columnNumber: 13
         }, this)
     }, void 0, false);
@@ -90,7 +97,8 @@ function Home() {
             styleCommon: {
                 width: "100px",
                 height: "100px",
-                backgroundColor: "pink"
+                backgroundColor: "pink",
+                transition: "0.1s"
             },
             styleHover: {
                 border: "5px solid red",
