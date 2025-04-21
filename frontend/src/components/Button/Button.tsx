@@ -1,24 +1,31 @@
 'use client'
 
-import { useState } from "react";
-import PropTypes from 'prop-types';
-import Text from "../Text/Text"
+import { Children, useState } from "react";
 
 type ButtonProps = {
-    textConfig: {
-        text: string;
-        color: string;
-        size: string;
-        isGradient: boolean; 
-      };
-    styleCommon: object;
-    styleHover: object;
-    click: () => void;
-  };
-  
+    styleCommon?: object;
+    styleHover?: object;
+    click?: () => void;
+    children?: React.ReactNode;
+};
 
-//              estilo comum, estilo com hover,função 
-function Button({textConfig, styleCommon, styleHover, click} : ButtonProps) {
+//              estilo comum, estilo com hover, função 
+function Button({
+    styleCommon = {
+        width: "100px",
+        height: "30px",
+        backgroundColor: "#FFFFFF",
+        color: "#000000"
+    },
+    styleHover = {
+        width: "100px",
+        height: "30px",
+        backgroundColor: "#898b8c",
+        color: "#000000"
+    },
+    click = () => console.log('mouseover'),
+    children
+}: ButtonProps) {
     
 
     const styleCssCommon = styleCommon;
@@ -63,33 +70,12 @@ function Button({textConfig, styleCommon, styleHover, click} : ButtonProps) {
                 onMouseLeave={changeStyle}
                 onClick={click}
             >
-                <Text text={textConfig.text} color={textConfig.color} size={textConfig.size} isGradient={textConfig.isGradient}/>
+                {children}
             </button>
         </>
     )
 }
 
-Button.defaultProps = {
-    textConfig: {
-        text: "",
-        color: "#FFFFFF",
-        size: "1rem",
-        isGradient: false
-      },
-    styleCommon: {
-        width : "50px",
-        height: "100px",
-        backgroundColor: "#FFFFFF",
-        color: "#000000"
-    },
-    styleHover: {
-        width : "50px",
-        height: "100px",
-        backgroundColor: "#898b8c",
-        color: "#000000"
-    },
-    click: () => console.log('mouseover')
-}
 
 
 export default Button;
