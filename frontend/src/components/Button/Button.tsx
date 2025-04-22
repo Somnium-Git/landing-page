@@ -5,8 +5,8 @@ import { Children, useEffect, useState } from "react";
 type ButtonProps = {
     styleCommon?: object;
     styleHover?: object;
-    classCommon: String;
-    classHover: String;
+    classCommon: string;
+    classHover: string;
     click?: () => void;
     children?: React.ReactNode;
 };
@@ -41,24 +41,17 @@ function Button({
     const [classCssCommon, setClassCssCommon] = useState(classCommon);
     const [classCssHover, setClassCssHover] = useState(classHover);
     
-    function mesclarObjetos(obj1, obj2) {
+    function mesclarObjetos(obj1: object, obj2: object) {
         return { ...obj1, ...obj2 };
     }
 
     useEffect(() => {
         console.log("Componente foi renderizado!");
         setStyleCssHover(mesclarObjetos(styleCssCommon, styleCssHover))
-        
-        
-        
       }, []);
-
     
-    
-    
-    
-    const [ StyleCss , setStyleCss] = useState<Object>(styleCssCommon);
-    const [ClassCss, setClassCss] = useState<String>(classCssCommon);
+    const [ StyleCss , setStyleCss] = useState<object>(styleCssCommon);
+    const [ClassCss, setClassCss] = useState<string>(classCssCommon);
     
     
     
