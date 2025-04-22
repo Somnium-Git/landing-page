@@ -13,6 +13,39 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .button-common {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: #000;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .button-hover{
+    box-shadow: #fff 0px 0px 20px;
+    transition: 300ms ease-in-out;
+    transition-delay: 300ms;
+  }
+  
+  .button-common::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-color: #FFFFFF;
+    z-index: -1;
+    transform: rotate(60deg) translate(-100%, 100%);
+    transform-origin: top left;
+    transition: 600ms ease-in-out;
+  }
+  .button-common:hover::after {
+    transform: rotate(0deg) translate(0px,0px);
+    transform-origin: top left;
+    transition: 600ms ease-in-out;
+  }
 }
 
 :root{

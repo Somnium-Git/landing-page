@@ -65,43 +65,37 @@ export default function Header() {
     setPosition(position);
   }
 
-  useEffect(() => {
-    console.log("position", position + 'px')
-    console.log("linePosition", linePosition + 'px')
-    console.log("width", width)
-  }, [position])
-
   return (
     <header 
     className="text-white font-KantumruyPro font-bold w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
     >
-      <div className="cursor-pointer flex"><Text text="Som" color="#FFFFFF" size="1.5rem"></Text><Text text="nium" isGradient={true} size="1.5rem"></Text></div>
+      <div className="cursor-pointer flex"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
       <section className="flex flex-col">
         <section className="flex gap-[3dvw] ">
           <div ref={homeRef} className={currentScreen === 'home' ? "cursor-pointer translate-y-[-5px] transition-all duration-200" 
             : "cursor-pointer translate-y-[0px] transition-all duration-200"
             } onClick={() => {changeScreen("home")}}>
-            <Text text="Inicio" color={currentScreen === "home" ? "#FFFFFF" : "#A8AFC1"} size="1rem"></Text>
+            <Text color={currentScreen === "home" ? "#FFFFFF" : "#A8AFC1"} size="1rem">Inicio</Text>
           </div>
           <div ref={aboutRef} className={currentScreen === 'about' ? 
             "cursor-pointer translate-y-[-5px] transition-all duration-200" : "cursor-pointer translate-y-[0px] transition-all duration-200"
             }  onClick={() => {changeScreen("about")}}>
-            <Text text="Sobre" color={currentScreen === "about" ? "#FFFFFF" : "#A8AFC1"} size="1rem"></Text>
+            <Text color={currentScreen === "about" ? "#FFFFFF" : "#A8AFC1"} size="1rem">Sobre</Text>
           </div>
           <div ref={projectsRef} className={currentScreen === 'projects' ? 
             "cursor-pointer translate-y-[-5px] transition-all duration-200" : "cursor-pointer translate-y-[0px] transition-all duration-200"
             } onClick={() => {changeScreen("projects")}}>
-            <Text text="Projetos" color={currentScreen === "projects" ? "#FFFFFF" : "#A8AFC1"} size="1rem"></Text>
+            <Text color={currentScreen === "projects" ? "#FFFFFF" : "#A8AFC1"} size="1rem">Projetos</Text>
           </div>
           <div ref={partnersRef} className={currentScreen === 'partners' ? 
             "cursor-pointer translate-y-[-5px] transition-all duration-200" : "cursor-pointer translate-y-[0px] transition-all duration-200"
             } onClick={() => {changeScreen("partners")}}>
-            <Text text="Parceiros" color={currentScreen === "partners" ? "#FFFFFF" : "#A8AFC1"} size="1rem"></Text>
+            <Text color={currentScreen === "partners" ? "#FFFFFF" : "#A8AFC1"} size="1rem">Parceiros</Text>
           </div>
           <div ref={contactRef} className={currentScreen === 'contact' ? 
             "cursor-pointer translate-y-[-5px] transition-all duration-200" : "cursor-pointer translate-y-[0px] transition-all duration-200"
             } onClick={() => {changeScreen("contact")}}>
-            <Text text="Contato" color={currentScreen === "contact" ? "#FFFFFF" : "#A8AFC1"} size="1rem"></Text>
+            <Text color={currentScreen === "contact" ? "#FFFFFF" : "#A8AFC1"} size="1rem">Contato</Text>
           </div>
         </section>
         <div ref={lineRef} 

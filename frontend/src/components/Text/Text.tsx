@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import styles from "./Text.module.css"
 
 type TextProps = {
-    text: string;
+    children: string;
     color: string;
     size: string;
     isGradient: boolean; 
   };
 
-function Text({ text, color, size, isGradient }: TextProps) {
+function Text({ children, color, size, isGradient }: TextProps) {
 
     return (
-        <div style={{color: `${color}`, fontSize: `${size}`}} className={isGradient ? "text-gradient" : ""}>
-            {text}
+        <div style={{color: `${color}`, fontSize: `${size}`}} className={isGradient ? "text-gradient txt" : "txt"}>
+            {children}
         </div>
     )
 }

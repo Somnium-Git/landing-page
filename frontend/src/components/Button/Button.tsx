@@ -1,103 +1,86 @@
 'use client'
 
-import { Children, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import Text from "../Text/Text";
 
 type ButtonProps = {
-    styleCommon?: object;
-    styleHover?: object;
-    classCommon: string;
-    classHover: string;
+    styleCommon?: React.CSSProperties;
+    styleHover?: React.CSSProperties;
+    classCommon?: string;
+    classHover?: string;
     click?: () => void;
+    text?: string;
+    image?: string;
     children?: React.ReactNode;
 };
 
+const defaultStyleCommon : React.CSSProperties = {
+    width: "250px",
+    height: "50px",
+    backgroundColor: "#333333",
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    letterSpacing: "1px",
+    borderRadius: "25px",
+    cursor: "pointer",
+}
+
+const defaultStyleHover : React.CSSProperties = {
+    ...defaultStyleCommon,
+    backgroundColor: "#111111",
+}
+
+const defaultClassCommon = "button-common";
+const defaultClassHover = `${defaultClassCommon} button-hover`;
 
 function Button({
-    styleCommon = {
-        width: "100px",
-        height: "30px",
-        backgroundColor: "#FFFFFF",
-        color: "#000000",
-        borderRadius: "4px",
-        border: "2px solid #398b8c"
-    },
-    styleHover = {
-        width: "100px",
-        height: "30px",
-        backgroundColor: "#898b8c",
-        color: "#000000",
-        borderRadius: "4px",
-        border: "2px solid #398b8c"
-    },
-    classCommon = "",
-    classHover = "",
-    click = () => console.log('mouseover'),
+    styleCommon = defaultStyleCommon,
+    styleHover = defaultStyleHover,
+    classCommon = defaultClassCommon,
+    classHover = defaultClassHover,
+    click = () => console.log('mouse clicked!'),
+    text = "",
+    image = "",
     children
 }: ButtonProps) {
+    const [styleCss, setStyleCss] = useState(styleCommon);
+    const [classCss, setClassCss] = useState(classCommon);
+    const [isGradient, setIsGradient] = useState(false);
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    
-    const [styleCssCommon, setStyleCssCommon] = useState(styleCommon);
-    const [styleCssHover, setStyleCssHover] = useState(styleHover);
-    const [classCssCommon, setClassCssCommon] = useState(classCommon);
-    const [classCssHover, setClassCssHover] = useState(classHover);
-    
-    function mesclarObjetos(obj1: object, obj2: object) {
-        return { ...obj1, ...obj2 };
-    }
-
-    useEffect(() => {
-        console.log("Componente foi renderizado!");
-        setStyleCssHover(mesclarObjetos(styleCssCommon, styleCssHover))
-      }, []);
-    
-    const [ StyleCss , setStyleCss] = useState<object>(styleCssCommon);
-    const [ClassCss, setClassCss] = useState<string>(classCssCommon);
-    
-    
-    
-    
-
-    const hover = ()=>{
-        var a = JSON.stringify(styleCssCommon);
-        var b = JSON.stringify(styleCssHover);
-        var c = JSON.stringify(StyleCss)
-
-        if(c == a){
-            // hover
-            setStyleCss(styleCssHover)
-            setClassCss(classCssHover)
-
-           
-            
-        }else if(c == b){
-            // leave
-            setStyleCss(styleCssCommon)
-            setClassCss(classCssCommon)
+    const handleHover = () => {
+        setStyleCss(styleHover);
+        setClassCss(classHover);
         
-        }else{
-            // else
-            setStyleCss(styleCssCommon)
-            setClassCss(classCssCommon)
-        }
-        
-    }
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
+        timeoutRef.current = setTimeout(() => {
+            setIsGradient(true);
+        }, 400);
+    };
+    
+    const handleUnhover = () => {
+        setStyleCss(styleCommon);
+        setClassCss(classCommon);
+
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        setIsGradient(false);
+    };
 
     return (
         <>
             <button 
-                style={StyleCss}
-                className={ClassCss}
-                onMouseEnter={hover}
-                onMouseLeave={hover}
+                style={styleCss}
+                className={classCss}
+                onMouseEnter={handleHover}
+                onMouseLeave={handleUnhover}
                 onClick={click}
             >
+                <Text size="1em" isGradient={isGradient}>{text}</Text>
                 {children}
             </button>
         </>
     )
 }
-
-
 
 export default Button;
