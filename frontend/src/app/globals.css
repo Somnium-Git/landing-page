@@ -21,6 +21,7 @@
     color: #000;
     z-index: 1;
     overflow: hidden;
+    background: linear-gradient(to right,#5A189A 0%,#C77DFF 120%);
   }
   .button-hover{
     box-shadow: #fff 0px 0px 20px;
@@ -39,12 +40,12 @@
     z-index: -1;
     transform: rotate(60deg) translate(-100%, 100%);
     transform-origin: top left;
-    transition: 600ms ease-in-out;
+    transition: 600ms ease-in;
   }
   .button-common:hover::after {
     transform: rotate(0deg) translate(0px,0px);
     transform-origin: top left;
-    transition: 600ms ease-in-out;
+    transition: 600ms ease-out;
   }
 }
 

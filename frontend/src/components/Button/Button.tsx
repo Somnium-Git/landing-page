@@ -64,7 +64,9 @@ function Button({
         setClassCss(classCommon);
 
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
-        setIsGradient(false);
+        timeoutRef.current = setTimeout(() => {
+            setIsGradient(false);
+        }, 100);
     };
 
     return (
@@ -76,7 +78,7 @@ function Button({
                 onMouseLeave={handleUnhover}
                 onClick={click}
             >
-                <Text size="1em" isGradient={isGradient}>{text}</Text>
+                <Text size="1.2em" isGradient={isGradient}>{text}</Text>
                 {children}
             </button>
         </>
