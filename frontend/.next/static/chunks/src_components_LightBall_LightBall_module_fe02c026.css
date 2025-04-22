@@ -1,0 +1,79 @@
+/* [project]/src/components/LightBall/LightBall.module.css [app-client] (css) */
+.LightBall-module__1pQTDW__lightBall {
+  z-index: -20;
+  transform-origin: var(--origin-x) var(--origin-y);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.LightBall-module__1pQTDW__rotate {
+  animation: 5s ease-in-out forwards LightBall-module__1pQTDW__orbit;
+}
+
+@keyframes LightBall-module__1pQTDW__orbit {
+  0% {
+    transform: rotate(0)scale(1);
+  }
+
+  50% {
+    transform: rotate(250deg)scale(3);
+  }
+
+  100% {
+    transform: rotate(500deg)scale(1);
+  }
+}
+
+.LightBall-module__1pQTDW__light1, .LightBall-module__1pQTDW__light2, .LightBall-module__1pQTDW__light3, .LightBall-module__1pQTDW__light4, .LightBall-module__1pQTDW__light5 {
+  background: linear-gradient(-120deg, #5a189a1a 0%, #c77dff1a 120%);
+  border-radius: 50%;
+  animation: 3.5s ease-in-out infinite LightBall-module__1pQTDW__LightAnim;
+  position: absolute;
+}
+
+.LightBall-module__1pQTDW__light1 {
+  width: 30%;
+  height: 30%;
+  animation-delay: 0s;
+}
+
+.LightBall-module__1pQTDW__light2 {
+  width: 40%;
+  height: 40%;
+  animation-delay: .2s;
+}
+
+.LightBall-module__1pQTDW__light3 {
+  width: 55%;
+  height: 55%;
+  animation-delay: .4s;
+}
+
+.LightBall-module__1pQTDW__light4 {
+  width: 80%;
+  height: 80%;
+  animation-delay: .6s;
+}
+
+.LightBall-module__1pQTDW__light5 {
+  width: 100%;
+  height: 100%;
+  animation-delay: .8s;
+}
+
+@keyframes LightBall-module__1pQTDW__LightAnim {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .9;
+    transform: scale(1.06);
+  }
+}
+
+
+/*# sourceMappingURL=src_components_LightBall_LightBall_module_fe02c026.css.map*/

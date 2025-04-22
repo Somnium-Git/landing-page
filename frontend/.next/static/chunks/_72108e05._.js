@@ -10,14 +10,14 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 ;
-function Text({ text, color, size, isGradient }) {
+function Text({ children, color, size, isGradient }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: {
             color: `${color}`,
             fontSize: `${size}`
         },
-        className: isGradient ? "text-gradient" : "",
-        children: text
+        className: isGradient ? "text-gradient txt" : "txt",
+        children: children
     }, void 0, false, {
         fileName: "[project]/src/components/Text/Text.tsx",
         lineNumber: 15,
@@ -112,15 +112,6 @@ function Header() {
     const changePosition = (screen)=>{
         setPosition(position);
     };
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "Header.useEffect": ()=>{
-            console.log("position", position + 'px');
-            console.log("linePosition", linePosition + 'px');
-            console.log("width", width);
-        }
-    }["Header.useEffect"], [
-        position
-    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
         className: "text-white font-KantumruyPro font-bold w-full h-[12dvh] flex justify-between items-center p-[2dvw]",
         children: [
@@ -128,27 +119,27 @@ function Header() {
                 className: "cursor-pointer flex",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$Text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                        text: "Som",
                         color: "#FFFFFF",
-                        size: "1.5rem"
+                        size: "1.5rem",
+                        children: "Som"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Header/Header.tsx",
-                        lineNumber: 78,
+                        lineNumber: 72,
                         columnNumber: 44
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$Text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                        text: "nium",
                         isGradient: true,
-                        size: "1.5rem"
+                        size: "1.5rem",
+                        children: "nium"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Header/Header.tsx",
-                        lineNumber: 78,
-                        columnNumber: 98
+                        lineNumber: 72,
+                        columnNumber: 90
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Header/Header.tsx",
-                lineNumber: 78,
+                lineNumber: 72,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -164,17 +155,17 @@ function Header() {
                                     changeScreen("home");
                                 },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$Text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    text: "Inicio",
                                     color: currentScreen === "home" ? "#FFFFFF" : "#A8AFC1",
-                                    size: "1rem"
+                                    size: "1rem",
+                                    children: "Inicio"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header/Header.tsx",
-                                    lineNumber: 84,
+                                    lineNumber: 78,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/Header.tsx",
-                                lineNumber: 81,
+                                lineNumber: 75,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -184,17 +175,17 @@ function Header() {
                                     changeScreen("about");
                                 },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$Text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    text: "Sobre",
                                     color: currentScreen === "about" ? "#FFFFFF" : "#A8AFC1",
-                                    size: "1rem"
+                                    size: "1rem",
+                                    children: "Sobre"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header/Header.tsx",
-                                    lineNumber: 89,
+                                    lineNumber: 83,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/Header.tsx",
-                                lineNumber: 86,
+                                lineNumber: 80,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -204,17 +195,17 @@ function Header() {
                                     changeScreen("projects");
                                 },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$Text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    text: "Projetos",
                                     color: currentScreen === "projects" ? "#FFFFFF" : "#A8AFC1",
-                                    size: "1rem"
+                                    size: "1rem",
+                                    children: "Projetos"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header/Header.tsx",
-                                    lineNumber: 94,
+                                    lineNumber: 88,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/Header.tsx",
-                                lineNumber: 91,
+                                lineNumber: 85,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -224,17 +215,17 @@ function Header() {
                                     changeScreen("partners");
                                 },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$Text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    text: "Parceiros",
                                     color: currentScreen === "partners" ? "#FFFFFF" : "#A8AFC1",
-                                    size: "1rem"
+                                    size: "1rem",
+                                    children: "Parceiros"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header/Header.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 93,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/Header.tsx",
-                                lineNumber: 96,
+                                lineNumber: 90,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -244,23 +235,23 @@ function Header() {
                                     changeScreen("contact");
                                 },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$Text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    text: "Contato",
                                     color: currentScreen === "contact" ? "#FFFFFF" : "#A8AFC1",
-                                    size: "1rem"
+                                    size: "1rem",
+                                    children: "Contato"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header/Header.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 98,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/Header.tsx",
-                                lineNumber: 101,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Header/Header.tsx",
-                        lineNumber: 80,
+                        lineNumber: 74,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -272,13 +263,13 @@ function Header() {
                         className: "transition-all duration-200 ease-in-out bg-[#C77DFF] w-[40px] h-[2px]"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Header/Header.tsx",
-                        lineNumber: 107,
+                        lineNumber: 101,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Header/Header.tsx",
-                lineNumber: 79,
+                lineNumber: 73,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -286,17 +277,17 @@ function Header() {
                 children: "?"
             }, void 0, false, {
                 fileName: "[project]/src/components/Header/Header.tsx",
-                lineNumber: 112,
+                lineNumber: 106,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/Header/Header.tsx",
-        lineNumber: 75,
+        lineNumber: 69,
         columnNumber: 5
     }, this);
 }
-_s(Header, "jerdUpAk2507R1/xXDTTPu2vXFA=");
+_s(Header, "8HUJo7K95XR9yAyR1O24OGKexGY=");
 _c = Header;
 var _c;
 __turbopack_context__.k.register(_c, "Header");

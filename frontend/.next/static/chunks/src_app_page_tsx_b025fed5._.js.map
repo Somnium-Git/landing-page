@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/Gabriel/Documents/Github/landing-page/frontend/src/app/page.tsx"],"sourcesContent":["'use client'\r\nimport Button from '@/components/Button/Button'\r\nimport Text from '@/components/Text/Text'\r\n\r\nexport default function Home() {\r\n  return (\r\n    <div>\r\n    </div>\r\n  )\r\n}"],"names":[],"mappings":";;;;AAAA;;AAIe,SAAS;IACtB,qBACE,6LAAC;;;;;AAGL;KALwB","debugId":null}}]
+}

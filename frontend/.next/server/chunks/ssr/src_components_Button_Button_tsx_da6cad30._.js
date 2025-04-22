@@ -10,57 +10,74 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$Text$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Text/Text.tsx [app-ssr] (ecmascript)");
 'use client';
 ;
 ;
-//              estilo comum, estilo com hover,função 
-function Button({ styleCommon, styleHover, click }) {
-    const styleCssCommon = styleCommon;
-    const styleCssHover = styleHover;
-    const [StyleCss, setStyle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(styleCssCommon);
-    const changeStyle = ()=>{
-        var a = JSON.stringify(styleCssCommon);
-        var b = JSON.stringify(styleCssHover);
-        var c = JSON.stringify(StyleCss);
-        if (c == a) {
-            // hover
-            setStyle(styleCssHover);
-        } else if (c == b) {
-            // leave
-            setStyle(styleCssCommon);
-        } else {
-            // else
-            setStyle(styleCssCommon);
-        }
+;
+const defaultStyleCommon = {
+    width: "250px",
+    height: "50px",
+    backgroundColor: "#333333",
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    letterSpacing: "1px",
+    borderRadius: "25px",
+    cursor: "pointer"
+};
+const defaultStyleHover = {
+    ...defaultStyleCommon,
+    backgroundColor: "#111111"
+};
+const defaultClassCommon = "button-common";
+const defaultClassHover = `${defaultClassCommon} button-hover`;
+function Button({ styleCommon = defaultStyleCommon, styleHover = defaultStyleHover, classCommon = defaultClassCommon, classHover = defaultClassHover, click = ()=>console.log('mouse clicked!'), text = "", image = "", children }) {
+    const [styleCss, setStyleCss] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(styleCommon);
+    const [classCss, setClassCss] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(classCommon);
+    const [isGradient, setIsGradient] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const timeoutRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const handleHover = ()=>{
+        setStyleCss(styleHover);
+        setClassCss(classHover);
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(()=>{
+            setIsGradient(true);
+        }, 400);
+    };
+    const handleUnhover = ()=>{
+        setStyleCss(styleCommon);
+        setClassCss(classCommon);
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(()=>{
+            setIsGradient(false);
+        }, 100);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-            style: StyleCss,
-            onMouseEnter: changeStyle,
-            onMouseLeave: changeStyle,
-            onClick: click
-        }, void 0, false, {
+            style: styleCss,
+            className: classCss,
+            onMouseEnter: handleHover,
+            onMouseLeave: handleUnhover,
+            onClick: click,
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$Text$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                    size: "1.2em",
+                    isGradient: isGradient,
+                    children: text
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Button/Button.tsx",
+                    lineNumber: 81,
+                    columnNumber: 17
+                }, this),
+                children
+            ]
+        }, void 0, true, {
             fileName: "[project]/src/components/Button/Button.tsx",
-            lineNumber: 54,
+            lineNumber: 74,
             columnNumber: 13
         }, this)
     }, void 0, false);
 }
-Button.defaultProps = {
-    styleCommon: {
-        width: "50px",
-        height: "100px",
-        backgroundColor: "#FFFFFF",
-        color: "#000000"
-    },
-    styleHover: {
-        width: "50px",
-        height: "100px",
-        backgroundColor: "#898b8c",
-        color: "#000000"
-    },
-    click: ()=>console.log('mouseover')
-};
 const __TURBOPACK__default__export__ = Button;
 }}),
 

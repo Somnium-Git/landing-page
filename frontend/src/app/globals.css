@@ -18,7 +18,7 @@
     display: inline-block;
     padding: 10px 20px;
     background-color: #ddd;
-    color: #000;
+    color: #030009;
     z-index: 1;
     overflow: hidden;
     background: linear-gradient(to right,#5A189A 0%,#C77DFF 120%);
@@ -58,4 +58,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
