@@ -1,7 +1,62 @@
 @import "tailwindcss";
+@font-face{
+  font-family: KantumruyPro;
+  src: url('../assets/fonts/KantumruyPro-Regular.ttf') format('truetype');
+}
+@theme{
+  --font-KantumruyPro: KantumruyPro, "sans-serif", ;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(-69deg,#774B99,#9F64CC, #C77DFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .button-common {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: #030009;
+    z-index: 1;
+    overflow: hidden;
+    background: linear-gradient(to right,#5A189A 0%,#C77DFF 120%);
+  }
+  .button-hover{
+    box-shadow: #fff 0px 0px 20px;
+    transition: 300ms ease-in-out;
+    transition-delay: 300ms;
+  }
+  
+  .button-common::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-color: #FFFFFF;
+    z-index: -1;
+    transform: rotate(60deg) translate(-100%, 100%);
+    transform-origin: top left;
+    transition: 600ms ease-in;
+  }
+  .button-common:hover::after {
+    transform: rotate(0deg) translate(0px,0px);
+    transform-origin: top left;
+    transition: 600ms ease-out;
+  }
+}
+
+:root{
+  --background: #000;
+  --foreground: #fff;
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
