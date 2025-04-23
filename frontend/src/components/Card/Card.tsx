@@ -10,7 +10,7 @@ type CardProps = {
 
 function Card({
   width = "100dvw",
-  height = "85dvh",
+  height = "90dvh",
   flex = "row",
   background = "#C3BED8",
   useBar = true,

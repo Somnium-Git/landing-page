@@ -1,8 +1,8 @@
 'use client'
-import styles from './LightBall.module.css'
+import styles from './LightPulse.module.css'
 import { useRef, useLayoutEffect } from 'react';
 
-type LightBallProps = {
+type LightPulseProps = {
   x: string;
   y: string;
   width: string;
@@ -10,13 +10,13 @@ type LightBallProps = {
   isActive?: boolean;
 }
 
-export default function LightBall({ x, y, width, height, isActive = false }: LightBallProps) {
+function LightPulse({ x, y, width, height, isActive = false }: LightPulseProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
-
+    
     const rect = el.getBoundingClientRect();
     const centerX = window.innerWidth  / 2;
     const centerY = window.innerHeight / 2;
@@ -43,3 +43,6 @@ export default function LightBall({ x, y, width, height, isActive = false }: Lig
     </div>
   );
 }
+
+
+export default LightPulse;

@@ -15,7 +15,7 @@ type ButtonProps = {
 };
 
 const defaultStyleCommon : React.CSSProperties = {
-    width: "250px",
+    width: "280px",
     height: "50px",
     backgroundColor: "#333333",
     color: "#FFFFFF",

@@ -25,7 +25,7 @@
   }
   .button-hover{
     box-shadow: #fff 0px 0px 20px;
-    transition: 300ms ease-in-out;
+    transition: 250ms ease-in-out;
     transition-delay: 300ms;
   }
   
