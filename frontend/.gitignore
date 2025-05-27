@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/.next
 /.pnp
 .pnp.*
 .yarn/*
@@ -13,9 +14,7 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+
 
 # production
 /build
