@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#040013] text-gray-300 px-6 md:px-16 pt-10 pb-6 mt-20 text-sm"> 
+    <footer className="bg-[#040013] text-gray-300 px-6 md:px-[2dvw] pt-10 pb-6 mt-20 text-sm"> 
       {/* Topo do footer (logo, navegação e redes sociais) */}
       <div className="flex flex-col md:flex-row md:mb-24 justify-between items-center md:items-start mb-12">
         <div className="mb-6 md:mb-0 text-center md:text-left">
@@ -40,7 +40,7 @@ export default function Footer() {
             <Text size="1rem">Contato</Text>
           </Link>
         </nav>
-        <div className="flex gap-6 mb-4 md:mb-0">
+        <div className="text-center flex gap-6 mb-4 md:mb-0">
           <Link href="/termos" className="hover:text-white transition-all duration-200">
             <Text size="1rem">TERMOS E CONDIÇÕES</Text>
           </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
       {/* Linha divisória roxa */}
-      <hr className="border-t border-[#1A0A37] mb-4" />
+      <hr className="border-t border-[#1A0A37] mb-6" />
 
       {/* Parte inferior com navegação legal e copyright */}
       <div className="flex md:flex-row flex-cow justify-center items-center gap-1">
