@@ -7,9 +7,9 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#09050f] text-gray-300 px-6 md:px-16 pt-10 pb-6 mt-20 text-sm"> 
+    <footer className="bg-[#040013] text-gray-300 px-6 md:px-16 pt-10 pb-6 mt-20 text-sm"> 
       {/* Topo do footer (logo, navegação e redes sociais) */}
-      <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-10">
+      <div className="flex flex-col md:flex-row md:mb-24 justify-between items-center md:items-start mb-12">
         <div className="mb-6 md:mb-0 text-center md:text-left">
           <div className="cursor-pointer flex justify-center font-bold md:justify-start"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
           <Text color="#99a1af" size="1rem">Seu sucesso é o nosso sonho!</Text>
@@ -40,6 +40,7 @@ export default function Footer() {
             <Text size="1rem">Contato</Text>
           </Link>
         </nav>
+
         <div className="flex gap-6 mb-4 md:mb-0">
           <Link href="/termos" className="hover:text-white transition-all duration-200">
             <Text size="1rem">TERMOS E CONDIÇÕES</Text>
@@ -51,12 +52,11 @@ export default function Footer() {
       </div>
 
       {/* Linha divisória roxa */}
-      <hr className="border-t border-purple-900 mb-4" />
+      <hr className="border-t border-[#1A0A37] mb-4" />
 
       {/* Parte inferior com navegação legal e copyright */}
       <div className="flex md:flex-row flex-cow justify-center items-center gap-1">
-        <Text color='oklch(71.4% 0.203 305.504)' size='1rem'>Somnium ©2025.</Text>
-        <Text>Todos os direitos reservados.</Text>
+        <Text color='oklch(71.4% 0.203 305.504)' size='1rem'>Somnium ©2025. Todos os direitos reservados.</Text>
       </div>
     </footer>
   );
