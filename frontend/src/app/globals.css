@@ -4,7 +4,7 @@
   src: url('../assets/fonts/KantumruyPro-Regular.ttf') format('truetype');
 }
 @theme{
-  --font-KantumruyPro: KantumruyPro, "sans-serif", ;
+  --font-KantumruyPro: KantumruyPro, "sans-serif";
 }
 
 @layer utilities {
@@ -25,7 +25,7 @@
   }
   .button-hover{
     box-shadow: #fff 0px 0px 20px;
-    transition: 250ms ease-in-out;
+    transition: 300ms ease-in-out;
     transition-delay: 300ms;
   }
   
@@ -57,6 +57,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "KantumruyPro", sans-serif;
+  font-weight: 500;
   overflow-x: hidden;
 }
