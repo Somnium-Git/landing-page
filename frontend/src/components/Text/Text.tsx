@@ -9,7 +9,7 @@ type TextProps = {
     isGradient?: boolean; 
     height?: string;
     wordSpacing?: string;
-  };
+};
 
 function Text({ children, color, size, isGradient, height = "light", wordSpacing }: TextProps) {
 

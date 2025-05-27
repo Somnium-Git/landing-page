@@ -3,7 +3,7 @@
 import styles from "./Header.module.css";
 import { useRef, useState, useEffect } from "react";
 import Text from "../Text/Text";
- 
+
 export default function Header() {
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -67,9 +67,9 @@ export default function Header() {
 
   return (
     <header 
-    className="text-white font-KantumruyPro font-bold w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
+    className="text-white font-KantumruyPro w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
     >
-      <div className="cursor-pointer flex"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
+      <div className="font-bold cursor-pointer flex"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
       <section className="flex flex-col">
         <section className="flex gap-[3dvw] ">
           <div ref={homeRef} className={currentScreen === 'home' ? "cursor-pointer translate-y-[-5px] transition-all duration-200" 
@@ -106,7 +106,7 @@ export default function Header() {
       <div
       className="
       w-[50px] h-[50px] rounded-full bg-[rgba(60,9,108,0.2)]
-       flex justify-center items-center cursor-pointer font-medium text-xl border-1 border-[#737373]
+      flex justify-center items-center cursor-pointer font-medium text-xl border-1 border-[#737373]
         hover:bg-[rgba(60,9,108,1)] hover:border-[#C77DFF] transition-all duration-200"
       >
         ?
