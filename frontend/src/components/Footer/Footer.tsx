@@ -7,11 +7,11 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#09050f] text-gray-300 px-6 md:px-16 pt-10 pb-6 mt-20 text-sm"> 
+    <footer className="bg-[#09050f] text-gray-300 px-6 md:px-[2dvw] pt-10 pb-6 mt-20 text-sm"> 
       {/* Topo do footer (logo, navegação e redes sociais) */}
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-10">
         <div className="mb-6 md:mb-0 text-center md:text-left">
-          <div className="cursor-pointer flex justify-center font-bold md:justify-start"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
+          <div className="cursor-pointer flex justify-center font-medium md:justify-start"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
           <Text color="#99a1af" size="1rem">Seu sucesso é o nosso sonho!</Text>
         </div>
 

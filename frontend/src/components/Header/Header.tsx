@@ -67,9 +67,9 @@ export default function Header() {
 
   return (
     <header 
-    className="text-white font-KantumruyPro font-bold w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
+    className="text-white font-KantumruyPro w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
     >
-      <div className="cursor-pointer flex"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
+      <div className="font-medium cursor-pointer flex"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
       <section className="flex flex-col">
         <section className="flex gap-[3dvw] ">
           <div ref={homeRef} className={currentScreen === 'home' ? "cursor-pointer translate-y-[-5px] transition-all duration-200" 
