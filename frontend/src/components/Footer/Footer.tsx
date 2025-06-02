@@ -16,9 +16,9 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center justify-center gap-4 mt-6 md:mt-0">
-          <a href="#" className="text-purple-400 hover:text-white text-2xl transition-all duration-200"><FaFacebook /></a>
-          <a href="#" className="text-purple-400 hover:text-white text-3xl transition-all duration-200"><AiFillInstagram /></a>
-          <a href="#" className="text-purple-400 hover:text-white text-2xl transition-all duration-200"><FaXTwitter /></a>
+          <a href="#" className="text-[#C77DFF] hover:text-white text-2xl transition-all duration-200"><FaFacebook /></a>
+          <a href="#" className="text-[#C77DFF] hover:text-white text-3xl transition-all duration-200"><AiFillInstagram /></a>
+          <a href="#" className="text-[#C77DFF] hover:text-white text-2xl transition-all duration-200"><FaXTwitter /></a>
         </div>
       </div>
 
