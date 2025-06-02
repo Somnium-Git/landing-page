@@ -16,9 +16,9 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center justify-center gap-4 mt-6 md:mt-0">
-          <a href="#" className="text-purple-400 hover:text-white text-2xl transition-all duration-200"><FaFacebook /></a>
-          <a href="#" className="text-purple-400 hover:text-white text-3xl transition-all duration-200"><AiFillInstagram /></a>
-          <a href="#" className="text-purple-400 hover:text-white text-2xl transition-all duration-200"><FaXTwitter /></a>
+          <a href="#" className="text-[#C77DFF] hover:text-white text-2xl transition-all duration-200"><FaFacebook /></a>
+          <a href="#" className="text-[#C77DFF] hover:text-white text-3xl transition-all duration-200"><AiFillInstagram /></a>
+          <a href="#" className="text-[#C77DFF] hover:text-white text-2xl transition-all duration-200"><FaXTwitter /></a>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
       {/* Linha divisória roxa */}
-      <hr className="border-t border-purple-900 mb-4" />
+      <hr className="border-t border-[#1A0A37] mb-4" />
 
       {/* Parte inferior com navegação legal e copyright */}
       <div className="flex md:flex-row flex-cow justify-center items-center gap-1">
