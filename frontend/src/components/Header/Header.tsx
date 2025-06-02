@@ -1,6 +1,6 @@
 'use client'
 
-import styles from "./Header.module.css";
+// import styles from "./Header.module.css";
 import { useRef, useState, useEffect } from "react";
 import Text from "../Text/Text";
 
@@ -60,17 +60,16 @@ export default function Header() {
     setCurrentScreen(screen);
   }
 
-  const changePosition = (screen: string) => {
-    
-    setPosition(position);
-  }
+  // const changePosition = (screen: string) => {
+  //   setPosition(position);
+  // }
 
   return (
     <header 
-    className="text-white font-KantumruyPro w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
+    className="text-white w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
     >
       <div className="font-bold cursor-pointer flex"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
-      <section className="flex flex-col">
+      <section className="flex flex-col font-bold">
         <section className="flex gap-[3dvw] ">
           <div ref={homeRef} className={currentScreen === 'home' ? "cursor-pointer translate-y-[-5px] transition-all duration-200" 
             : "cursor-pointer translate-y-[0px] transition-all duration-200"
