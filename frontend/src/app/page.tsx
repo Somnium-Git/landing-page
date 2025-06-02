@@ -5,6 +5,7 @@ import LightBlur from "@/components/LightBall/LightBlur/LightBlur"
 import LightPulse from "@/components/LightBall/LightPulse/LightPulse"
 import Text from "@/components/Text/Text"
 import Card from "@/components/Card/Card"
+import Contact from "@/components/Contact/Contact"
 
 import { useState } from "react"	
 
@@ -37,6 +38,8 @@ export default function Home() {
       {/* sobre */}
       <Card background="#040013" useBar={false}>
       </Card>
+
+      
 
       {/* projetos */}
       <Card flex="col" background="transparent" useBar={false}>
@@ -77,6 +80,8 @@ export default function Home() {
 
         <LightPulse x="25vw" y="-125vh" width="50vw" height="50vw" isActive={isActive}/>
       </section>
+
+      <Contact></Contact>
     </div>
   )
 }
