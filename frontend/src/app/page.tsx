@@ -5,11 +5,13 @@ import LightBlur from "@/components/LightBall/LightBlur/LightBlur"
 import LightPulse from "@/components/LightBall/LightPulse/LightPulse"
 import Text from "@/components/Text/Text"
 import Card from "@/components/Card/Card"
+import Carousel from "@/components/Carousel/Carousel"
 
 import { useState } from "react"	
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false)
+
   return (
     <div>
       {/* inicio */}
@@ -49,19 +51,19 @@ export default function Home() {
             <Text size="1.25em" color="#A8AFC1">Comprometimento total com o seu sonho.</Text>
           </div>
         </div>
+      </Card>
 
-        {/* Linha divisória roxa */}
-        <div className="w-full h-[2px] bg-[#1A0A37] mx-[2dvw] mb-4"></div>
+      {/* Linha divisória roxa */}
+      <div className="w-full h-[2px] bg-[#1A0A37] mx-[2dvw] mb-16"></div>
 
-        <div>
-          <div className="flex flex-col text-center gap-6">
-            <Text size="2.5em" height="bold">Conheça nossos <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">projetos!</span></Text>
-            <Text size="1.25em" color="#A8AFC1">Aqui você encontra os projetos que colocam nossas<br></br> ideias em prática, <span className="text-[#C77DFF] font-bold">transformando desafios<br></br> em soluções criativas.</span></Text>
-          </div>
-
-          <></>
+      <Card height="full" background="transparent" useBar={false}>
+        <div className="flex flex-col text-center gap-6">
+          <Text size="2.5em" height="bold">Conheça nossos <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">projetos!</span></Text>
+          <Text size="1.25em" color="#A8AFC1">Aqui você encontra os projetos que colocam nossas<br></br> ideias em prática, <span className="text-[#C77DFF] font-bold">transformando desafios<br></br> em soluções criativas.</span></Text>
         </div>
       </Card>
+
+      <Carousel></Carousel>
 
       <section>
         <LightBlur x="25vw" y="50vh" size="150px"></LightBlur>

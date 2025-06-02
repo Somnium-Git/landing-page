@@ -1,27 +1,32 @@
 import { SwiperProps, SwiperSlide } from "swiper/react";
 
-import Slider from "@/components/Carousel/SliderContainer/SliderContainer"
+import SliderContainer from "@/components/Carousel/SliderContainer/SliderContainer"
 import SliderItem from "./SliderItem/SliderItem";
 import Text from "../Text/Text";
 
-export default function Carrossel() {
+export default function Carousel() {
   const settings: SwiperProps = {
     freeMode: true,
-    slidesPerView: 2,
-    spaceBetween: 10,
+    initialSlide: 2,
+    slidesPerView: 1,
+    spaceBetween: -40,
     pagination: {
       clickable: true,
     },
     breakpoints: {
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
       640: {
         slidesPerView: 2,
         spaceBetween: 10,
       },
-      768: {
+      830: {
         slidesPerView: 3,
         spaceBetween: 10,
       },
-      1024: {
+      1095: {
         slidesPerView: 4,
         spaceBetween: 10,
       },
@@ -33,48 +38,41 @@ export default function Carrossel() {
   };
 
   return (
-    <Slider settings={settings}>
+    <SliderContainer settings={settings}>
       <SwiperSlide>
-        <SliderItem>
-          <Text size="1.5em" height="bold"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span></Text>
+        <SliderItem></SliderItem>
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <SliderItem></SliderItem>
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <SliderItem></SliderItem>
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <SliderItem 
+        description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem" 
+        projectLink="https://github.com/" 
+        repositoryLink="https://github.com/Somnium-Git/landing-page/tree/test">
+          <Text size="1.5em" height="bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span>
+          </Text>
         </SliderItem>
       </SwiperSlide>
 
       <SwiperSlide>
-        <SliderItem>
-          <Text size="1.5em" height="bold"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span></Text>
-        </SliderItem>
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <SliderItem>
-          <Text size="1.5em" height="bold"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span></Text>
-        </SliderItem>
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <SliderItem>
-          <Text size="1.5em" height="bold"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span></Text>
-        </SliderItem>
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <SliderItem>
-          <Text size="1.5em" height="bold"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span></Text>
-        </SliderItem>
+        <SliderItem></SliderItem>
       </SwiperSlide>
       
       <SwiperSlide>
-        <SliderItem>
-          <Text size="1.5em" height="bold"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span></Text>
-        </SliderItem>
+        <SliderItem></SliderItem>
       </SwiperSlide>
 
       <SwiperSlide>
-        <SliderItem>
-          <Text size="1.5em" height="bold"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span></Text>
-        </SliderItem>
+        <SliderItem></SliderItem>
       </SwiperSlide>
-    </Slider>
+    </SliderContainer>
   );
 }

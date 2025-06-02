@@ -27,7 +27,7 @@ export default function SliderContainer({ settings, children }: SliderContainerP
   return (
     <div>
       {/* Controle do Swiper */}
-      <div className="px-[2dvw] flex justify-between items-center my-4">
+      <div className="px-[2dvw] flex justify-between items-center">
         <button onClick={handlePrevious} className="cursor-pointer text-4xl text-[#774B99] hover:text-[#C77DFF] transition-all duration-200">
           <HiArrowSmallLeft />
         </button>
