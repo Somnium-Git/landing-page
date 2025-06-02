@@ -1,0 +1,16 @@
+.swiper {
+  padding: 1rem;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-prev {
+  color: #C77DFF;
+}
+
+.swiper-button-next {
+  color: #C77DFF;
+}
