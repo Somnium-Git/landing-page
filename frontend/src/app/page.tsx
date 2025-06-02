@@ -14,17 +14,19 @@ export default function Home() {
     <div>
       {/* inicio */}
       <Card flex="row" height="85dvh" background="transparent" useBar={false}>
-        <section className="flex flex-col w-[20vw] h-[40vh] justify-around items-start">
-          <div className="flex flex-col">
-            <div><Text size="2.5em" height="light">Seu sucesso </Text></div>
+        <section className="flex flex-col h-[40vh] justify-around items-start">
+          <div className="flex flex-col leading-12">
+            <div><Text size="2.5em" height="bold">Seu sucesso </Text></div>
             <div className="flex flex-row gap-3">
-              <Text size="2.5em" height="light">é nosso</Text>
+              <Text size="2.5em" height="bold">é nosso</Text>
               <Text size="2.5em" height="bold" isGradient> sonho!</Text>
             </div>
           </div>
-          <div className="w-[20vw] mt-[-10%]">
+
+          <div className="w-[280px]">
             <Text size="1.25em" height="light" color="#A8AFC1" wordSpacing="2px">Use ferramentas inovadoras e dê uma chance para que seu sonho se torne realidade.</Text>
           </div>
+
           <Button text="Saiba mais" click={() => setIsActive(true)}>
           </Button> 
         </section>
@@ -38,11 +40,14 @@ export default function Home() {
 
       {/* projetos */}
       <Card flex="col" background="transparent" useBar={false}>
-        <div className="flex flex-col gap-6">
-          <div className="text-center">
-            <Text size="2.5em" height="bold"><Text isGradient>Sonhe</Text>Acordado Conosco!</Text>
+        <div className="flex flex-col items-center text-center">
+          <div className="leading-9">
+            <Text size="2.5em" height="bold" isGradient>Sonhe</Text>
           </div>
-          <Text size="1.25em" color="#A8AFC1">Comprometimento total com o seu sonho.</Text>
+          <Text size="2.5em" height="bold">Acordado Conosco!</Text>
+          <div className="mt-4">
+            <Text size="1.25em" color="#A8AFC1">Comprometimento total com o seu sonho.</Text>
+          </div>
         </div>
 
         {/* Linha divisória roxa */}

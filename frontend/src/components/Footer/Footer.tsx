@@ -55,7 +55,7 @@ export default function Footer() {
 
       {/* Parte inferior com navegação legal e copyright */}
       <div className="flex md:flex-row flex-cow justify-center items-center gap-1">
-        <Text color='oklch(71.4% 0.203 305.504)' size='1rem'>Somnium ©2025. Todos os direitos reservados.</Text>
+        <Text color='oklch(71.4% 0.203 305.504)' size='1rem'><span className="font-bold">Somnium ©2025</span>. Todos os direitos reservados.</Text>
       </div>
     </footer>
   );
