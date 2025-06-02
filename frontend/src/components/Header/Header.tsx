@@ -1,9 +1,9 @@
 'use client'
 
-import styles from "./Header.module.css";
+// import styles from "./Header.module.css";
 import { useRef, useState, useEffect } from "react";
 import Text from "../Text/Text";
- 
+
 export default function Header() {
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -106,7 +106,7 @@ export default function Header() {
       <div
       className="
       w-[50px] h-[50px] rounded-full bg-[rgba(60,9,108,0.2)]
-       flex justify-center items-center cursor-pointer font-medium text-xl border-1 border-[#737373]
+      flex justify-center items-center cursor-pointer font-medium text-xl border-1 border-[#737373]
         hover:bg-[rgba(60,9,108,1)] hover:border-[#C77DFF] transition-all duration-200"
       >
         ?
