@@ -19,7 +19,6 @@ export default function Home() {
   return (
     <div>
       {/* ===================== INÍCIO ===================== */}
-
       <div id="home">
         <Card flex="row" height="85dvh" background="transparent" useBar={false}>
           <section className="flex flex-col h-[40vh] justify-around items-start">
@@ -82,6 +81,7 @@ export default function Home() {
           </div>
         </div>
       </Card>
+
       <div id="projects">
         {/* ===================== LINHA DIVISÓRIA ===================== */}
         <div className="w-full h-[2px] bg-[#1A0A37] mx-[2dvw] mb-16"></div>
@@ -108,6 +108,16 @@ export default function Home() {
         {/* ===================== CARROSSEL DE PROJETOS ===================== */}
 
         <Carousel></Carousel>
+      </div>
+
+      {/* ===================== PARCEIROS ===================== */}
+      <div id="partners">
+        <Associates></Associates>
+      </div>
+
+      {/* ===================== CONTATO ===================== */}
+      <div id="contact">
+        <Contact></Contact>
       </div>
 
       {/* ===================== EFEITOS DE LUZ ===================== */}
@@ -148,17 +158,15 @@ export default function Home() {
           height="50vw"
           isActive={isActive}
         />
+
+        <LightPulse
+          x="37vw"
+          y="-500vh"
+          width="1250px"
+          height="1250px"
+          isActive={isActive}
+        />
       </section>
-
-      {/* ===================== PARCEIROS ===================== */}
-      <div id="partners">
-        <Associates></Associates>
-      </div>
-
-      {/* ===================== CONTATO ===================== */}
-      <div id="contact">
-        <Contact></Contact>
-      </div>
     </div>
   );
 }
