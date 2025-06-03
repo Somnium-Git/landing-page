@@ -69,7 +69,8 @@ export default function Header() {
     className="text-white w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
     >
       <div className="font-bold cursor-pointer flex"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
-      <section className="flex flex-col font-bold">
+
+      <section className="hidden flex-col font-bold md:flex">
         <section className="flex gap-[3dvw] ">
           <div ref={homeRef} className={currentScreen === 'home' ? "cursor-pointer translate-y-[-5px] transition-all duration-200" 
             : "cursor-pointer translate-y-[0px] transition-all duration-200"
@@ -102,6 +103,7 @@ export default function Header() {
         className={"transition-all duration-200 ease-in-out bg-[#C77DFF] w-[40px] h-[2px]"}
         ></div>
       </section>
+
       <div
       className="
       w-[50px] h-[50px] rounded-full bg-[rgba(60,9,108,0.2)]

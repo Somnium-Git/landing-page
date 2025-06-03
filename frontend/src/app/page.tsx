@@ -50,7 +50,12 @@ export default function Home() {
             </Text>
           </div>
 
+<<<<<<< HEAD
           <Button text="Saiba mais" click={() => setIsActive(true)}></Button>
+=======
+          <Button text="Saiba mais" click={() => setIsActive(true)}>
+          </Button>
+>>>>>>> f4c75b69ab0015d179b78d9b37b40439bd100ac4
         </section>
         <div></div>
         <div></div>
