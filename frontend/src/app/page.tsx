@@ -33,7 +33,7 @@ export default function Home() {
           </div>
 
           <Button text="Saiba mais" click={() => setIsActive(true)}>
-          </Button> 
+          </Button>
         </section>
         <div></div>
         <div></div>
@@ -41,8 +41,6 @@ export default function Home() {
 
       {/* sobre */}
       <AboutUs></AboutUs>
-
-      
 
       {/* projetos */}
       <Card flex="col" background="transparent" useBar={false}>
@@ -55,7 +53,6 @@ export default function Home() {
             <Text size="1.25em" color="#A8AFC1">Comprometimento total com o seu sonho.</Text>
           </div>
         </div>
-
       </Card>
 
       {/* Linha divisória roxa */}
