@@ -7,7 +7,7 @@ export default function AboutSection() {
       style={{ width: "100dvw", height: "100dvh" }}
     >
       {/* Texto */}
-      <div className="max-w-xl">
+      <div className="max-w-xl ">
         <h4 className="text-[#C77DFF] text-lg font-semibold mb-2">Sobre nós</h4>
         <h2 className="text-white text-4xl font-bold mb-4 leading-tight">
           Conheça <br /> nossa empresa
