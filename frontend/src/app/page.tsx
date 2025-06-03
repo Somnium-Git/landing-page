@@ -7,6 +7,8 @@ import Text from "@/components/Text/Text"
 import Card from "@/components/Card/Card"
 import Carousel from "@/components/Carousel/Carousel"
 import Contact from "@/components/Contact/Contact"
+import AboutUs from "@/components/AboutUs/AboutUs"
+
 
 import { useState } from "react"	
 
@@ -38,8 +40,7 @@ export default function Home() {
       </Card>
 
       {/* sobre */}
-      <Card background="#040013" useBar={false}>
-      </Card>
+      <AboutUs></AboutUs>
 
       
 
@@ -54,6 +55,7 @@ export default function Home() {
             <Text size="1.25em" color="#A8AFC1">Comprometimento total com o seu sonho.</Text>
           </div>
         </div>
+
       </Card>
 
       {/* Linha divisória roxa */}

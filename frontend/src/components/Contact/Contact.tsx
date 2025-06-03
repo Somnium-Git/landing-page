@@ -1,6 +1,6 @@
 import React from "react";
 import Text from "../Text/Text";
-import styles from "./Contact.module.css"
+import styles from "./Contact/Contact.module.css"
 import { FaFacebook, FaXTwitter } from 'react-icons/fa6';
 import { AiFillInstagram } from "react-icons/ai"
 import { MdEmail } from 'react-icons/md';
