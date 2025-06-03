@@ -1,107 +1,130 @@
-import { useState, useRef } from "react";
+"use client";
+import { useState } from "react";
+import Image from "next/image";
 
-const cards = [
-  {
-    logo: "../../assets/Outlier.jpeg",
-    title: "Empresa 1",
-    description: "Descrição da Empresa 1",
-  },
-  {
-    logo: "/empresas/logo2.png",
-    title: "Empresa 2",
-    description: "Descrição da Empresa 2",
-  },
-  {
-    logo: "/empresas/logo3.png",
-    title: "Empresa 3",
-    description: "Descrição da Empresa 3",
-  },
-  {
-    logo: "/empresas/logo4.png",
-    title: "Empresa 4",
-    description: "Descrição da Empresa 4",
-  },
-];
-
-export default function Associates() {
+export default function PartnerSection() {
   const [hovered, setHovered] = useState<number | null>(null);
-  const [isGradient, setIsGradient] = useState<number | null>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const handleMouseEnter = (i: number) => {
-    setHovered(i);
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => setIsGradient(i), 400);
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(null);
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => setIsGradient(null), 100);
-  };
 
   return (
-    <section
-      className="bg-[#040013] flex flex-col items-center justify-center overflow-hidden px-8 py-16 relative my-16"
-      style={{ width: "100dvw", height: "500px" }}
-    >
-      <h1 className="text-4xl font-bold text-white">
+    <section className="w-full bg-[#040013] py-20 px-4 flex flex-col items-center my-20">
+      <h2 className="text-white text-4xl font-bold text-center mb-12">
         Empresas{" "}
-        <span className="bg-gradient-to-r from-[#C77DFF] to-[#774B99] bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent">
           parceiras
         </span>
-      </h1>
+      </h2>
 
-      <div className="flex justify-center gap-8 mt-12 w-full max-w-2xl">
-        {cards.map((card, i) => (
+      <div className="flex flex-wrap justify-center gap-10">
+        {/* Card 1 - TechSpark */}
+        <div
+          onMouseEnter={() => setHovered(0)}
+          onMouseLeave={() => setHovered(null)}
+          className={`relative w-[20.5rem] h-[28.5rem] m-2 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 
+            ${
+              hovered === 0
+                ? "bg-white scale-110 shadow-[0_0_40px_10px_rgba(255,255,255,0.5)]"
+                : "bg-[#5A189A] scale-100 shadow-lg"
+            }
+          `}
+        >
+          <Image
+            src="/Gama.png"
+            alt="Background Image"
+            width={300}
+            height={300}
+            className={`object-contain transition-opacity duration-300 absolute inset-0 m-auto 
+              ${hovered === 0 ? "opacity-0" : "opacity-100"}
+            `}
+            draggable={false}
+            priority
+          />
           <div
-            key={i}
-            className={`flex flex-col items-center transition-all duration-300 ease-in-out ${
-              hovered === i ? "scale-110 shadow-2xl" : "scale-100"
-            }`}
-            onMouseEnter={() => handleMouseEnter(i)}
-            onMouseLeave={handleMouseLeave}
+            className={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-300 
+              ${hovered === 0 ? "opacity-100" : "opacity-0 pointer-events-none"}
+            `}
           >
-            <div
-              className={`rounded-xl border-2 flex items-center justify-center relative overflow-hidden transition-all duration-300
-                ${
-                  isGradient === i
-                    ? "bg-gradient-to-b from-[#C77DFF] to-[#774B99] border-[#8B3DFF]"
-                    : "bg-[#333333] border-[#555555]"
-                }
-              `}
-              style={{ width: "250px", height: "340px" }}
-            >
-              <img
-                src={card.logo}
-                alt={card.title}
-                className={`w-24 h-24 object-contain transition-opacity duration-300 absolute inset-0 m-auto ${
-                  hovered === i ? "opacity-0" : "opacity-100"
-                }`}
-                draggable={false}
-              />
-              <div
-                className={`flex flex-col items-center justify-center absolute inset-0 px-4 text-center transition-opacity duration-300 ${
-                  hovered === i
-                    ? "opacity-100"
-                    : "opacity-0 pointer-events-none"
-                }`}
-              >
-                <span
-                  className={`text-white font-bold text-lg mb-2 transition-colors duration-300 ${
-                    isGradient === i
-                      ? "bg-gradient-to-r from-[#C77DFF] to-[#774B99] bg-clip-text text-transparent"
-                      : ""
-                  }`}
-                >
-                  {card.title}
-                </span>
-                <span className="text-white text-sm">{card.description}</span>
-              </div>
-            </div>
-            <span className="w-3 h-3 bg-[#A259FF] rounded-full mt-4 block transition-all duration-300" />
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent mb-2">
+              TechSpark
+            </h3>
+            <p className="text-[#5A189A] text-sm font-medium">
+              Soluções inovadoras em tecnologia educacional.
+            </p>
           </div>
-        ))}
+        </div>
+
+        {/* Card 2 - CodeVerse */}
+        <div
+          onMouseEnter={() => setHovered(1)}
+          onMouseLeave={() => setHovered(null)}
+          className={`relative w-[20.5rem] h-[28.5rem] m-2 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 
+            ${
+              hovered === 1
+                ? "bg-white scale-110 shadow-[0_0_40px_10px_rgba(255,255,255,0.5)]"
+                : "bg-[#5A189A] scale-100 shadow-lg"
+            }
+          `}
+        >
+          <Image
+            src="/Outlier.png"
+            alt="CodeVerse"
+            width={300}
+            height={300}
+            className={`object-contain transition-opacity duration-300 absolute inset-0 m-auto 
+              ${hovered === 1 ? "opacity-0" : "opacity-100"}
+            `}
+            draggable={false}
+            priority
+          />
+          <div
+            className={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-300 
+              ${hovered === 1 ? "opacity-100" : "opacity-0 pointer-events-none"}
+            `}
+          >
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent mb-2">
+              CodeVerse
+            </h3>
+            <p className="text-[#5A189A] text-sm font-medium">
+              Transformando ideias em códigos eficientes.
+            </p>
+          </div>
+        </div>
+
+        {/* Card 3 - BrightData */}
+        <div
+          onMouseEnter={() => setHovered(2)}
+          onMouseLeave={() => setHovered(null)}
+          className={`relative w-[20.5rem] h-[28.5rem] m-2 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 
+            ${
+              hovered === 2
+                ? "bg-white scale-110 shadow-[0_0_40px_10px_rgba(255,255,255,0.5)]"
+                : "bg-[#5A189A] scale-100 shadow-lg"
+            }
+          `}
+        >
+          <Image
+            src="/trinity.png"
+            alt="BrightData"
+            width={300}
+            height={300}
+            className={`object-contain transition-opacity duration-300 absolute inset-0 m-auto 
+              ${hovered === 2 ? "opacity-0" : "opacity-100"}
+            `}
+            draggable={false}
+            priority
+          />
+          <div
+            className={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-300 
+              ${hovered === 2 ? "opacity-100" : "opacity-0 pointer-events-none"}
+            `}
+          >
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent mb-2">
+              BrightData
+            </h3>
+            <p className="text-[#5A189A] text-sm font-medium">
+              Inteligência de dados para decisões assertivas.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

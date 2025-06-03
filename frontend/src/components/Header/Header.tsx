@@ -30,6 +30,12 @@ export default function Header() {
   }, []);
   
   const changeScreen = async (screen: string) => {
+    const section = document.getElementById(screen);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Atualize a linha e o destaque normalmente:
     if(screen === "home") {
       if(homeRef.current) {
         setPosition(Math.round(homeRef.current.getBoundingClientRect().x)); 

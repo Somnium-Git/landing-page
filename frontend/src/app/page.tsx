@@ -1,70 +1,70 @@
-'use client'
+"use client";
 
-import Button from "@/components/Button/Button"
-import LightBlur from "@/components/LightBall/LightBlur/LightBlur"
-import LightPulse from "@/components/LightBall/LightPulse/LightPulse"
-import Text from "@/components/Text/Text"
-import Card from "@/components/Card/Card"
-import Carousel from "@/components/Carousel/Carousel"
-import Contact from "@/components/Contact/Contact"
-import AboutUs from "@/components/AboutUs/AboutUs"
-import Associates from "@/components/Associates/Associates"
+import Button from "@/components/Button/Button";
+import LightBlur from "@/components/LightBall/LightBlur/LightBlur";
+import LightPulse from "@/components/LightBall/LightPulse/LightPulse";
+import Text from "@/components/Text/Text";
+import Card from "@/components/Card/Card";
+import Carousel from "@/components/Carousel/Carousel";
+import Contact from "@/components/Contact/Contact";
+import AboutUs from "@/components/AboutUs/AboutUs";
+import Associates from "@/components/Associates/Associates";
 
 
-import { useState } from "react"	
+import { useState } from "react";
 
 export default function Home() {
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <div>
-      {/* inicio */}
-      <Card flex="row" height="85dvh" background="transparent" useBar={false}>
-        <section className="flex flex-col h-[40vh] justify-around items-start">
-          <div className="flex flex-col leading-12">
-            <div>
-              <Text size="2.5em" height="bold">
-                Seu sucesso{" "}
+      {/* ===================== INÍCIO ===================== */}
+
+      <div id="home">
+        <Card flex="row" height="85dvh" background="transparent" useBar={false}>
+          <section className="flex flex-col h-[40vh] justify-around items-start">
+            <div className="flex flex-col leading-12">
+              <div>
+                <Text size="2.5em" height="bold">
+                  Seu sucesso{" "}
+                </Text>
+              </div>
+              <div className="flex flex-row gap-3">
+                <Text size="2.5em" height="bold">
+                  é nosso
+                </Text>
+                <Text size="2.5em" height="bold" isGradient>
+                  {" "}
+                  sonho!
+                </Text>
+              </div>
+            </div>
+
+            <div className="w-[280px]">
+              <Text
+                size="1.25em"
+                height="light"
+                color="#A8AFC1"
+                wordSpacing="2px"
+              >
+                Use ferramentas inovadoras e dê uma chance para que seu sonho se
+                torne realidade.
               </Text>
             </div>
-            <div className="flex flex-row gap-3">
-              <Text size="2.5em" height="bold">
-                é nosso
-              </Text>
-              <Text size="2.5em" height="bold" isGradient>
-                {" "}
-                sonho!
-              </Text>
-            </div>
-          </div>
 
-          <div className="w-[280px]">
-            <Text
-              size="1.25em"
-              height="light"
-              color="#A8AFC1"
-              wordSpacing="2px"
-            >
-              Use ferramentas inovadoras e dê uma chance para que seu sonho se
-              torne realidade.
-            </Text>
-          </div>
+            <Button text="Saiba mais" click={() => setIsActive(true)}></Button>
+          </section>
+          <div></div>
+          <div></div>
+        </Card>
+      </div>
 
-<<<<<<< HEAD
-          <Button text="Saiba mais" click={() => setIsActive(true)}></Button>
-=======
-          <Button text="Saiba mais" click={() => setIsActive(true)}>
-          </Button>
->>>>>>> f4c75b69ab0015d179b78d9b37b40439bd100ac4
-        </section>
-        <div></div>
-        <div></div>
-      </Card>
+      {/* ===================== SOBRE ===================== */}
+      <div id="about">
+        <AboutUs></AboutUs>
+      </div>
 
-      {/* sobre */}
-      <AboutUs></AboutUs>
-
-      {/* projetos */}
+      {/* ===================== PROJETOS - TÍTULO ===================== */}
       <Card flex="col" background="transparent" useBar={false}>
         <div className="flex flex-col items-center text-center">
           <div className="leading-9">
@@ -82,30 +82,35 @@ export default function Home() {
           </div>
         </div>
       </Card>
+      <div id="projects">
+        {/* ===================== LINHA DIVISÓRIA ===================== */}
+        <div className="w-full h-[2px] bg-[#1A0A37] mx-[2dvw] mb-16"></div>
 
-      {/* Linha divisória roxa */}
-      <div className="w-full h-[2px] bg-[#1A0A37] mx-[2dvw] mb-16"></div>
+        {/* ===================== PROJETOS - DESCRIÇÃO ===================== */}
+        <Card height="full" background="transparent" useBar={false}>
+          <div className="flex flex-col text-center gap-6">
+            <Text size="2.5em" height="bold">
+              Conheça nossos{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">
+                projetos!
+              </span>
+            </Text>
+            <Text size="1.25em" color="#A8AFC1">
+              Aqui você encontra os projetos que colocam nossas<br></br> ideias
+              em prática,{" "}
+              <span className="text-[#C77DFF] font-bold">
+                transformando desafios<br></br> em soluções criativas.
+              </span>
+            </Text>
+          </div>
+        </Card>
 
-      <Card height="full" background="transparent" useBar={false}>
-        <div className="flex flex-col text-center gap-6">
-          <Text size="2.5em" height="bold">
-            Conheça nossos{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">
-              projetos!
-            </span>
-          </Text>
-          <Text size="1.25em" color="#A8AFC1">
-            Aqui você encontra os projetos que colocam nossas<br></br> ideias em
-            prática,{" "}
-            <span className="text-[#C77DFF] font-bold">
-              transformando desafios<br></br> em soluções criativas.
-            </span>
-          </Text>
-        </div>
-      </Card>
+        {/* ===================== CARROSSEL DE PROJETOS ===================== */}
 
-      <Carousel></Carousel>
+        <Carousel></Carousel>
+      </div>
 
+      {/* ===================== EFEITOS DE LUZ ===================== */}
       <section>
         <LightBlur x="25vw" y="50vh" size="150px"></LightBlur>
         <LightBlur x="80vw" y="80vh" size="200px"></LightBlur>
@@ -145,11 +150,15 @@ export default function Home() {
         />
       </section>
 
-      {/* parceiros */}
-      <Associates></Associates>
+      {/* ===================== PARCEIROS ===================== */}
+      <div id="partners">
+        <Associates></Associates>
+      </div>
 
-      {/* contato */}
-       <Contact></Contact>
+      {/* ===================== CONTATO ===================== */}
+      <div id="contact">
+        <Contact></Contact>
+      </div>
     </div>
   );
 }

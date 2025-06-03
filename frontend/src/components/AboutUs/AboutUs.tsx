@@ -8,24 +8,6 @@ export default function AboutSection() {
       style={{ width: "100dvw", minHeight: "100dvh" }}
     >
       {/* Texto */}
-<<<<<<< HEAD
-      <div className="max-w-xl ">
-        <h4 className="text-[#C77DFF] text-lg font-semibold mb-2">Sobre nós</h4>
-        <h2 className="text-white text-4xl font-bold mb-4 leading-tight">
-          Conheça <br /> nossa empresa
-        </h2>
-        <p className="text-gray-300 text-base mb-6">
-          A <strong>Somnium</strong> é uma empresa focada em inovação e no
-          avanço tecnológico, com o objetivo de tornar a tecnologia mais
-          acessível para empresas de pequeno e médio porte. Nossa missão é
-          facilitar a inserção e a ascensão dessas empresas no mercado por meio
-          de soluções tecnológicas eficazes e personalizadas.
-        </p>
-        <p className="text-gray-400 mb-6">
-          Veja um pouco mais sobre a <strong>Somnium</strong> e seus
-          desenvolvedores clicando no botão abaixo.
-        </p>
-=======
       <div className="max-w-[400px]">
         <div className="w-max mb-3">
           <Text size="1.5em" height="bold" isGradient>Sobre nós</Text>
@@ -51,7 +33,6 @@ export default function AboutSection() {
           </Text>
         </div>
   
->>>>>>> f4c75b69ab0015d179b78d9b37b40439bd100ac4
         <Button
           text="Veja mais"
           click={() => {
