@@ -1,0 +1,135 @@
+.section {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+	gap: 2.5rem;
+	padding: 2dvw;
+}
+
+.line {
+	height: 3px;
+	width: 100%;
+	background-color: #A8AFC1;
+	border-radius: 10px;
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+
+.container {
+	width: max-content;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: start;
+	flex-direction: column;
+}
+
+.spacing {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-top: 2rem;
+}
+
+/* formulario */
+
+.divForm {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: column;
+	max-width: 420px;
+	height: auto;
+	border: solid 0.4vh #9F53DD;
+	border-radius: 10px;
+	padding: 2.5rem;
+	background-color: #030009;
+}
+
+.alignmentText {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.containerForm {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	gap: 2rem;
+}
+
+.inputBasic {
+	width: 100%;
+	background-color: #040013;
+	border: solid 3px #475579;
+	border-radius: 1rem;
+	padding: 0.5rem 1rem;
+	font-size: 1.25em;
+}
+
+
+/* COMEÇO area de texto da mensagem */
+.textarea {
+	width: 100%;
+	height: 150px;
+	background-color: #040013;
+	border: solid 3px #475579;
+	border-radius: 1rem;
+	padding: 0.5rem 1rem;
+	font-size: 1.25em;
+	resize: none;
+	margin-bottom: 4rem;
+}
+
+.textarea::-webkit-scrollbar {
+	width: 5px;
+	border: solid 1px #475579;
+}
+
+.textarea::-webkit-scrollbar-track {
+	background: #040013;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+	background-color: #a855f7;
+	/* roxo */
+	border-radius: 8px;
+	border: 1px solid #7B2CBF;
+}
+
+/* FIM area de texto da mensagem */
+
+.textarea::placeholder, .inputBasic::placeholder {
+	color: #A8AFC1;
+}
+
+/* .btn {
+	width: 20vw;
+	height: 7vh;
+	background: #9F53DD;
+	background: linear-gradient(81deg, rgba(90, 24, 154, 1) 0%, rgba(199, 125, 255, 1) 100%);
+	border-radius: 100px;
+	font-size: 2.8vh;
+	transition: .5s;
+}
+
+.btn:hover {
+	background: linear-gradient(81deg, rgba(85, 76, 94, 0) 0%, rgba(199, 125, 255, 0) 100%);
+	background-color: #cfcfcf;
+	color: #5A189A;
+	box-shadow: 0px 0px 10px #a855f7;
+	text-shadow: 0px 0px 25px #8000ff;
+} */
+
+@media screen and (max-width: 1024px) {
+	.section {
+		flex-direction: column;
+	}
+}
