@@ -6,6 +6,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import Text from "../Text/Text";
 import Modal from "../Modal/Modal";
 import { DialogTrigger } from "@/lib/utils/modal";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -117,7 +118,7 @@ export default function Footer() {
             title="TERMOS E CONDIÇÕES"
             description="Descrição breve sobre a Somnium"
           >
-            <p className="text-sm text-muted-foreground">
+            <p className="text-justify text-[#f6f6f6] text-sm text-muted-foreground">
               A Somnium é uma empresa de desenvolvimento de software dedicada à
               criação de soluções inovadoras e personalizadas, utilizando
               tecnologias modernas e metodologias ágeis. Ao contratar nossos
@@ -159,18 +160,19 @@ export default function Footer() {
               <strong>somniumorganizacional@gmail.com</strong>.
             </p>
           </Modal>
+
           <Modal
             trigger={
               <DialogTrigger asChild>
                 <span className="hover:text-white transition-all duration-200 cursor-pointer">
-                  <Text size="1rem">TERMOS E CONDIÇÕES</Text>
+                  <Text size="1rem">POLÍTICA DE PRIVACIDADE</Text>
                 </span>
               </DialogTrigger>
             }
             title="POLÍTICA DE PRIVACIDADE"
             description="Descrição breve sobre a Somnium"
           >
-            <p className="text-sm text-muted-foreground">
+            <p className="text-justify text-[#f6f6f6] text-sm text-muted-foreground">
               A Somnium respeita sua privacidade e está comprometida com a
               proteção dos seus dados pessoais coletados durante o uso de nossos
               serviços e plataformas.

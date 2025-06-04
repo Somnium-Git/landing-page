@@ -5,6 +5,7 @@ import { useRef, useState, useEffect } from "react";
 import { DialogTrigger } from "@radix-ui/react-dialog";
 import Text from "../Text/Text";
 import Modal from "../Modal/Modal";
+import Link from "next/link";
 
 export default function Header() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -206,9 +207,9 @@ export default function Header() {
           </DialogTrigger>
         }
         title="Sobre a Somnium"
-        description="Descrição breve sorbe a somnium"
+        description="Descrição breve sobre a Somnium"
       >
-        <p className="text-sm text-muted-foreground">
+        <p className="text-justify text-[#f6f6f6] text-sm text-muted-foreground">
           A Somnium é uma empresa desenvolvedora de software que se dedica a
           criar soluções inovadoras e personalizadas para atender às
           necessidades dos nossos clientes. Nossa equipe é composta por

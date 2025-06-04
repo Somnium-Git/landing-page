@@ -6,7 +6,7 @@ export default function PartnerSection() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="w-full bg-[#040013] py-20 px-4 flex flex-col items-center my-20">
+    <section className="w-full bg-[#040013] py-24 px-4 flex flex-col items-center my-20">
       <h2 className="text-white text-4xl font-bold text-center mb-12">
         Empresas{" "}
         <span className="bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent">
@@ -23,7 +23,7 @@ export default function PartnerSection() {
         ${
           hovered === 0
             ? "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] scale-110 shadow-[0_0_80px_30px_rgba(90,24,154,0.5)]"
-            : "bg-[#EEEEEE] shadow-lg"
+            : "bg-gradient-to-t from-[#f6f6f6] to-[#A8AFC1] shadow-lg"
         }
         `}
         >
@@ -70,7 +70,7 @@ export default function PartnerSection() {
         ${
           hovered === 1
             ? "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] scale-110 shadow-[0_0_80px_30px_rgba(90,24,154,0.5)]"
-            : "bg-[#EEEEEE] shadow-lg"
+            : "bg-gradient-to-t from-[#f6f6f6] to-[#A8AFC1] shadow-lg"
         }
         `}
         >
@@ -117,7 +117,7 @@ export default function PartnerSection() {
         ${
           hovered === 2
             ? "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] scale-110 shadow-[0_0_80px_30px_rgba(90,24,154,0.5)]"
-            : "bg-[#EEEEEE] shadow-lg"
+            : "bg-gradient-to-t from-[#f6f6f6] to-[#A8AFC1] shadow-lg"
         }
         `}
         >

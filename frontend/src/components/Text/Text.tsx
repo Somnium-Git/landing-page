@@ -1,6 +1,6 @@
 
-import PropTypes from 'prop-types';
-import styles from "./Text.module.css"
+// import PropTypes from 'prop-types';
+// import styles from "./Text.module.css"
 
 type TextProps = {
     children?: React.ReactNode;

@@ -135,7 +135,7 @@ export default function Home() {
       {/* ===================== PARCEIROS ===================== */}
       <div id="partners">
 
-        <Associates>  </Associates>
+        <Associates></Associates>
       </div>
 
       {/* ===================== CONTATO ===================== */}

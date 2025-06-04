@@ -1,15 +1,15 @@
+import Image from "next/image";
 import Button from "../Button/Button";
 import Text from "../Text/Text";
-import Image from "next/image";
 
 export default function AboutSection() {
   return (
     <section
-      className="bg-[#040013] flex flex-col items-center justify-evenly gap-10 px-8 py-16 relative overflow-hidden lg:gap-0 lg:flex-row"
+      className="bg-[#040013] flex flex-col items-center justify-evenly gap-10 px-8 py-16 relative overflow-hidden md:gap-0 md:flex-row"
       style={{ width: "100dvw", minHeight: "100dvh" }}
     >
       {/* Texto */}
-      <div className="max-w-[500px] lg:max-w-[400px]">
+      <div className="max-w-[400px]">
         <div className="w-max mb-3">
           <Text size="1.5em" height="bold" isGradient>
             Sobre nós

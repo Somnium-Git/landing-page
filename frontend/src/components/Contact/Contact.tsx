@@ -5,22 +5,23 @@ import { FaFacebook, FaXTwitter } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import Button from "../Button/Button";
+import Swal from "sweetalert2";
 
 function Contact() {
   const newStyleCommon = {
-		width: "100%",
-		height: "50px",
-		backgroundColor: "#333333",
-		color: "#FFFFFF",
-		fontWeight: "bold",
-		letterSpacing: "1px",
-		borderRadius: "25px",
-		cursor: "pointer",
-	};
+    width: "100%",
+    height: "50px",
+    backgroundColor: "#333333",
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    letterSpacing: "1px",
+    borderRadius: "25px",
+    cursor: "pointer",
+  };
 
   const newStyleHover = {
     ...newStyleCommon,
-		backgroundColor: "#111111",
+    backgroundColor: "#111111",
   };
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -44,11 +45,28 @@ function Contact() {
       }),
     });
 
+    const swalOptions = {
+      background: "#040013",
+      color: "#fff",
+      confirmButtonColor: "#C77DFF", // roxo, ajuste se quiser outra cor
+      iconColor: "#C77DFF",
+    };
+
     if (res.ok) {
-      alert("Mensagem enviada com sucesso!");
+      Swal.fire({
+        icon: "success",
+        title: "Mensagem enviada!",
+        text: "Mensagem enviada com sucesso!",
+        ...swalOptions,
+      });
       form.reset();
     } else {
-      alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+      Swal.fire({
+        icon: "error",
+        title: "Erro",
+        text: "Erro ao enviar a mensagem. Tente novamente mais tarde.",
+        ...swalOptions,
+      });
     }
   }
 
@@ -61,12 +79,12 @@ function Contact() {
           </Text>
         </div>
 
-				<div className="text-center lg:text-justify">
-					<Text color="#A8AFC1" size="1.25em">
-						Entre em contato com a nossa equipe e <br />
-						tire suas duvidas conosco.
-					</Text>
-				</div>
+        <div className="text-center lg:text-justify">
+          <Text color="#A8AFC1" size="1.25em">
+            Entre em contato com a nossa equipe e <br />
+            tire suas duvidas conosco.
+          </Text>
+        </div>
 
         <div className={styles.spacing}>
           <a
@@ -131,7 +149,11 @@ function Contact() {
 
           <textarea placeholder="Sua Mensagem..." className={styles.textarea} />
 
-          <Button text="Enviar" styleCommon={newStyleCommon} styleHover={newStyleHover}></Button>
+          <Button
+            text="Enviar"
+            styleCommon={newStyleCommon}
+            styleHover={newStyleHover}
+          ></Button>
 
           {/* <button className={styles.btn} type="submit">
             Enviar
