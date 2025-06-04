@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div>
       {/* ===================== INÍCIO ===================== */}
-      
+
       <div id="home">
         <Card flex="row" height="85dvh" background="transparent" useBar={false}>
           <section className="flex flex-col h-[40vh] justify-around items-start">
@@ -73,7 +73,12 @@ export default function Home() {
       </div>
 
       {/* ===================== PROJETOS - TÍTULO ===================== */}
-      <Card justify="justify-center" flex="col" background="transparent" useBar={false}>
+      <Card
+        justify="justify-center"
+        flex="col"
+        background="transparent"
+        useBar={false}
+      >
         <div className="flex flex-col items-center text-center mb-28">
           <div className="leading-9">
             <Text size="2.5em" height="bold" isGradient>
@@ -89,12 +94,12 @@ export default function Home() {
             </Text>
           </div>
         </div>
-        
-        <Image 
-          src="/Diagrama.png" 
+
+        <Image
+          src="/Diagrama.png"
           alt="Diagrama Somnium"
           width={900}
-          height={900}          
+          height={900}
           draggable={false}
         />
       </Card>
@@ -129,7 +134,8 @@ export default function Home() {
 
       {/* ===================== PARCEIROS ===================== */}
       <div id="partners">
-        <Associates></Associates>
+
+        <Associates>  </Associates>
       </div>
 
       {/* ===================== CONTATO ===================== */}
@@ -168,20 +174,9 @@ export default function Home() {
           isActive={isActive}
         />
 
-        <LightPulse
-          x="26.5vw"
-          y="-130vh"
-          width="50vw"
-          height="600px"
-        />
-        
+        <LightPulse x="26.5vw" y="-130vh" width="50vw" height="600px" />
 
-        <LightPulse
-          x="37vw"
-          y="-500vh"
-          width="1250px"
-          height="1250px"
-        />
+        <LightPulse x="37vw" y="-500vh" width="1250px" height="1250px" />
       </section>
     </div>
   );
