@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-        <nav className="flex gap-6 flex-wrap justify-center md:justify-start">
+        <nav className="font-bold flex gap-6 flex-wrap justify-center md:justify-start">
           <button
             className="cursor-pointer hover:text-white transition-all duration-200"
             onClick={() => {

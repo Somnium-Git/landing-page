@@ -19,25 +19,25 @@ export default function Equipe() {
   {
     name: "Felipe Daniel",
     role: "QA",
-    githubLink: "https://github.com/",
-    instagramLink: "https://instagram.com/",
-    linkedinLink: "https://linkedin.com/",
+    githubLink: "https://github.com/FelpsBZ",
+    instagramLink: "https://www.instagram.com/felps_bz",
+    linkedinLink: "",
     image: "/equipe/felipe daniel.jpeg"
   },
   {
     name: "Gabriel Lima",
     role: "Tech Lead Front-End",
-    githubLink: "https://github.com/",
-    instagramLink: "https://instagram.com/",
-    linkedinLink: "https://linkedin.com/",
+    githubLink: "https://github.com/gabriellimao7500",
+    instagramLink: "https://www.instagram.com/gabriel_limao7500/",
+    linkedinLink: "",
     image: "/equipe/gabriel lima.jpeg"
   },
   {
     name: "Gabriel Ortiz",
     role: "Diretor",
-    githubLink: "https://github.com/",
-    instagramLink: "https://instagram.com/",
-    linkedinLink: "https://linkedin.com/",
+    githubLink: "https://github.com/GMarsura",
+    instagramLink: "https://www.instagram.com/gabriel_marsura/",
+    linkedinLink: "https://www.linkedin.com/in/gabriel-marsura-4bb6732a9/",
     image: "/equipe/gabriel ortiz.jpeg"
   },
   {
@@ -53,15 +53,15 @@ export default function Equipe() {
     role: "Desenvolvedor Back-End",
     githubLink: "https://github.com/Joao2007Pedro",
     instagramLink: "https://www.instagram.com/_.joao7.__?igsh=NjZ5d2x3Y3JzZTRj",
-    linkedinLink: "https://linkedin.com/",
+    linkedinLink: "",
     image: "/equipe/joao pedro.jpeg"
   },
   {
     name: "Lucas Caribé",
     role: "Desenvolvedor Front-End",
-    githubLink: "https://github.com/",
-    instagramLink: "https://instagram.com/",
-    linkedinLink: "https://linkedin.com/",
+    githubLink: "https://github.com/LucasCaribeAraujo",
+    instagramLink: "https://www.instagram.com/lucas.caribe_",
+    linkedinLink: "",
     image: "/equipe/lucas caribe.jpeg"
   },
   {
@@ -75,9 +75,9 @@ export default function Equipe() {
   {
     name: "Nathan Fioravanti",
     role: "Desenvolvedor Front-End",
-    githubLink: "https://github.com/",
-    instagramLink: "https://instagram.com/",
-    linkedinLink: "https://linkedin.com/",
+    githubLink: "https://github.com/Nathan-Fioravanti",
+    instagramLink: "https://www.instagram.com/nathanfer1",
+    linkedinLink: "",
     image: "/equipe/nathan fioravanti.jpeg"
   },
   {
@@ -90,11 +90,9 @@ export default function Equipe() {
   }
 ];
 
-
-
   return (
     <div style={{paddingTop: "2rem", marginBottom: "15rem"}}>
-      <Card background="transparent" useBar={false} flex="col">
+      <Card height="auto" background="transparent" useBar={false} flex="col">
         <div className="" style={{ alignSelf: "flex-start", marginBottom: "2rem"}}>
           <Text size="2.5em" height="bold">Nossa equipe</Text>
           <Text size="1.25em" height="light" color="#A8AFC1" wordSpacing="2px">
@@ -102,7 +100,7 @@ export default function Equipe() {
           </Text>
         </div>
 
-        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 w-full px-4 mx-auto">
+        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 w-full mx-auto">
 
           {teamMembers.map((member, index) => (
             <CardTeam 

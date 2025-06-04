@@ -172,7 +172,6 @@ export default function Home() {
           y="-130vh"
           width="50vw"
           height="600px"
-          isActive={isActive}
         />
         
 
@@ -181,7 +180,6 @@ export default function Home() {
           y="-500vh"
           width="1250px"
           height="1250px"
-          isActive={isActive}
         />
       </section>
     </div>
