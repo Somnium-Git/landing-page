@@ -49,13 +49,16 @@ export default function AboutSection() {
       </div>
 
       {/* Box com imagem */}
-      <div className="w-[500px] h-[450px] flex items-center justify-center rounded-lg bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg">
+      <div className="relative w-[500px] h-[450px] flex items-center justify-center rounded-lg bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg">
+        <div className="absolute inset-0 rounded-lg pointer-events-none" style={{
+          boxShadow: "0 0 30px 10px #c77dff88, 0 0 120px 40px #5a189a55"
+        }} />
         <Image
-          src="/Vetor.png"
+          src="/VetorSobre.png"
           alt="Imagem da Somnium"
-          width={400}
-          height={400}
-          className="object-contain"
+          width={500}
+          height={500}
+          className="object-contain relative z-10"
           draggable={false}
           priority
         />

@@ -39,7 +39,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row gap-3">
                 <Text size="2.5em" height="bold">
-                  é nosso
+                  é o nosso
                 </Text>
                 <Text size="2.5em" height="bold" isGradient>
                   {" "}

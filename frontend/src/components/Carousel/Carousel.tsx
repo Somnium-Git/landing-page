@@ -53,7 +53,7 @@ export default function Carousel() {
 
       <SwiperSlide>
         <SliderItem
-          description="Um sistema web personalizável, com interface simples e acessível, que permita os pequenos e médios empreendedores criarem páginas exclusivas para divulgação de seus produtos e serviços, sem a necessidade de contratar profissionais especializados, facilitando sua inserção no meio digital e aumentando sua visibilidade no mercado."
+          description="Um sistema web personalizável, com interface simples e acessível, que permita os pequenos e médios empreendedores criarem páginas exclusivas para divulgação de seus produtos e serviços."
           projectLink="https://github.com/Somnium-Git/Paggie"
           repositoryLink="https://github.com/Somnium-Git/Paggie"
         >
