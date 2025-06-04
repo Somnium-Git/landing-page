@@ -3,7 +3,6 @@ type CardProps = {
   width?: string;
   height?: string;
   flex?: string; /* = row | col */
-  justify?: string;
   background?: string; /* = #000000 | rgba(0, 0, 0, 0) | hsl(0 0 0) */
   useBar?: boolean; /* = true | false (barra na lateral) */ 
   children?: React.ReactNode;
@@ -13,7 +12,6 @@ function Card({
   width = "100dvw",
   height = "90dvh",
   flex = "row",
-  justify = "justify-around",
   background = "#C3BED8",
   useBar = true,
   children
@@ -31,7 +29,7 @@ function Card({
         : 
         ( <></> )
       }
-      <div className={`w-full h-full flex ${flexClass} ${justify} items-center`}>
+      <div className={`w-full h-full flex ${flexClass} justify-around items-center`}>
         {children}
       </div>
     </div>

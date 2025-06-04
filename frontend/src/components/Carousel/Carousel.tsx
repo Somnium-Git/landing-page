@@ -1,6 +1,6 @@
 import { SwiperProps, SwiperSlide } from "swiper/react";
 
-import SliderContainer from "@/components/Carousel/SliderContainer/SliderContainer"
+import SliderContainer from "@/components/Carousel/SliderContainer/SliderContainer";
 import SliderItem from "./SliderItem/SliderItem";
 import Text from "../Text/Text";
 
@@ -33,8 +33,8 @@ export default function Carousel() {
       1400: {
         slidesPerView: 5,
         spaceBetween: 10,
-      }
-    }
+      },
+    },
   };
 
   return (
