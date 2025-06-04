@@ -13,14 +13,18 @@ export default function Footer() {
       {/* Topo do footer (logo, navegação e redes sociais) */}
       <div className="flex flex-col md:flex-row md:mb-24 justify-between items-center md:items-start mb-12">
         <div className="mb-6 md:mb-0 text-center md:text-left">
-          <div className="cursor-pointer flex justify-center font-bold md:justify-start">
+          <Link
+            href={"/"}
+            className="cursor-pointer flex justify-center font-bold md:justify-start"
+          >
             <Text color="#FFFFFF" size="1.5rem">
               Som
             </Text>
             <Text isGradient={true} size="1.5rem">
               nium
             </Text>
-          </div>
+          </Link>
+
           <Text color="#99a1af" size="1rem">
             Seu sucesso é o nosso sonho!
           </Text>
@@ -51,7 +55,7 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-center mb-6">
         <nav className="flex gap-6 flex-wrap justify-center md:justify-start">
           <button
-            className="hover:text-white transition-all duration-200"
+            className="cursor-pointer hover:text-white transition-all duration-200"
             onClick={() => {
               document
                 .getElementById("home")
@@ -61,7 +65,7 @@ export default function Footer() {
             <Text size="1rem">Home</Text>
           </button>
           <button
-            className="hover:text-white transition-all duration-200"
+            className="cursor-pointer hover:text-white transition-all duration-200"
             onClick={() => {
               document
                 .getElementById("about")
@@ -71,7 +75,7 @@ export default function Footer() {
             <Text size="1rem">Sobre</Text>
           </button>
           <button
-            className="hover:text-white transition-all duration-200"
+            className="cursor-pointer hover:text-white transition-all duration-200"
             onClick={() => {
               document
                 .getElementById("projects")
@@ -81,7 +85,7 @@ export default function Footer() {
             <Text size="1rem">Projetos</Text>
           </button>
           <button
-            className="hover:text-white transition-all duration-200"
+            className="cursor-pointer hover:text-white transition-all duration-200"
             onClick={() => {
               document
                 .getElementById("partners")
@@ -91,7 +95,7 @@ export default function Footer() {
             <Text size="1rem">Parceiros</Text>
           </button>
           <button
-            className="hover:text-white transition-all duration-200"
+            className="cursor-pointer hover:text-white transition-all duration-200"
             onClick={() => {
               document
                 .getElementById("contact")
@@ -213,10 +217,10 @@ export default function Footer() {
       <hr className="border-t border-[#1A0A37] mb-6" />
 
       {/* Parte inferior com navegação legal e copyright */}
-      <div className="flex md:flex-row flex-cow justify-center items-center gap-1">
+      <div className="flex md:flex-row flex-col justify-center items-center gap-1">
         <Text color="oklch(71.4% 0.203 305.504)" size="1rem">
-          <span className="font-bold">Somnium ©2025</span>. Todos os direitos
-          reservados.
+          <span className="font-bold">Somnium ©2025</span>.{" "}
+          <span style={{ color: "#fff" }}>Todos os direitos reservados.</span>
         </Text>
       </div>
     </footer>

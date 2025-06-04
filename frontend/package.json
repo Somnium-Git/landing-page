@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "install:all": "npm install && npm install --save-dev @types/prop-types && npm i react-icon"
+    "install:all": "npm install && npm install --save-dev @types/prop-types && npm i react-icons"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
