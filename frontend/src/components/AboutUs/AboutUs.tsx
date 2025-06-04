@@ -4,11 +4,11 @@ import Text from "../Text/Text";
 export default function AboutSection() {
   return (
     <section
-      className="bg-[#040013] flex flex-col items-center justify-evenly gap-10 px-8 py-16 relative overflow-hidden md:gap-0 md:flex-row"
+      className="bg-[#040013] flex flex-col items-center justify-evenly gap-10 px-8 py-16 relative overflow-hidden lg:gap-0 lg:flex-row"
       style={{ width: "100dvw", minHeight: "100dvh" }}
     >
       {/* Texto */}
-      <div className="max-w-[400px]">
+      <div className="max-w-[500px] lg:max-w-[400px]">
         <div className="w-max mb-3">
           <Text size="1.5em" height="bold" isGradient>Sobre nós</Text>
         </div>
@@ -36,13 +36,13 @@ export default function AboutSection() {
         <Button
           text="Veja mais"
           click={() => {
-            window.location.href = "/sobre"; //Vai madar pra algum lugar
+            window.location.href = "/equipe"; //Vai madar pra algum lugar
           }}
         />
       </div>
 
       {/* Box com imagem */}
-      <div className="w-[380px] h-[520px] flex items-center justify-center rounded-lg bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg md:block"></div>
+      <div className="w-[500px] h-[450px] flex items-center justify-center rounded-lg bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg"></div>
     </section>
   );
 }

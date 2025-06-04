@@ -12,9 +12,17 @@ import Associates from "@/components/Associates/Associates";
 
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
+
+  const handleSaibaMais = () => {
+    setIsActive(true);
+    setTimeout(() => {
+      document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+    }, 4000);
+  }
 
   return (
     <div>
@@ -39,7 +47,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-[280px]">
+            <div className="max-w-[350px]">
               <Text
                 size="1.25em"
                 height="light"
@@ -51,7 +59,7 @@ export default function Home() {
               </Text>
             </div>
 
-            <Button text="Saiba mais" click={() => setIsActive(true)}></Button>
+            <Button text="Saiba mais" click={handleSaibaMais}></Button>
           </section>
           <div></div>
           <div></div>
@@ -64,8 +72,8 @@ export default function Home() {
       </div>
 
       {/* ===================== PROJETOS - TÍTULO ===================== */}
-      <Card flex="col" background="transparent" useBar={false}>
-        <div className="flex flex-col items-center text-center">
+      <Card justify="justify-center" flex="col" background="transparent" useBar={false}>
+        <div className="flex flex-col items-center text-center mb-28">
           <div className="leading-9">
             <Text size="2.5em" height="bold" isGradient>
               Sonhe
@@ -80,12 +88,21 @@ export default function Home() {
             </Text>
           </div>
         </div>
+        
+        <Image 
+          src="/Diagrama.png" 
+          alt="Diagrama Somnium"
+          width={900}
+          height={900}          
+          draggable={false}
+        />
       </Card>
 
-      <div id="projects">
-        {/* ===================== LINHA DIVISÓRIA ===================== */}
-        <div className="w-full h-[2px] bg-[#1A0A37] mx-[2dvw] mb-16"></div>
+      {/* ===================== LINHA DIVISÓRIA ===================== */}
+      <div className="w-full h-[2px] bg-[#1A0A37] mb-16"></div>
 
+      {/* ===================== PROJETOS - CARROSSEL ===================== */}
+      <div id="projects">
         {/* ===================== PROJETOS - DESCRIÇÃO ===================== */}
         <Card height="full" background="transparent" useBar={false}>
           <div className="flex flex-col text-center gap-6">
@@ -106,7 +123,6 @@ export default function Home() {
         </Card>
 
         {/* ===================== CARROSSEL DE PROJETOS ===================== */}
-
         <Carousel></Carousel>
       </div>
 
@@ -132,8 +148,8 @@ export default function Home() {
         <LightPulse
           x="40vw"
           y="-40vh"
-          width="70vw"
-          height="70vw"
+          width="1400px"
+          height="1400px"
           isActive={isActive}
         />
         <LightPulse
@@ -152,12 +168,13 @@ export default function Home() {
         />
 
         <LightPulse
-          x="25vw"
-          y="-125vh"
+          x="26.5vw"
+          y="-130vh"
           width="50vw"
-          height="50vw"
+          height="600px"
           isActive={isActive}
         />
+        
 
         <LightPulse
           x="37vw"

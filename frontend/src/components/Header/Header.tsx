@@ -3,6 +3,7 @@
 // import styles from "./Header.module.css";
 import { useRef, useState, useEffect } from "react";
 import Text from "../Text/Text";
+import Link from "next/link";
 
 export default function Header() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -74,7 +75,7 @@ export default function Header() {
     <header 
     className="text-white w-full h-[12dvh] flex justify-between items-center p-[2dvw]"
     >
-      <div className="font-bold cursor-pointer flex"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></div>
+      <Link href={"/"} className="font-bold cursor-pointer flex"><Text color="#FFFFFF" size="1.5rem">Som</Text><Text isGradient={true} size="1.5rem">nium</Text></Link>
 
       <section className="hidden flex-col font-bold md:flex">
         <section className="flex gap-[3dvw] ">

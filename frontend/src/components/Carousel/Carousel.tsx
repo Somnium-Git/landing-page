@@ -53,9 +53,9 @@ export default function Carousel() {
 
       <SwiperSlide>
         <SliderItem 
-        description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem" 
-        projectLink="https://github.com/" 
-        repositoryLink="https://github.com/Somnium-Git/landing-page/tree/test">
+        description="Um sistema para a criação de páginas web personalizáveis." 
+        projectLink="https://github.com/Somnium-Git" 
+        repositoryLink="https://github.com/Somnium-Git">
           <Text size="1.5em" height="bold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span>
           </Text>
