@@ -1,6 +1,6 @@
 import { SwiperProps, SwiperSlide } from "swiper/react";
 
-import SliderContainer from "@/components/Carousel/SliderContainer/SliderContainer"
+import SliderContainer from "@/components/Carousel/SliderContainer/SliderContainer";
 import SliderItem from "./SliderItem/SliderItem";
 import Text from "../Text/Text";
 
@@ -33,8 +33,8 @@ export default function Carousel() {
       1400: {
         slidesPerView: 5,
         spaceBetween: 10,
-      }
-    }
+      },
+    },
   };
 
   return (
@@ -52,12 +52,15 @@ export default function Carousel() {
       </SwiperSlide>
 
       <SwiperSlide>
-        <SliderItem 
-        description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem" 
-        projectLink="https://github.com/" 
-        repositoryLink="https://github.com/Somnium-Git/landing-page/tree/test">
+        <SliderItem
+          description="Um sistema web personalizável, com interface simples e acessível, que permita os pequenos e médios empreendedores criarem páginas exclusivas para divulgação de seus produtos e serviços."
+          projectLink="https://github.com/Somnium-Git/Paggie"
+          repositoryLink="https://github.com/Somnium-Git/Paggie"
+        >
           <Text size="1.5em" height="bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">
+              Paggie
+            </span>
           </Text>
         </SliderItem>
       </SwiperSlide>
@@ -65,7 +68,7 @@ export default function Carousel() {
       <SwiperSlide>
         <SliderItem></SliderItem>
       </SwiperSlide>
-      
+
       <SwiperSlide>
         <SliderItem></SliderItem>
       </SwiperSlide>

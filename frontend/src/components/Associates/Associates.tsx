@@ -23,7 +23,7 @@ export default function PartnerSection() {
             ${
               hovered === 0
                 ? "bg-white scale-110 shadow-[0_0_40px_10px_rgba(255,255,255,0.5)]"
-                : "bg-[#5A189A] scale-100 shadow-lg"
+                : "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg"
             }
           `}
         >
@@ -44,10 +44,10 @@ export default function PartnerSection() {
             `}
           >
             <h3 className="text-2xl font-bold bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent mb-2">
-              TechSpark
+              Gama
             </h3>
             <p className="text-[#5A189A] text-sm font-medium">
-              Soluções inovadoras em tecnologia educacional.
+              Desenvolvedora de soluções tecnologicas para o ramo alimenticio.
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function PartnerSection() {
             ${
               hovered === 1
                 ? "bg-white scale-110 shadow-[0_0_40px_10px_rgba(255,255,255,0.5)]"
-                : "bg-[#5A189A] scale-100 shadow-lg"
+                : "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg"
             }
           `}
         >
@@ -81,10 +81,10 @@ export default function PartnerSection() {
             `}
           >
             <h3 className="text-2xl font-bold bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent mb-2">
-              CodeVerse
+              Outlier
             </h3>
             <p className="text-[#5A189A] text-sm font-medium">
-              Transformando ideias em códigos eficientes.
+              Criando soluções tecnologicas para a área pet.
             </p>
           </div>
         </div>
@@ -97,12 +97,12 @@ export default function PartnerSection() {
             ${
               hovered === 2
                 ? "bg-white scale-110 shadow-[0_0_40px_10px_rgba(255,255,255,0.5)]"
-                : "bg-[#5A189A] scale-100 shadow-lg"
+                : "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg"
             }
           `}
         >
           <Image
-            src="/trinity.png"
+            src="/Trinity.png"
             alt="BrightData"
             width={300}
             height={300}
@@ -118,10 +118,10 @@ export default function PartnerSection() {
             `}
           >
             <h3 className="text-2xl font-bold bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent mb-2">
-              BrightData
+              Trinity
             </h3>
             <p className="text-[#5A189A] text-sm font-medium">
-              Inteligência de dados para decisões assertivas.
+              Inserindo no mercado de trabalho pessoas não escolarizadas.
             </p>
           </div>
         </div>

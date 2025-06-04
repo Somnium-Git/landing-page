@@ -39,7 +39,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row gap-3">
                 <Text size="2.5em" height="bold">
-                  é nosso
+                  é o nosso
                 </Text>
                 <Text size="2.5em" height="bold" isGradient>
                   {" "}
@@ -173,7 +173,6 @@ export default function Home() {
           y="-130vh"
           width="50vw"
           height="600px"
-          isActive={isActive}
         />
         
 
@@ -182,7 +181,6 @@ export default function Home() {
           y="-500vh"
           width="1250px"
           height="1250px"
-          isActive={isActive}
         />
       </section>
     </div>
