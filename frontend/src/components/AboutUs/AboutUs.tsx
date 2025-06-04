@@ -1,5 +1,6 @@
 import Button from "../Button/Button";
 import Text from "../Text/Text";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -10,21 +11,27 @@ export default function AboutSection() {
       {/* Texto */}
       <div className="max-w-[500px] lg:max-w-[400px]">
         <div className="w-max mb-3">
-          <Text size="1.5em" height="bold" isGradient>Sobre nós</Text>
+          <Text size="1.5em" height="bold" isGradient>
+            Sobre nós
+          </Text>
         </div>
 
         <div className="leading-9 mb-10">
-          <Text size="2.5em" height="bold">Conheça</Text>
-          <Text size="2.5em" height="bold">Nossa empresa</Text>
+          <Text size="2.5em" height="bold">
+            Conheça
+          </Text>
+          <Text size="2.5em" height="bold">
+            Nossa empresa
+          </Text>
         </div>
-        
-        <div className="space-y-4 text-justify mb-10"> 
+
+        <div className="space-y-4 text-justify mb-10">
           <Text size="1.25em" height="light" color="#A8AFC1" wordSpacing="2px">
             A <strong>Somnium</strong> é uma empresa focada em inovação e no
             avanço tecnológico, com o objetivo de tornar a tecnologia mais
             acessível para empresas de pequeno e médio porte. Nossa missão é
-            facilitar a inserção e a ascensão dessas empresas no mercado por meio
-            de soluções tecnológicas eficazes e personalizadas.
+            facilitar a inserção e a ascensão dessas empresas no mercado por
+            meio de soluções tecnológicas eficazes e personalizadas.
           </Text>
 
           <Text size="1.25em" height="light" color="#A8AFC1" wordSpacing="2px">
@@ -32,7 +39,7 @@ export default function AboutSection() {
             desenvolvedores clicando no botão abaixo.
           </Text>
         </div>
-  
+
         <Button
           text="Veja mais"
           click={() => {
@@ -42,7 +49,20 @@ export default function AboutSection() {
       </div>
 
       {/* Box com imagem */}
-      <div className="w-[500px] h-[450px] flex items-center justify-center rounded-lg bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg"></div>
+      <div className="relative w-[500px] h-[450px] flex items-center justify-center rounded-lg bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg">
+        <div className="absolute inset-0 rounded-lg pointer-events-none" style={{
+          boxShadow: "0 0 30px 10px #c77dff88, 0 0 120px 40px #5a189a55"
+        }} />
+        <Image
+          src="/VetorSobre.png"
+          alt="Imagem da Somnium"
+          width={500}
+          height={500}
+          className="object-contain relative z-10"
+          draggable={false}
+          priority
+        />
+      </div>
     </section>
   );
 }

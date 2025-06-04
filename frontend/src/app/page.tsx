@@ -27,6 +27,7 @@ export default function Home() {
   return (
     <div>
       {/* ===================== INÍCIO ===================== */}
+      
       <div id="home">
         <Card flex="row" height="85dvh" background="transparent" useBar={false}>
           <section className="flex flex-col h-[40vh] justify-around items-start">
@@ -38,7 +39,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row gap-3">
                 <Text size="2.5em" height="bold">
-                  é nosso
+                  é o nosso
                 </Text>
                 <Text size="2.5em" height="bold" isGradient>
                   {" "}

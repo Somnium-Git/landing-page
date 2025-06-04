@@ -52,12 +52,15 @@ export default function Carousel() {
       </SwiperSlide>
 
       <SwiperSlide>
-        <SliderItem 
-        description="Um sistema para a criação de páginas web personalizáveis." 
-        projectLink="https://github.com/Somnium-Git" 
-        repositoryLink="https://github.com/Somnium-Git">
+        <SliderItem
+          description="Um sistema web personalizável, com interface simples e acessível, que permita os pequenos e médios empreendedores criarem páginas exclusivas para divulgação de seus produtos e serviços."
+          projectLink="https://github.com/Somnium-Git/Paggie"
+          repositoryLink="https://github.com/Somnium-Git/Paggie"
+        >
           <Text size="1.5em" height="bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">Paggie</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">
+              Paggie
+            </span>
           </Text>
         </SliderItem>
       </SwiperSlide>
@@ -65,7 +68,7 @@ export default function Carousel() {
       <SwiperSlide>
         <SliderItem></SliderItem>
       </SwiperSlide>
-      
+
       <SwiperSlide>
         <SliderItem></SliderItem>
       </SwiperSlide>

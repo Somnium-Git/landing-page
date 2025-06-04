@@ -101,30 +101,16 @@ export default function Footer() {
             <Text size="1rem">Contato</Text>
           </button>
         </nav>
-        <div className="text-center flex gap-6 mb-4 md:mb-0">
-          <Link
-            href="/termos"
-            className="hover:text-white transition-all duration-200"
-          >
-            <Text size="1rem">TERMOS E CONDIÇÕES</Text>
-          </Link>
-          <Link
-            href="/privacidade"
-            className="hover:text-white transition-all duration-200"
-          >
-            <Text size="1rem">POLÍTICA DE PRIVACIDADE</Text>
-          </Link>
-        </div>
       </div>
 
       {/* Linha divisória roxa */}
       <hr className="border-t border-[#1A0A37] mb-6" />
 
       {/* Parte inferior com navegação legal e copyright */}
-      <div className="flex md:flex-row flex-cow justify-center items-center gap-1">
+      <div className="flex md:flex-row flex-col justify-center items-center gap-1">
         <Text color="oklch(71.4% 0.203 305.504)" size="1rem">
-          <span className="font-bold">Somnium ©2025</span>. Todos os direitos
-          reservados.
+          <span className="font-bold">Somnium ©2025</span>.{" "}
+          <span style={{ color: "#fff" }}>Todos os direitos reservados.</span>
         </Text>
       </div>
     </footer>
