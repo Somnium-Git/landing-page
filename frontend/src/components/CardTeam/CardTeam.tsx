@@ -1,4 +1,5 @@
 import Text from "../Text/Text";
+import Image from "next/image";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
@@ -11,6 +12,7 @@ type CardTeamProps = {
   githubLink?: string,
   instagramLink?: string,
   linkedinLink?: string,
+  image?: string,
 };
 
 export default function CardTeam({
@@ -18,12 +20,20 @@ export default function CardTeam({
   role = "", 
   githubLink = "", 
   instagramLink = "", 
-  linkedinLink = ""
+  linkedinLink = "",
+  image = "",
 }: CardTeamProps ) {
   return (
     <div className="w-[300px] h-[420px] flex flex-col justify-between gap-8 p-4 rounded-2xl bg-gradient-to-b from-[#050013] to-[#0C0420]">
-      <div className="w-full h-[250px] rounded-2xl bg-[#0C0420]">
-      </div>
+      <Image
+        src={image}
+        alt={`Foto de ${name}`}
+        width={300}
+        height={250}
+        className="w-full h-[250px] object-cover rounded-2xl"
+      />
+
+
 
       <div className="flex items-center flex-col">
         <Text size="1.25em" height="bold">{name}</Text>
