@@ -20,12 +20,12 @@ export default function PartnerSection() {
           onMouseEnter={() => setHovered(0)}
           onMouseLeave={() => setHovered(null)}
           className={`relative w-[20.5rem] h-[28.5rem] m-2 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 
-            ${
-              hovered === 0
-                ? "bg-white scale-110 shadow-[0_0_40px_10px_rgba(255,255,255,0.5)]"
-                : "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg"
-            }
-          `}
+        ${
+          hovered === 0
+            ? "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] scale-110 shadow-[0_0_80px_30px_rgba(90,24,154,0.5)]"
+            : "bg-[#EEEEEE] shadow-lg"
+        }
+        `}
         >
           <Image
             src="/Gama.png"
@@ -33,20 +33,30 @@ export default function PartnerSection() {
             width={300}
             height={300}
             className={`object-contain transition-opacity duration-300 absolute inset-0 m-auto 
-              ${hovered === 0 ? "opacity-0" : "opacity-100"}
-            `}
+          ${hovered === 0 ? "opacity-0" : "opacity-100"}
+        `}
             draggable={false}
             priority
           />
           <div
             className={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-300 
-              ${hovered === 0 ? "opacity-100" : "opacity-0 pointer-events-none"}
-            `}
+          ${hovered === 0 ? "opacity-100" : "opacity-0 pointer-events-none"}
+        `}
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent mb-2">
+            <h3
+              className={`text-2xl font-bold mb-2 transition-colors duration-300 ${
+                hovered === 0
+                  ? "text-white"
+                  : "bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent"
+              }`}
+            >
               Gama
             </h3>
-            <p className="text-[#5A189A] text-sm font-medium">
+            <p
+              className={`text-sm font-medium transition-colors duration-300 ${
+                hovered === 0 ? "text-white" : "text-[#5A189A]"
+              }`}
+            >
               Desenvolvedora de soluções tecnologicas para o ramo alimenticio.
             </p>
           </div>
@@ -57,12 +67,12 @@ export default function PartnerSection() {
           onMouseEnter={() => setHovered(1)}
           onMouseLeave={() => setHovered(null)}
           className={`relative w-[20.5rem] h-[28.5rem] m-2 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 
-            ${
-              hovered === 1
-                ? "bg-white scale-110 shadow-[0_0_40px_10px_rgba(255,255,255,0.5)]"
-                : "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg"
-            }
-          `}
+        ${
+          hovered === 1
+            ? "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] scale-110 shadow-[0_0_80px_30px_rgba(90,24,154,0.5)]"
+            : "bg-[#EEEEEE] shadow-lg"
+        }
+        `}
         >
           <Image
             src="/Outlier.png"
@@ -70,20 +80,30 @@ export default function PartnerSection() {
             width={300}
             height={300}
             className={`object-contain transition-opacity duration-300 absolute inset-0 m-auto 
-              ${hovered === 1 ? "opacity-0" : "opacity-100"}
-            `}
+          ${hovered === 1 ? "opacity-0" : "opacity-100"}
+        `}
             draggable={false}
             priority
           />
           <div
             className={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-300 
-              ${hovered === 1 ? "opacity-100" : "opacity-0 pointer-events-none"}
-            `}
+          ${hovered === 1 ? "opacity-100" : "opacity-0 pointer-events-none"}
+        `}
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent mb-2">
+            <h3
+              className={`text-2xl font-bold mb-2 transition-colors duration-300 ${
+                hovered === 1
+                  ? "text-white"
+                  : "bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent"
+              }`}
+            >
               Outlier
             </h3>
-            <p className="text-[#5A189A] text-sm font-medium">
+            <p
+              className={`text-sm font-medium transition-colors duration-300 ${
+                hovered === 1 ? "text-white" : "text-[#5A189A]"
+              }`}
+            >
               Criando soluções tecnologicas para a área pet.
             </p>
           </div>
@@ -94,12 +114,12 @@ export default function PartnerSection() {
           onMouseEnter={() => setHovered(2)}
           onMouseLeave={() => setHovered(null)}
           className={`relative w-[20.5rem] h-[28.5rem] m-2 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 
-            ${
-              hovered === 2
-                ? "bg-white scale-110 shadow-[0_0_40px_10px_rgba(255,255,255,0.5)]"
-                : "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg"
-            }
-          `}
+        ${
+          hovered === 2
+            ? "bg-gradient-to-b from-[#C77DFF] to-[#5A189A] scale-110 shadow-[0_0_80px_30px_rgba(90,24,154,0.5)]"
+            : "bg-[#EEEEEE] shadow-lg"
+        }
+        `}
         >
           <Image
             src="/Trinity.png"
@@ -107,20 +127,30 @@ export default function PartnerSection() {
             width={300}
             height={300}
             className={`object-contain transition-opacity duration-300 absolute inset-0 m-auto 
-              ${hovered === 2 ? "opacity-0" : "opacity-100"}
-            `}
+          ${hovered === 2 ? "opacity-0" : "opacity-100"}
+        `}
             draggable={false}
             priority
           />
           <div
             className={`absolute inset-0 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-300 
-              ${hovered === 2 ? "opacity-100" : "opacity-0 pointer-events-none"}
-            `}
+          ${hovered === 2 ? "opacity-100" : "opacity-0 pointer-events-none"}
+        `}
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent mb-2">
+            <h3
+              className={`text-2xl font-bold mb-2 transition-colors duration-300 ${
+                hovered === 2
+                  ? "text-white"
+                  : "bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent"
+              }`}
+            >
               Trinity
             </h3>
-            <p className="text-[#5A189A] text-sm font-medium">
+            <p
+              className={`text-sm font-medium transition-colors duration-300 ${
+                hovered === 2 ? "text-white" : "text-[#5A189A]"
+              }`}
+            >
               Inserindo no mercado de trabalho pessoas não escolarizadas.
             </p>
           </div>

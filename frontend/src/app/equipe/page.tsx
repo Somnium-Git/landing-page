@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import LightPulse from "@/components/LightBall/LightPulse/LightPulse";
 import Card from "@/components/Card/Card";
@@ -6,7 +6,6 @@ import Text from "@/components/Text/Text";
 import CardTeam from "@/components/CardTeam/CardTeam";
 
 export default function Equipe() {
-
   const teamMembers = [
   {
     name: "Anderson Reis",
@@ -96,13 +95,16 @@ export default function Equipe() {
         <div style={{ alignSelf: "flex-start", marginBottom: "4rem"}}>
           <Text size="2.5em" height="bold">Nossa equipe</Text>
           <Text size="1.25em" height="light" color="#A8AFC1" wordSpacing="2px">
-            Por trás de cada projeto de sucesso, existe <br></br>uma equipe <span className="text-[#C77DFF] font-bold">dedicada</span>, <span className="text-[#C77DFF] font-bold">apaixonada</span> e <span className="text-[#C77DFF] font-bold">comprometida</span>.
+            Por trás de cada projeto de sucesso, existe <br></br>uma equipe{" "}
+            <span className="text-[#C77DFF] font-bold">dedicada</span>,{" "}
+            <span className="text-[#C77DFF] font-bold">apaixonada</span> e{" "}
+            <span className="text-[#C77DFF] font-bold">comprometida</span>.
           </Text>
         </div>
 
         <div className="flex justify-between flex-row flex-wrap xl:grid xl:grid-cols-5 gap-6 w-full mx-auto">
           {teamMembers.map((member, index) => (
-            <CardTeam 
+            <CardTeam
               key={index}
               name={member.name} 
               role={`< ${member.role} >`} 
@@ -112,7 +114,6 @@ export default function Equipe() {
               image={member.image}
             />
           ))}
-
         </div>
       </Card>
 
