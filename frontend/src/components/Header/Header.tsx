@@ -128,14 +128,14 @@ export default function Header() {
             </div>
           </DialogTrigger>
         }
-        title="Ajuda"
-        description="Sla, n faço ideia do que colocar aqui"
+        title="Sobre a Somnium"
+        description="Descrição breve sorbe a somnium"
       >
-        children={
+        
           <p className="text-sm text-muted-foreground">
-          Clique nos menus acima para navegar pelas seções: Início, Sobre, Projetos, Parceiros e Contato.
+          A Somnium é uma empresa desenvolvedora de software que se dedica a criar soluções inovadoras e personalizadas para atender às necessidades dos nossos clientes. Nossa equipe é composta por profissionais apaixonados por tecnologia e comprometidos em entregar produtos de alta qualidade. Trabalhamos com as mais recentes tecnologias e metodologias ágeis para garantir eficiência e agilidade em nossos projetos. Na Somnium, acreditamos que a colaboração e a comunicação são fundamentais para o sucesso, por isso mantemos um diálogo aberto com nossos clientes durante todo o processo de desenvolvimento.
         </p>
-        }
+        
       </Modal>
 
 
