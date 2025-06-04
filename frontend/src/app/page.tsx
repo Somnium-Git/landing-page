@@ -27,6 +27,7 @@ export default function Home() {
   return (
     <div>
       {/* ===================== INÍCIO ===================== */}
+      
       <div id="home">
         <Card flex="row" height="85dvh" background="transparent" useBar={false}>
           <section className="flex flex-col h-[40vh] justify-around items-start">
