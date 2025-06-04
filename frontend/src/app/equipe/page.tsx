@@ -13,31 +13,31 @@ export default function Equipe() {
     role: "Product Manager",
     githubLink: "https://github.com/EuAndersonDev/",
     instagramLink: "https://www.instagram.com/oandersondev",
-    linkedinLink: "https://www.linkedin.com/in/anderson-reis-5407311b3/",
+    linkedinLink: "https://www.linkedin.com/in/andersonreisdev/",
     image: "/equipe/anderson reis.jpeg"
   },
   {
     name: "Felipe Daniel",
     role: "QA",
-    githubLink: "https://github.com/",
-    instagramLink: "https://instagram.com/",
-    linkedinLink: "https://linkedin.com/",
+    githubLink: "https://github.com/FelpsBZ",
+    instagramLink: "https://www.instagram.com/felps_bz?igsh=YTVlaWtwM3BvMWJ1",
+    linkedinLink: "https://www.linkedin.com/in/felpsbr-gamer-a4918b293/",
     image: "/equipe/felipe daniel.jpeg"
   },
   {
     name: "Gabriel Lima",
     role: "Tech Lead Front-End",
-    githubLink: "https://github.com/",
-    instagramLink: "https://instagram.com/",
+    githubLink: "https://github.com/gabriellimao7500",
+    instagramLink: "https://www.instagram.com/gabriel_limao7500/",
     linkedinLink: "https://linkedin.com/",
     image: "/equipe/gabriel lima.jpeg"
   },
   {
     name: "Gabriel Ortiz",
     role: "Diretor",
-    githubLink: "https://github.com/",
-    instagramLink: "https://instagram.com/",
-    linkedinLink: "https://linkedin.com/",
+    githubLink: "https://github.com/GMarsura",
+    instagramLink: "https://www.instagram.com/gabriel_marsura/",
+    linkedinLink: "https://www.linkedin.com/in/gabriel-marsura-4bb6732a9/",
     image: "/equipe/gabriel ortiz.jpeg"
   },
   {
@@ -60,7 +60,7 @@ export default function Equipe() {
     name: "Lucas Caribé",
     role: "Desenvolvedor Front-End",
     githubLink: "https://github.com/",
-    instagramLink: "https://instagram.com/",
+    instagramLink: "https://www.instagram.com/lucas.caribe_?igsh=MTc3cGtsb21rbWlyMg%3D%3D",
     linkedinLink: "https://linkedin.com/",
     image: "/equipe/lucas caribe.jpeg"
   },
@@ -76,7 +76,7 @@ export default function Equipe() {
     name: "Nathan Fioravanti",
     role: "Desenvolvedor Front-End",
     githubLink: "https://github.com/",
-    instagramLink: "https://instagram.com/",
+    instagramLink: "https://www.instagram.com/nathanfer1?igsh=MWlzZTExdTR4ZnRoMw%3D%3D",
     linkedinLink: "https://linkedin.com/",
     image: "/equipe/nathan fioravanti.jpeg"
   },

@@ -2,7 +2,9 @@
 
 // import styles from "./Header.module.css";
 import { useRef, useState, useEffect } from "react";
+import { DialogTrigger } from "@radix-ui/react-dialog";
 import Text from "../Text/Text";
+import Modal from "../Modal/Modal";
 
 export default function Header() {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -17,6 +19,7 @@ export default function Header() {
   const [position, setPosition] = useState(0);
   const [linePosition, setLinePosition] = useState(0);
   const [width, setWidth] = useState(40)
+
 
   useEffect(() => {
     const updateLinePosition = () => {
@@ -110,14 +113,32 @@ export default function Header() {
         ></div>
       </section>
 
-      <div
-      className="
-      w-[50px] h-[50px] rounded-full bg-[rgba(60,9,108,0.2)]
-      flex justify-center items-center cursor-pointer font-medium text-xl border-1 border-[#737373]
-        hover:bg-[rgba(60,9,108,1)] hover:border-[#C77DFF] transition-all duration-200"
+      
+    
+      <Modal
+        trigger={
+          <DialogTrigger asChild>
+            <div
+              className="
+                w-[50px] h-[50px] rounded-full bg-[rgba(60,9,108,0.2)]
+                flex justify-center items-center cursor-pointer font-medium text-xl border-1 border-[#737373]
+                hover:bg-[rgba(60,9,108,1)] hover:border-[#C77DFF] transition-all duration-200"
+            >
+              ?
+            </div>
+          </DialogTrigger>
+        }
+        title="Ajuda"
+        description="Sla, n faço ideia do que colocar aqui"
       >
-        ?
-      </div>
+        children={
+          <p className="text-sm text-muted-foreground">
+          Clique nos menus acima para navegar pelas seções: Início, Sobre, Projetos, Parceiros e Contato.
+        </p>
+        }
+      </Modal>
+
+
     </header>
   )
 }
