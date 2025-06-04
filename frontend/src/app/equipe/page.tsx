@@ -50,7 +50,7 @@ export default function Equipe() {
   },
   {
     name: "João Pedro",
-    role: "Desenvolvedor Back-End",
+    role: "Dev Back-End",
     githubLink: "https://github.com/Joao2007Pedro",
     instagramLink: "https://www.instagram.com/_.joao7.__?igsh=NjZ5d2x3Y3JzZTRj",
     linkedinLink: "",
@@ -58,7 +58,7 @@ export default function Equipe() {
   },
   {
     name: "Lucas Caribé",
-    role: "Desenvolvedor Front-End",
+    role: "Dev Front-End",
     githubLink: "https://github.com/LucasCaribeAraujo",
     instagramLink: "https://www.instagram.com/lucas.caribe_",
     linkedinLink: "",
@@ -66,7 +66,7 @@ export default function Equipe() {
   },
   {
     name: "Matheus Vinícius",
-    role: "Desenvolvedor Back-End",
+    role: "Dev Back-End",
     githubLink: "https://github.com/matheusviniciusbrito",
     instagramLink: "https://www.instagram.com/mavinous",
     linkedinLink: "https://www.linkedin.com/in/matheusviniciusbrito/",
@@ -74,7 +74,7 @@ export default function Equipe() {
   },
   {
     name: "Nathan Fioravanti",
-    role: "Desenvolvedor Front-End",
+    role: "Dev Front-End",
     githubLink: "https://github.com/Nathan-Fioravanti",
     instagramLink: "https://www.instagram.com/nathanfer1",
     linkedinLink: "",
@@ -82,7 +82,7 @@ export default function Equipe() {
   },
   {
     name: "Thiago Moreira",
-    role: "Desenvolvedor Fullstack",
+    role: "Dev Fullstack",
     githubLink: "https://github.com/ethior0",
     instagramLink: "",
     linkedinLink: "",
@@ -91,22 +91,21 @@ export default function Equipe() {
 ];
 
   return (
-    <div style={{paddingTop: "2rem", marginBottom: "15rem"}}>
+    <div style={{paddingTop: "2rem", marginTop: "2rem", marginBottom: "15rem"}}>
       <Card height="auto" background="transparent" useBar={false} flex="col">
-        <div className="" style={{ alignSelf: "flex-start", marginBottom: "2rem"}}>
+        <div style={{ alignSelf: "flex-start", marginBottom: "4rem"}}>
           <Text size="2.5em" height="bold">Nossa equipe</Text>
           <Text size="1.25em" height="light" color="#A8AFC1" wordSpacing="2px">
             Por trás de cada projeto de sucesso, existe <br></br>uma equipe <span className="text-[#C77DFF] font-bold">dedicada</span>, <span className="text-[#C77DFF] font-bold">apaixonada</span> e <span className="text-[#C77DFF] font-bold">comprometida</span>.
           </Text>
         </div>
 
-        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 w-full mx-auto">
-
+        <div className="flex justify-between flex-row flex-wrap xl:grid xl:grid-cols-5 gap-6 w-full mx-auto">
           {teamMembers.map((member, index) => (
             <CardTeam 
               key={index}
               name={member.name} 
-              role={member.role} 
+              role={`< ${member.role} >`} 
               githubLink={member.githubLink} 
               instagramLink={member.instagramLink} 
               linkedinLink={member.linkedinLink}
@@ -118,7 +117,7 @@ export default function Equipe() {
       </Card>
 
       <section>
-        <LightPulse x="28vw" y="60vh" width="45vw" height="45vw"/>
+        <LightPulse x="25vw" y="70vh" width="900px" height="900px"/>
       </section>
     </div>
   );

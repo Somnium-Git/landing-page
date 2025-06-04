@@ -50,9 +50,6 @@ export default function AboutSection() {
 
       {/* Box com imagem */}
       <div className="relative w-[500px] h-[450px] flex items-center justify-center rounded-lg bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg">
-        <div className="absolute inset-0 rounded-lg pointer-events-none" style={{
-          boxShadow: "0 0 30px 10px #c77dff88, 0 0 120px 40px #5a189a55"
-        }} />
         <Image
           src="/VetorSobre.png"
           alt="Imagem da Somnium"
