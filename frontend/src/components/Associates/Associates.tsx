@@ -122,7 +122,7 @@ export default function PartnerSection() {
         `}
         >
           <Image
-            src="/trinity.png"
+            src="/Trinity.png"
             alt="BrightData"
             width={300}
             height={300}
