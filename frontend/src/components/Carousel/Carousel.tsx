@@ -9,22 +9,42 @@ export default function Carousel() {
     freeMode: true,
     initialSlide: 2,
     slidesPerView: 1,
-    spaceBetween: -40,
+    spaceBetween: 30,
     pagination: {
       clickable: true,
     },
     breakpoints: {
+      360: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      430: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
       480: {
+        slidesPerView: 1,
+        spaceBetween: -40,
+      },
+      500: {
+        slidesPerView: 1,
+        spaceBetween: -80,
+      },
+      540: {
+        slidesPerView: 1,
+        spaceBetween: -120,
+      },
+      570: {
         slidesPerView: 2,
         spaceBetween: 10,
       },
       640: {
         slidesPerView: 2,
-        spaceBetween: 10,
+        spaceBetween: 20,
       },
       830: {
         slidesPerView: 3,
-        spaceBetween: 10,
+        spaceBetween: 15,
       },
       1095: {
         slidesPerView: 4,

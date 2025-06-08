@@ -30,8 +30,8 @@ export default function Home() {
 
       <div id="home">
         <Card flex="row" height="85dvh" background="transparent" useBar={false}>
-          <section className="flex flex-col h-[40vh] justify-around items-start">
-            <div className="flex flex-col leading-12">
+          <section className="flex flex-col h-[40vh] justify-around items-center lg:items-start">
+            <div className="flex flex-col text-center leading-12 lg:text-left">
               <div>
                 <Text size="2.5em" height="bold">
                   Seu sucesso{" "}
@@ -48,7 +48,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="max-w-[350px]">
+            <div className="max-w-[350px] text-center lg:text-left">
               <Text
                 size="1.25em"
                 height="light"
@@ -62,8 +62,8 @@ export default function Home() {
 
             <Button text="Saiba mais" click={handleSaibaMais}></Button>
           </section>
-          <div></div>
-          <div></div>
+          <div className="hidden lg:block"></div>
+          <div className="hidden lg:block"></div>
         </Card>
       </div>
 
@@ -134,7 +134,7 @@ export default function Home() {
 
       {/* ===================== PARCEIROS ===================== */}
       <div id="partners">
-
+          
         <Associates></Associates>
       </div>
 
