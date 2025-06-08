@@ -26,8 +26,27 @@ export default function Home() {
 
   return (
     <div>
-      {/* ===================== INÍCIO ===================== */}
+      {/* EFEITO DE LUZ - HOME */}
+      <section className="relative -z-30">
+        <LightBlur x="25vw" y="-50vh" size="150px"></LightBlur>
+        <LightBlur x="80vw" y="-80vh" size="200px"></LightBlur>
+        <LightBlur x="30vw" y="-20vh" size="100px"></LightBlur>
+        <LightBlur x="6vw" y="-50vh" size="200px"></LightBlur>
+        <LightBlur x="70vw" y="-20vh" size="200px"></LightBlur>
+        <LightBlur x="40vw" y="-70vh" size="80px"></LightBlur>
 
+        <LightPulse x="40vw" y="-130vh" width="1200px" height="1200px" isActive={isActive} />
+        <LightPulse x="-7vw" y="-10vh" width="60vw" height="60vw" isActive={isActive} />
+        <LightPulse
+          x="-15vw"
+          y="-150vh"
+          width="50vw"
+          height="50vw"
+          isActive={isActive}
+        />
+      </section>
+
+      {/* ===================== HOME ===================== */}
       <div id="home">
         <Card flex="row" height="85dvh" background="transparent" useBar={false}>
           <section className="flex flex-col h-[40vh] justify-around items-center lg:items-start">
@@ -72,6 +91,17 @@ export default function Home() {
         <AboutUs></AboutUs>
       </div>
 
+      {/* EFEITO DE LUZ - PROJETOS */}
+      <section className="relative -z-30">
+        <LightBlur x="26.5vw" y="-10vh" size="150px"></LightBlur>
+        <LightBlur x="60vw" y="-25vh" size="150px"></LightBlur>
+        <LightBlur x="70.5vw" y="-65vh" size="120px"></LightBlur>
+        <LightBlur x="45.5vw" y="-65vh" size="150px"></LightBlur>
+        <LightBlur x="15.5vw" y="-65vh" size="105px"></LightBlur>
+
+        <LightPulse x="26.5vw" y="-30vh" width="50vw" height="600px" />
+      </section>
+
       {/* ===================== PROJETOS - TÍTULO ===================== */}
       <Card
         justify="justify-center"
@@ -79,7 +109,7 @@ export default function Home() {
         background="transparent"
         useBar={false}
       >
-        <div className="flex flex-col items-center text-center mb-28">
+        <div className="flex flex-col items-center text-center mb-20 sm:mb-28">
           <div className="leading-9">
             <Text size="2.5em" height="bold" isGradient>
               Sonhe
@@ -134,50 +164,23 @@ export default function Home() {
 
       {/* ===================== PARCEIROS ===================== */}
       <div id="partners">
-          
         <Associates></Associates>
       </div>
+      
+      {/* EFEITO DE LUZ - CONTATO */}
+      <section className="relative -z-30">
+        <LightBlur x="5vw" y="-10vh" size="100px"></LightBlur>
+        <LightBlur x="18vw" y="-70vh" size="125px"></LightBlur>
+        <LightBlur x="50vw" y="-50vh" size="150px"></LightBlur>
+        <LightBlur x="90vw" y="-100vh" size="150px"></LightBlur>
+
+        <LightPulse x="35vw" y="-125vh" width="70vw" height="70vw" />
+      </section>
 
       {/* ===================== CONTATO ===================== */}
       <div id="contact">
         <Contact></Contact>
       </div>
-
-      {/* ===================== EFEITOS DE LUZ ===================== */}
-      <section>
-        <LightBlur x="25vw" y="50vh" size="150px"></LightBlur>
-        <LightBlur x="80vw" y="80vh" size="200px"></LightBlur>
-        <LightBlur x="30vw" y="20vh" size="100px"></LightBlur>
-        <LightBlur x="6vw" y="50vh" size="200px"></LightBlur>
-        <LightBlur x="70vw" y="20vh" size="200px"></LightBlur>
-        <LightBlur x="40vw" y="70vh" size="80px"></LightBlur>
-
-        <LightPulse
-          x="40vw"
-          y="-40vh"
-          width="1400px"
-          height="1400px"
-          isActive={isActive}
-        />
-        <LightPulse
-          x="-7vw"
-          y="75vh"
-          width="60vw"
-          height="60vw"
-          isActive={isActive}
-        />
-        <LightPulse
-          x="-15vw"
-          y="-60vh"
-          width="50vw"
-          height="50vw"
-          isActive={isActive}
-        />
-
-        <LightPulse x="26.5vw" y="-130vh" width="50vw" height="600px" />
-
-        <LightPulse x="37vw" y="-500vh" width="1250px" height="1250px" />
-      </section>
     </div>
   );
 }
