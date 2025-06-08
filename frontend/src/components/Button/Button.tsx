@@ -10,8 +10,8 @@ type ButtonProps = {
   classHover?: string;
   click?: () => void;
   text?: string;
-  image?: string;
-  typeButton?: string;
+  // image?: string;
+  // typeButton?: string;
   children?: React.ReactNode;
 };
 
@@ -41,8 +41,8 @@ function Button({
   classHover = defaultClassHover,
   click = () => console.log("mouse clicked!"),
   text = "",
-  image = "",
-  typeButton = "button",
+  // image = "",
+  // typeButton = "button",
   children,
 }: ButtonProps) {
   const [styleCss, setStyleCss] = useState(styleCommon);
@@ -79,7 +79,7 @@ function Button({
         onMouseEnter={handleHover}
         onMouseLeave={handleUnhover}
         onClick={click}
-        type={`"${typeButton}"`}
+        type="submit"
       >
         <Text size="1.2em" isGradient={isGradient}>
           {text}
