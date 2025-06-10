@@ -89,7 +89,7 @@ function Contact() {
         <div className={styles.spacing}>
           <a
             href="mailto:somniumorganizacional@gmail.com"
-            className="flex items-center gap-2.5"
+            className="flex flex-wrap items-center gap-2.5"
           >
             <div className="text-white text-3xl">
               <MdEmail />

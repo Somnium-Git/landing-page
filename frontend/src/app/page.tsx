@@ -89,11 +89,11 @@ export default function Home() {
       <section className="relative -z-30">
         <LightBlur x="26.5vw" y="-10vh" size="150px"></LightBlur>
         <LightBlur x="60vw" y="-25vh" size="150px"></LightBlur>
-        <LightBlur x="70.5vw" y="-65vh" size="120px"></LightBlur>
-        <LightBlur x="45.5vw" y="-65vh" size="150px"></LightBlur>
-        <LightBlur x="15.5vw" y="-65vh" size="105px"></LightBlur>
+        <LightBlur x="70.5vw" y="-72vh" size="100px"></LightBlur>
+        <LightBlur x="45vw" y="-65vh" size="130px"></LightBlur>
+        <LightBlur x="15.5vw" y="-45vh" size="105px"></LightBlur>
 
-        <LightPulse x="26.5vw" y="-30vh" width="50vw" height="600px" />
+        <LightPulse x="25.5vw" y="-30vh" width="50vw" height="600px" />
       </section>
 
       {/* ===================== PROJETOS - TÍTULO ===================== */}
@@ -102,8 +102,9 @@ export default function Home() {
         flex="col"
         background="transparent"
         useBar={false}
+        height="auto"
       >
-        <div className="flex flex-col items-center text-center mb-20 sm:mb-28">
+        <div className="flex flex-col items-center text-center mt-10 mb-14 sm:mb-20">
           <div className="leading-9">
             <Text size="2.5em" height="bold" isGradient>
               Sonhe
@@ -119,10 +120,17 @@ export default function Home() {
           </div>
         </div>
 
-        <Image
+        <Image className="hidden mb-6 sm:mb-16 sm:block"
           src="/Diagrama.png"
           alt="Diagrama Somnium"
           width={900}
+          height={900}
+          draggable={false}
+        />
+        <Image className="block mb-6 sm:hidden"
+          src="/DiagramaResponsivo.png"
+          alt="Diagrama Somnium"
+          width={200}
           height={900}
           draggable={false}
         />
@@ -143,10 +151,10 @@ export default function Home() {
               </span>
             </Text>
             <Text size="1.25em" color="#A8AFC1">
-              Aqui você encontra os projetos que colocam nossas<br></br> ideias
+              Aqui você encontra os projetos que colocam nossas<br className="hidden sm:block"></br> ideias
               em prática,{" "}
               <span className="text-[#C77DFF] font-bold">
-                transformando desafios<br></br> em soluções criativas.
+                transformando desafios<br className="hidden sm:block"></br> em soluções criativas.
               </span>
             </Text>
           </div>

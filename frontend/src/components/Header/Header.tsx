@@ -1,6 +1,7 @@
 "use client";
 
 // import styles from "./Header.module.css";
+import { useRouter, usePathname } from "next/navigation";
 import { useRef, useState, useEffect } from "react";
 import { DialogTrigger } from "@radix-ui/react-dialog";
 import Text from "../Text/Text";
@@ -8,6 +9,9 @@ import Modal from "../Modal/Modal";
 import Link from "next/link";
 
 export default function Header() {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -33,10 +37,15 @@ export default function Header() {
   }, []);
 
   const changeScreen = async (screen: string) => {
+    if (pathname !== "/") {
+      router.push(`/#${screen}`);
+      return;
+    }
+
     const section = document.getElementById(screen);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-    }
+    } 
 
     // Atualize a linha e o destaque normalmente:
     if (screen === "home") {

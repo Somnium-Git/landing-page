@@ -68,7 +68,17 @@ export default function Carousel() {
       </SwiperSlide>
 
       <SwiperSlide>
-        <SliderItem></SliderItem>
+        <SliderItem
+          description="O Cupuaçu é uma aplicação web projetada para facilitar a compra e venda de produtos online. O sistema oferece uma interface simples e intuitiva para que os clientes possam navegar, selecionar e comprar produtos, enquanto os administradores têm a capacidade de gerenciar o catálogo de produtos."
+          projectLink="https://github.com/EuAndersonDev/Cupuacu"
+          repositoryLink="https://github.com/EuAndersonDev/Cupuacu"
+        >
+          <Text size="1.5em" height="bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#a6efdd] to-[#5ab2ff]">
+              Cupuaçu
+            </span>
+          </Text>
+        </SliderItem>
       </SwiperSlide>
 
       <SwiperSlide>
@@ -86,7 +96,17 @@ export default function Carousel() {
       </SwiperSlide>
 
       <SwiperSlide>
-        <SliderItem></SliderItem>
+        <SliderItem
+          description="Um sistema web com o objetivo de simplificar e simular transações de criptomoedas de forma simples e intuitiva. O sistema oferece compra, venda, saque e depósito de criptomoedas ou moedas comuns dentro da aplicação de forma segura."
+          projectLink="https://github.com/GuilhermeCustodioNieto/GL-Crypto"
+          repositoryLink="https://github.com/GuilhermeCustodioNieto/GL-Crypto"
+        >
+          <Text size="1.5em" height="bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff9659] to-[#efd8a6]">
+              GL-Cripto
+            </span>
+          </Text>
+        </SliderItem>
       </SwiperSlide>
 
       <SwiperSlide>

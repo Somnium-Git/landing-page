@@ -51,7 +51,7 @@ export default function AboutUs() {
       {/* Box com imagem */}
       <div className="relative max-w-[600px] max-h-[600px] flex items-center justify-center rounded-lg">
         <Image
-          src="/VetorSobre2.png"
+          src="/VetorSobre.png"
           alt="Imagem da Seção Sobre"
           width={600}
           height={600}

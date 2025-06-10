@@ -8,13 +8,14 @@ type SliderItemProps = {
   description?: string;
   projectLink?: string;
   repositoryLink?: string;
+  ehPaggie?: boolean;
 };
 
 export default function SliderItem({ 
   children, 
   description = "", 
   projectLink = "", 
-  repositoryLink = "" 
+  repositoryLink = "",
 }: SliderItemProps) {
   return (
     <div className="w-[380px] h-[520px] flex flex-col justify-between p-8 rounded-2xl bg-gradient-to-b from-[#050013] to-[#0C0420]">
