@@ -37,13 +37,7 @@ export default function Home() {
 
         <LightPulse x="40vw" y="-130vh" width="1200px" height="1200px" isActive={isActive} />
         <LightPulse x="-7vw" y="-10vh" width="60vw" height="60vw" isActive={isActive} />
-        <LightPulse
-          x="-15vw"
-          y="-150vh"
-          width="50vw"
-          height="50vw"
-          isActive={isActive}
-        />
+        <LightPulse x="-15vw" y="-150vh" width="50vw" height="50vw" isActive={isActive} />
       </section>
 
       {/* ===================== HOME ===================== */}

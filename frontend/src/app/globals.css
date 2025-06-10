@@ -64,3 +64,11 @@ body {
   font-family: "Kantumruy", sans-serif;
   font-weight: 500;
 }
+
+html body[data-scroll-locked] {
+  margin-right: 0px !important;
+}
+
+html body .right-scroll-bar-position {
+  right: 0px !important;
+}
