@@ -25,7 +25,7 @@ export default function AboutUs() {
           </Text>
         </div>
 
-        <div className="space-y-4 text-justify mb-10">
+        <div className="space-y-4 text-justify mb-10 px-2">
           <Text size="1.25em" height="light" color="#A8AFC1" wordSpacing="2px">
             A <strong>Somnium</strong> é uma empresa focada em inovação e no
             avanço tecnológico, com o objetivo de tornar a tecnologia mais

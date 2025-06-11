@@ -79,7 +79,7 @@ function Contact() {
           </Text>
         </div>
 
-        <div className="text-center lg:text-justify">
+        <div className="px-2 text-center lg:text-justify">
           <Text color="#A8AFC1" size="1.25em">
             Entre em contato com a nossa equipe e <br />
             tire suas duvidas conosco.
@@ -94,7 +94,7 @@ function Contact() {
             <div className="text-white text-3xl">
               <MdEmail />
             </div>
-            <Text color="#A8AFC1" size="1.25em">
+            <Text color="#A8AFC1" size="1.125em">
               somniumorganizacional@gmail.com
             </Text>
           </a>

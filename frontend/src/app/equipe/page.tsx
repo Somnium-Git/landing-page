@@ -91,7 +91,7 @@ export default function Equipe() {
 
   return (
     //container
-    <div>
+    <div className="mt-[calc(4dvw+58px)]">
       <section className="relative -z-30">
         <LightBlur x="26.5vw" y="-10vh" size="150px"></LightBlur>
         <LightBlur x="58vw" y="-18vh" size="125px"></LightBlur>

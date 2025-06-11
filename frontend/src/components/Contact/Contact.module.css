@@ -27,6 +27,7 @@
 }
 
 .spacing {
+	width: 100%;
 	display: flex;
 	align-items: center;
 	gap: 0.75rem;
@@ -131,6 +132,10 @@
 @media screen and (max-width: 1024px) {
 	.section {
 		flex-direction: column;
+	}
+
+	.spacing {
+		justify-content: center;
 	}
 }
 

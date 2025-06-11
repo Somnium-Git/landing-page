@@ -6,7 +6,7 @@ import { useRef, useState, useEffect } from "react";
 import { DialogTrigger } from "@radix-ui/react-dialog";
 import Text from "../Text/Text";
 import Modal from "../Modal/Modal";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function Header() {
   const router = useRouter();
@@ -83,18 +83,24 @@ export default function Header() {
   // }
 
   return (
-    <header className="text-white w-full h-[12dvh] flex justify-between items-center p-[2dvw]">
-      <Link href={"/"} className="font-bold cursor-pointer flex">
+    <header className="z-50 fixed text-white w-full h-[12dvh] flex justify-between items-center p-[2dvw]">
+      <div
+        ref={homeRef}
+        className="font-bold cursor-pointer flex"
+        onClick={() => {
+          changeScreen("home");
+        }}
+      >
         <Text color="#FFFFFF" size="1.5rem">
           Som
         </Text>
         <Text isGradient={true} size="1.5rem">
           nium
         </Text>
-      </Link>
+      </div>
 
-      <section className="hidden flex-col font-bold md:flex">
-        <section className="flex gap-[3dvw] ">
+      <section className="hidden flex-col font-bold md:flex md:rounded-4xl md:px-8 md:py-4 md:shadow-lg md:backdrop-blur-xl">
+        <section className="flex gap-[3dvw]">
           <div
             ref={homeRef}
             className={
@@ -110,7 +116,7 @@ export default function Header() {
               color={currentScreen === "home" ? "#FFFFFF" : "#A8AFC1"}
               size="1rem"
             >
-              Inicio
+              Início
             </Text>
           </div>
           <div

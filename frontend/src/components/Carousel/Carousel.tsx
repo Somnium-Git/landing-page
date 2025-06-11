@@ -7,7 +7,7 @@ import Text from "../Text/Text";
 export default function Carousel() {
   const settings: SwiperProps = {
     freeMode: true,
-    initialSlide: 2,
+    initialSlide: 1,
     slidesPerView: 1,
     spaceBetween: 30,
     pagination: {
@@ -59,10 +59,6 @@ export default function Carousel() {
 
   return (
     <SliderContainer settings={settings}>
-      <SwiperSlide>
-        <SliderItem></SliderItem>
-      </SwiperSlide>
-
       <SwiperSlide>
         <SliderItem
           description="Uma aplicação web com objetivos educacionais para simplificar o aprendizado de matemática de forma divertida e prática. A aplicação oferece sistema de XP, ranking, trocas de imagem e progressão gradual nas lições."

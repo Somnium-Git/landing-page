@@ -106,7 +106,7 @@ export default function Footer() {
             <Text size="1rem">Contato</Text>
           </button>
         </nav>
-        <div className="text-center flex gap-6 flex-col mb-4 mt-4 md:mb-0 md:mt-0 sm:mt-0 sm:flex-row">
+        <div className="text-center flex gap-6 flex-col mb-4 mt-4 md:mb-0 md:mt-0 sm:flex-row">
           <Modal
             trigger={
               <DialogTrigger asChild>
@@ -119,45 +119,11 @@ export default function Footer() {
             description="Descrição breve sobre a Somnium"
           >
             <p className="text-justify text-[#f2f2f2] text-sm text-muted-foreground">
-              A Somnium é uma empresa de desenvolvimento de software dedicada à
-              criação de soluções inovadoras e personalizadas, utilizando
-              tecnologias modernas e metodologias ágeis. Ao contratar nossos
-              serviços, você concorda com os presentes termos.
+              A Somnium é uma empresa de desenvolvimento de software que cria soluções personalizadas com tecnologias modernas e metodologias ágeis. Ao contratar seus serviços, o cliente concorda com os termos estabelecidos.
+              A empresa se compromete a entregar sistemas de qualidade e manter comunicação constante, enquanto o cliente deve fornecer informações corretas, colaborar e cumprir prazos e pagamentos. O código e as entregas são protegidos por direitos autorais, com uso restrito conforme contrato.
               <br />
               <br />
-              Nosso compromisso é fornecer sistemas de alta qualidade, sempre
-              mantendo um canal de comunicação aberto com o cliente durante todo
-              o processo. Em contrapartida, o cliente se compromete a fornecer
-              informações precisas, colaborar com a equipe e cumprir os prazos e
-              pagamentos acordados.
-              <br />
-              <br />
-              Todo o código e demais entregas produzidas são protegidos por
-              direitos autorais. O cliente recebe uma licença de uso conforme
-              definido em contrato, sendo proibida a reprodução ou
-              redistribuição sem autorização da Somnium. Informações
-              confidenciais trocadas durante o projeto devem ser mantidas em
-              sigilo por ambas as partes.
-              <br />
-              <br />
-              A Somnium não se responsabiliza por prejuízos causados por mau uso
-              do software, falhas externas (como problemas de internet ou
-              servidores de terceiros), ou qualquer uso não autorizado da
-              solução entregue.
-              <br />
-              <br />
-              O contrato pode ser encerrado a qualquer momento por qualquer das
-              partes mediante aviso prévio, e os serviços prestados até a data
-              deverão ser pagos proporcionalmente.
-              <br />
-              <br />
-              Estes termos podem ser atualizados a qualquer momento. Ao
-              continuar utilizando nossos serviços, você concorda com eventuais
-              alterações.
-              <br />
-              <br />
-              Em caso de dúvidas, entre em contato pelo e-mail{" "}
-              <Link href="mailto:somniumorganizacional@gmail.com"><strong>somniumorganizacional@gmail.com</strong></Link>.
+              Ambas as partes devem manter a confidencialidade das informações. A Somnium não se responsabiliza por mau uso, falhas externas ou usos não autorizados. O contrato pode ser encerrado por qualquer parte com aviso prévio. Os termos podem ser atualizados. Dúvidas podem ser enviadas para <Link href="mailto:somniumorganizacional@gmail.com"><strong>somniumorganizacional@gmail.com</strong></Link>.
             </p>
           </Modal>
 
@@ -173,43 +139,14 @@ export default function Footer() {
             description="Descrição breve sobre a Somnium"
           >
             <p className="text-justify text-[#f2f2f2] text-sm text-muted-foreground">
-              A Somnium respeita sua privacidade e está comprometida com a
-              proteção dos seus dados pessoais coletados durante o uso de nossos
-              serviços e plataformas.
+              A Somnium respeita a privacidade dos usuários e protege seus dados pessoais. As informações coletadas são usadas apenas para comunicação, execução dos serviços contratados e melhoria dos atendimentos. 
               <br />
               <br />
-              As informações fornecidas por você, como nome, e-mail, telefone e
-              demais dados de contato, são utilizadas exclusivamente para fins
-              de comunicação, execução dos serviços contratados, e melhoria
-              contínua de nossos produtos e atendimentos.
+              Os dados não serão compartilhados sem consentimento, salvo por exigência legal. A empresa adota medidas de segurança e também coleta dados de navegação de forma anônima para aprimorar seus serviços.
               <br />
               <br />
-              Garantimos que seus dados não serão compartilhados, vendidos ou
-              divulgados a terceiros sem seu consentimento, exceto em casos
-              previstos por lei ou por ordem judicial. Aplicamos medidas
-              técnicas e administrativas adequadas para proteger essas
-              informações contra acessos não autorizados, perda ou uso indevido.
-              <br />
-              <br />
-              Também coletamos automaticamente alguns dados de navegação, como
-              endereço IP, tipo de navegador e tempo de acesso, com o objetivo
-              de entender o comportamento do usuário e aprimorar nossos
-              serviços. Esses dados são tratados de forma agregada e anônima.
-              <br />
-              <br />
-              Você pode, a qualquer momento, solicitar a atualização, correção
-              ou exclusão dos seus dados pessoais armazenados por nós, entrando
-              em contato pelo e-mail{" "}
-              <Link href="mailto:somniumorganizacional@gmail.com"><strong>somniumorganizacional@gmail.com</strong></Link>.
-              <br />
-              <br />
-              O uso contínuo dos nossos serviços representa sua concordância com
-              esta Política de Privacidade. A Somnium reserva-se o direito de
-              atualizá-la periodicamente, sendo de responsabilidade do usuário
-              consultá-la com frequência.
-              <br />
-              <br />
-              Esta política é regida pelas leis brasileiras.
+              O usuário pode solicitar a atualização, correção ou exclusão dos dados a qualquer momento pelo e-mail <Link href="mailto:somniumorganizacional@gmail.com"><strong>somniumorganizacional@gmail.com</strong></Link>. 
+              O uso contínuo dos serviços indica concordância com a política, que pode ser atualizada. A política é regida pelas leis brasileiras.
             </p>
           </Modal>
         </div>
@@ -219,7 +156,7 @@ export default function Footer() {
       <hr className="border-t border-[#1A0A37] mb-6" />
 
       {/* Parte inferior com navegação legal e copyright */}
-      <div className="flex md:flex-row flex-col justify-center items-center gap-1">
+      <div className="flex md:flex-row flex-col justify-center items-center gap-1 text-center">
         <Text color="oklch(71.4% 0.203 305.504)" size="1rem">
           <span className="font-bold">Somnium ©2025</span>.{" "}
           <span style={{ color: "#fff" }}>Todos os direitos reservados.</span>

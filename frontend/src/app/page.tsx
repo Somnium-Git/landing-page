@@ -11,21 +11,21 @@ import AboutUs from "@/components/AboutUs/AboutUs";
 import Associates from "@/components/Associates/Associates";
 
 
-import { useState } from "react";
+// import { useState } from "react";
 import Image from "next/image";
 
 export default function Home() {
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
 
   const handleSaibaMais = () => {
-    setIsActive(true);
+    // setIsActive(true);
     setTimeout(() => {
       document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-    }, 4000);
+    });
   }
 
   return (
-    <div>
+    <div className="mt-[calc(4dvw+58px)]">
       {/* EFEITO DE LUZ - HOME */}
       <section className="relative -z-30">
         <LightBlur x="25vw" y="-50vh" size="150px"></LightBlur>
@@ -35,13 +35,13 @@ export default function Home() {
         <LightBlur x="70vw" y="-20vh" size="200px"></LightBlur>
         <LightBlur x="40vw" y="-70vh" size="80px"></LightBlur>
 
-        <LightPulse x="40vw" y="-130vh" width="1200px" height="1200px" isActive={isActive} />
-        <LightPulse x="-7vw" y="-10vh" width="60vw" height="60vw" isActive={isActive} />
-        <LightPulse x="-15vw" y="-150vh" width="50vw" height="50vw" isActive={isActive} />
+        <LightPulse x="40vw" y="-130vh" width="1200px" height="1200px" />
+        <LightPulse x="-7vw" y="-10vh" width="60vw" height="60vw" />
+        <LightPulse x="-15vw" y="-150vh" width="50vw" height="50vw" />
       </section>
 
       {/* ===================== HOME ===================== */}
-      <div id="home">
+      <div>
         <Card flex="row" height="85dvh" background="transparent" useBar={false}>
           <section className="flex flex-col h-[40vh] justify-around items-center lg:items-start">
             <div className="flex flex-col text-center leading-12 lg:text-left">
