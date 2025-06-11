@@ -64,7 +64,17 @@ export default function Carousel() {
       </SwiperSlide>
 
       <SwiperSlide>
-        <SliderItem></SliderItem>
+        <SliderItem
+          description="Uma aplicação web com objetivos educacionais para simplificar o aprendizado de matemática de forma divertida e prática. A aplicação oferece sistema de XP, ranking, trocas de imagem e progressão gradual nas lições."
+          projectLink="http://pollymath.mypressonline.com/"
+          repositoryLink="https://github.com/gabriellimao7500/PolyMath"
+        >
+          <Text size="1.5em" height="bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c4fff0] to-[#fcfdff]">
+              PolyMath
+            </span>
+          </Text>
+        </SliderItem>
       </SwiperSlide>
 
       <SwiperSlide>
@@ -110,11 +120,31 @@ export default function Carousel() {
       </SwiperSlide>
 
       <SwiperSlide>
-        <SliderItem></SliderItem>
+        <SliderItem
+          description="Uma aplicação web para simular um cassino online, com o objetivo de conscientizar sobre os malefícios das apostas online."
+          projectLink="https://f12794cd-68ad-4f46-9e86-87589dcce8cd-00-3i96uiu3rzg7z.janeway.replit.dev/"
+          repositoryLink="https://github.com/gabriellimao7500/Cassino.git"
+        >
+          <Text size="1.5em" height="bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff2873] to-[#7b72ff]">
+              Bet369
+            </span>
+          </Text>
+        </SliderItem>
       </SwiperSlide>
 
       <SwiperSlide>
-        <SliderItem></SliderItem>
+        <SliderItem
+          description="Uma aplicação com um catálogo de 2 jogos: jogo da velha e snake game, de forma didatica e divertida."
+          projectLink="https://c7b65aed-6a2b-43e0-85c0-e01af640df45-00-1lxbn50mrbqv0.picard.replit.dev/paginas/tic-tac.html"
+          repositoryLink="https://c7b65aed-6a2b-43e0-85c0-e01af640df45-00-1lxbn50mrbqv0.picard.replit.dev/paginas/tic-tac.html"
+        >
+          <Text size="1.5em" height="bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#a0a0a0] to-[#dedede]">
+              Games
+            </span>
+          </Text>
+        </SliderItem>
       </SwiperSlide>
     </SliderContainer>
   );
