@@ -79,7 +79,7 @@ function Contact() {
           </Text>
         </div>
 
-        <div className="px-2 text-center lg:text-justify">
+        <div className="text-center lg:text-justify px-2 md:px-0">
           <Text color="#A8AFC1" size="1.25em">
             Entre em contato com a nossa equipe e <br />
             tire suas duvidas conosco.
