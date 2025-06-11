@@ -106,7 +106,7 @@ export default function Footer() {
             <Text size="1rem">Contato</Text>
           </button>
         </nav>
-        <div className="text-center flex gap-6 mb-4 md:mb-0">
+        <div className="text-center flex gap-6 flex-col mb-4 mt-4 md:mb-0 md:mt-0 sm:mt-0 sm:flex-row">
           <Modal
             trigger={
               <DialogTrigger asChild>
@@ -118,7 +118,7 @@ export default function Footer() {
             title="TERMOS E CONDIÇÕES"
             description="Descrição breve sobre a Somnium"
           >
-            <p className="text-justify text-[#f6f6f6] text-sm text-muted-foreground">
+            <p className="text-justify text-[#f2f2f2] text-sm text-muted-foreground">
               A Somnium é uma empresa de desenvolvimento de software dedicada à
               criação de soluções inovadoras e personalizadas, utilizando
               tecnologias modernas e metodologias ágeis. Ao contratar nossos
@@ -157,7 +157,7 @@ export default function Footer() {
               <br />
               <br />
               Em caso de dúvidas, entre em contato pelo e-mail{" "}
-              <strong>somniumorganizacional@gmail.com</strong>.
+              <Link href="mailto:somniumorganizacional@gmail.com"><strong>somniumorganizacional@gmail.com</strong></Link>.
             </p>
           </Modal>
 
@@ -172,7 +172,7 @@ export default function Footer() {
             title="POLÍTICA DE PRIVACIDADE"
             description="Descrição breve sobre a Somnium"
           >
-            <p className="text-justify text-[#f6f6f6] text-sm text-muted-foreground">
+            <p className="text-justify text-[#f2f2f2] text-sm text-muted-foreground">
               A Somnium respeita sua privacidade e está comprometida com a
               proteção dos seus dados pessoais coletados durante o uso de nossos
               serviços e plataformas.
@@ -200,7 +200,7 @@ export default function Footer() {
               Você pode, a qualquer momento, solicitar a atualização, correção
               ou exclusão dos seus dados pessoais armazenados por nós, entrando
               em contato pelo e-mail{" "}
-              <strong>somniumorganizacional@gmail.com</strong>.
+              <Link href="mailto:somniumorganizacional@gmail.com"><strong>somniumorganizacional@gmail.com</strong></Link>.
               <br />
               <br />
               O uso contínuo dos nossos serviços representa sua concordância com

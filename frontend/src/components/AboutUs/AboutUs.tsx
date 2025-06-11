@@ -2,21 +2,21 @@ import Image from "next/image";
 import Button from "../Button/Button";
 import Text from "../Text/Text";
 
-export default function AboutSection() {
+export default function AboutUs() {
   return (
     <section
-      className="bg-[#040013] flex flex-col items-center justify-evenly gap-10 px-8 py-16 relative overflow-hidden md:gap-0 md:flex-row"
+      className="bg-[#040013] flex flex-col items-center justify-evenly gap-10 px-[2dvw] py-32 relative overflow-hidden lg:gap-14 lg:flex-row"
       style={{ width: "100dvw", minHeight: "100dvh" }}
     >
       {/* Texto */}
-      <div className="max-w-[400px]">
-        <div className="w-max mb-3">
+      <div className="max-w-[600px] flex flex-col justify-center items-center lg:max-w-[400px] lg:block">
+        <div className="text-center w-max mb-3">
           <Text size="1.5em" height="bold" isGradient>
             Sobre nós
           </Text>
         </div>
 
-        <div className="leading-9 mb-10">
+        <div className="text-center leading-9 mb-10 lg:text-left">
           <Text size="2.5em" height="bold">
             Conheça
           </Text>
@@ -49,12 +49,12 @@ export default function AboutSection() {
       </div>
 
       {/* Box com imagem */}
-      <div className="relative w-[500px] h-[450px] flex items-center justify-center rounded-lg bg-gradient-to-b from-[#C77DFF] to-[#5A189A] shadow-lg">
+      <div className="relative max-w-[600px] max-h-[600px] flex items-center justify-center rounded-lg">
         <Image
           src="/VetorSobre.png"
-          alt="Imagem da Somnium"
-          width={500}
-          height={500}
+          alt="Imagem da Seção Sobre"
+          width={600}
+          height={600}
           className="object-contain relative z-10"
           draggable={false}
           priority

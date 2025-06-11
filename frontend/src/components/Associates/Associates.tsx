@@ -57,7 +57,7 @@ export default function PartnerSection() {
                 hovered === 0 ? "text-white" : "text-[#5A189A]"
               }`}
             >
-              Desenvolvedora de soluções tecnologicas para o ramo alimenticio.
+              Desenvolvedora de soluções tecnológicas para o ramo alimenticio.
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function PartnerSection() {
                 hovered === 1 ? "text-white" : "text-[#5A189A]"
               }`}
             >
-              Criando soluções tecnologicas para a área pet.
+              Criando soluções tecnológicas para a área pet.
             </p>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function PartnerSection() {
                 hovered === 2 ? "text-white" : "text-[#5A189A]"
               }`}
             >
-              Inserindo no mercado de trabalho pessoas não escolarizadas.
+              Inserindo pessoas não escolarizadas no mercado de trabalho.
             </p>
           </div>
         </div>

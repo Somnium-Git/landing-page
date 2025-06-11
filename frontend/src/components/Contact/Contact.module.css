@@ -71,7 +71,7 @@
 	border: solid 3px #475579;
 	border-radius: 1rem;
 	padding: 0.5rem 1rem;
-	font-size: 1.25em;
+	font-size: 1.125em;
 }
 
 
@@ -83,7 +83,7 @@
 	border: solid 3px #475579;
 	border-radius: 1rem;
 	padding: 0.5rem 1rem;
-	font-size: 1.25em;
+	font-size: 1.125em;
 	resize: none;
 	margin-bottom: 4rem;
 }
@@ -131,5 +131,11 @@
 @media screen and (max-width: 1024px) {
 	.section {
 		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.divForm {
+		padding: 1.5rem;
 	}
 }
