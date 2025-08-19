@@ -1,11 +1,10 @@
-"use client";
+import { SwiperSlide } from "swiper/react";
 
-import LightPulse from "@/components/LightBall/LightPulse/LightPulse";
-import Text from "@/components/Text/Text";
+import Carousel from "./Carousel";
 import CardTeam from "@/components/CardTeam/CardTeam";
-import LightBlur from "@/components/LightBall/LightBlur/LightBlur";
 
-export default function Equipe() {
+export default function CarouselMembers() {
+
   const teamMembers = [
     {
       name: "Anderson Reis",
@@ -90,39 +89,14 @@ export default function Equipe() {
   ];
 
   return (
-    //container
-    <div className="mt-[calc(4dvw+58px)]">
-      <section className="relative -z-30">
-        <LightBlur x="26.5vw" y="-10vh" size="150px"></LightBlur>
-        <LightBlur x="58vw" y="-18vh" size="125px"></LightBlur>
-        <LightBlur x="60vw" y="-50vh" size="125px"></LightBlur>
-        <LightBlur x="13vw" y="-80vh" size="125px"></LightBlur>
-        <LightBlur x="22vw" y="-100vh" size="125px"></LightBlur>
-
-        <LightPulse x="26.5vw" y="-20vh" width="900px" height="900px" />
-      </section>
-
-      <div className="flex flex-col items-center justify-center w-full h-full gap-8 p-[2dvw]">
-        {/* Titulo e texto*/} 
-        <div style={{ marginBottom: "4rem" }} className="text-center">
-          <Text size="2.5em" height="bold">
-            Nossa equipe
-          </Text>
-          <Text size="1.25em" height="light" color="#A8AFC1" wordSpacing="2px">
-            Por trás de cada projeto de sucesso, existe <br className="hidden sm:block"></br>uma equipe{" "}
-            <span className="text-[#C77DFF] font-bold">dedicada</span>,{" "}
-            <span className="text-[#C77DFF] font-bold">apaixonada</span> e{" "}
-            <span className="text-[#C77DFF] font-bold">comprometida</span>.
-          </Text>
-        </div>
-        {/* Cards da equipe */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 w-full mx-auto">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="cursor-pointer rounded-xl shadow-md p-1 flex justify-center items-center transition-all duration-300 hover:scale-105"
-              style={{ minHeight: 220 }}
-            >
+    <Carousel isProjectBreakpoint={false}>
+      {/* Cards da equipe */}
+      {teamMembers.map((member, index) => (
+        <SwiperSlide key={index}>
+          <div
+            className="cursor-pointer rounded-xl shadow-md p-1 flex justify-center items-center transition-all duration-300 hover:scale-105"
+            style={{ minHeight: 220 }}
+          >
               <CardTeam
                 name={member.name}
                 role={` ${member.role} `}
@@ -131,10 +105,9 @@ export default function Equipe() {
                 linkedinLink={member.linkedinLink}
                 image={member.image}
               />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Carousel>
   );
 }

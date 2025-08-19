@@ -83,7 +83,7 @@ export default function Header() {
   // }
 
   return (
-    <header className="z-50 fixed text-white w-full h-[12dvh] flex justify-between items-center p-[2dvw]">
+    <header className="bg-[#040013] outline-2 outline-[#1A0A37] z-50 fixed text-white w-full h-[12dvh] flex justify-between items-center p-[2dvw]">
       <div
         ref={homeRef}
         className="font-bold cursor-pointer flex"
@@ -99,7 +99,7 @@ export default function Header() {
         </Text>
       </div>
 
-      <section className="hidden flex-col font-bold md:flex md:rounded-4xl md:px-8 md:py-4 md:shadow-lg md:backdrop-blur-xl">
+      <section className="hidden flex-col font-bold md:flex md:rounded-4xl md:px-8 md:py-4">
         <section className="flex gap-[3dvw]">
           <div
             ref={homeRef}

@@ -105,19 +105,19 @@ function Contact() {
         <nav className="w-full flex items-center row gap-4 md:mt-0 justify-center lg:justify-start">
           <a
             href="#"
-            className="text-purple-400 hover:text-white text-3xl transition-all duration-200"
+            className="text-[#C77DFF] hover:text-white text-3xl transition-all duration-200"
           >
             <FaFacebook />
           </a>
           <a
             href="#"
-            className="text-purple-400 hover:text-white text-4xl transition-all duration-200"
+            className="text-[#C77DFF] hover:text-white text-4xl transition-all duration-200"
           >
             <AiFillInstagram />
           </a>
           <a
             href="#"
-            className="text-purple-400 hover:text-white text-3xl transition-all duration-200"
+            className="text-[#C77DFF] hover:text-white text-3xl transition-all duration-200"
           >
             <FaXTwitter />
           </a>
@@ -130,7 +130,7 @@ function Contact() {
             Fale
           </Text>
           <Text isGradient size="2em" height="bold">
-            Conosco
+            conosco
           </Text>
         </div>
 
@@ -142,7 +142,7 @@ function Contact() {
           <input placeholder="Nome" type="text" className={styles.inputBasic} />
 
           <input
-            placeholder="Email"
+            placeholder="E-mail"
             type="email"
             className={styles.inputBasic}
           />

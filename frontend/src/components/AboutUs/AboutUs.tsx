@@ -21,7 +21,7 @@ export default function AboutUs() {
             Conheça
           </Text>
           <Text size="2.5em" height="bold">
-            Nossa empresa
+            nossa empresa
           </Text>
         </div>
 
@@ -35,15 +35,16 @@ export default function AboutUs() {
           </Text>
 
           <Text size="1.25em" height="light" color="#A8AFC1" wordSpacing="2px">
-            Veja um pouco mais sobre a <strong>Somnium</strong> e seus
-            desenvolvedores clicando no botão abaixo.
+            Fale com a <strong>Somnium</strong> clicando no botão abaixo.
           </Text>
         </div>
 
         <Button
-          text="Veja mais"
+          text="Fale conosco"
           click={() => {
-            window.location.href = "/equipe"; //Vai madar pra algum lugar
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
         />
       </div>

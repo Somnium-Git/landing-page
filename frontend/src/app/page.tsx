@@ -1,18 +1,20 @@
 "use client";
 
-import Button from "@/components/Button/Button";
 import LightBlur from "@/components/LightBall/LightBlur/LightBlur";
 import LightPulse from "@/components/LightBall/LightPulse/LightPulse";
+
 import Text from "@/components/Text/Text";
 import Card from "@/components/Card/Card";
-import Carousel from "@/components/Carousel/Carousel";
-import Contact from "@/components/Contact/Contact";
-import AboutUs from "@/components/AboutUs/AboutUs";
-import Associates from "@/components/Associates/Associates";
+import Button from "@/components/Button/Button";
 
+import AboutUs from "@/components/AboutUs/AboutUs";
+import CarouselProjects from "@/components/Carousel/CarouselProjects";
+import Associates from "@/components/Associates/Associates";
+import Contact from "@/components/Contact/Contact";
 
 // import { useState } from "react";
 import Image from "next/image";
+import CarouselMembers from "@/components/Carousel/CarouselMembers";
 
 export default function Home() {
   // const [isActive, setIsActive] = useState(false);
@@ -83,6 +85,24 @@ export default function Home() {
       {/* ===================== SOBRE ===================== */}
       <div id="about">
         <AboutUs></AboutUs>
+
+        <div className="w-full h-[2px] bg-[#1A0A37]"></div>
+
+        <section className="bg-[#040013] py-32">
+          <div style={{ marginBottom: "4rem" }} className="text-center px-[2dvw]">
+            <Text size="2.5em" height="bold">
+              Nossa equipe
+            </Text>
+            <Text size="1.25em" height="light" color="#A8AFC1" wordSpacing="2px">
+              Por trás de cada projeto de sucesso, existe <br className="hidden sm:block"></br>uma equipe{" "}
+              <span className="text-[#C77DFF] font-bold">dedicada</span>,{" "}
+              <span className="text-[#C77DFF] font-bold">apaixonada</span> e{" "}
+              <span className="text-[#C77DFF] font-bold">comprometida</span>
+            </Text>
+          </div>
+
+          <CarouselMembers></CarouselMembers>
+        </section>
       </div>
 
       {/* EFEITO DE LUZ - PROJETOS */}
@@ -105,13 +125,13 @@ export default function Home() {
         height="auto"
       >
         <div className="flex flex-col items-center text-center mt-10 mb-14 sm:mb-20">
-          <div className="leading-9">
+          <div className="leading-normal">
             <Text size="2.5em" height="bold" isGradient>
-              Sonhe
+              Futuro
             </Text>
           </div>
           <Text size="2.5em" height="bold">
-            Acordado Conosco!
+            Sonhe acordado conosco!
           </Text>
           <div className="mt-4">
             <Text size="1.25em" color="#A8AFC1">
@@ -161,7 +181,7 @@ export default function Home() {
         </Card>
 
         {/* ===================== CARROSSEL DE PROJETOS ===================== */}
-        <Carousel></Carousel>
+        <CarouselProjects></CarouselProjects>
       </div>
 
       {/* ===================== PARCEIROS ===================== */}
