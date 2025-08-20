@@ -45,7 +45,7 @@ export default function Home() {
       {/* ===================== HOME ===================== */}
       <div>
         <Card flex="row" height="85dvh" background="transparent" useBar={false}>
-          <section className="flex flex-col h-[40vh] justify-around items-center lg:items-start">
+          <section className="flex flex-col justify-around items-center lg:items-start">
             <div className="flex flex-col text-center leading-12 lg:text-left">
               <div>
                 <Text size="2.5em" height="bold">
@@ -63,7 +63,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="max-w-[350px] text-center lg:text-left">
+            <div className="max-w-[350px] mb-6 text-center lg:text-left">
               <Text
                 size="1.25em"
                 height="light"
@@ -126,16 +126,18 @@ export default function Home() {
       >
         <div className="flex flex-col items-center text-center mt-10 mb-14 sm:mb-20">
           <div className="leading-normal">
-            <Text size="2.5em" height="bold" isGradient>
+            <Text size="1.5em" height="bold" isGradient>
               Futuro
             </Text>
           </div>
-          <Text size="2.5em" height="bold">
-            Sonhe acordado conosco!
-          </Text>
+          <div className="leading-9">
+            <Text size="2.5em" height="bold">
+              Sonhe acordado conosco!
+            </Text>
+          </div>
           <div className="mt-4">
             <Text size="1.25em" color="#A8AFC1">
-              Comprometimento total com o seu sonho.
+              Comprometimento total com o seu sonho
             </Text>
           </div>
         </div>
