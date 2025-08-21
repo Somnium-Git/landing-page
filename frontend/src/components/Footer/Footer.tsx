@@ -63,7 +63,7 @@ export default function Footer() {
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            <Text size="1rem">Home</Text>
+            <Text size="1rem">Início</Text>
           </button>
           <button
             className="cursor-pointer hover:text-white transition-all duration-200"
@@ -106,6 +106,8 @@ export default function Footer() {
             <Text size="1rem">Contato</Text>
           </button>
         </nav>
+
+        {/* Modais Termos e Condições / Política de Privacidade */}
         <div className="text-center flex gap-6 flex-col mb-4 mt-4 md:mb-0 md:mt-0 sm:flex-row">
           <Modal
             trigger={

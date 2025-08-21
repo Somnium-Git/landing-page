@@ -83,7 +83,7 @@ export default function Header() {
   // }
 
   return (
-    <header className="bg-[#040013] outline-2 outline-[#1A0A37] z-50 fixed text-white w-full h-[12dvh] flex justify-between items-center p-[2dvw]">
+    <header className="bg-[#040013] outline-2 outline-[#1A0A37] z-50 fixed text-white w-full flex justify-between items-center px-[2dvw] py-4">
       <div
         ref={homeRef}
         className="font-bold cursor-pointer flex"

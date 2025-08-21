@@ -6,15 +6,15 @@ export default function PartnerSection() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="w-full bg-[#040013] py-24 px-4 flex flex-col items-center my-20">
-      <h2 className="text-white text-4xl font-bold text-center mb-12">
+    <section className="w-full bg-[#040013] py-24 px-4 flex flex-col items-center my-20 mt-40">
+      <h2 className="text-white text-4xl font-bold text-center mt-12 mb-12">
         Empresas{" "}
         <span className="bg-gradient-to-r from-[#C77DFF] to-[#5A189A] bg-clip-text text-transparent">
           parceiras
         </span>
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-10">
+      <div className="flex flex-wrap justify-center gap-10 mb-14">
         {/* Card 1 - TechSpark */}
         <div
           onMouseEnter={() => setHovered(0)}

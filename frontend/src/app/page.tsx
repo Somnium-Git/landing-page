@@ -142,7 +142,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Image className="hidden mb-6 sm:mb-16 sm:block"
+        <Image className="hidden mb-6 sm:mb-20 sm:block"
           src="/Diagrama.png"
           alt="Diagrama Somnium"
           width={900}
@@ -159,13 +159,13 @@ export default function Home() {
       </Card>
 
       {/* ===================== LINHA DIVISÓRIA ===================== */}
-      <div className="w-full h-[2px] bg-[#1A0A37] mb-16"></div>
+      <div className="w-full h-[2px] bg-[#1A0A37] mt-16 mb-16"></div>
 
       {/* ===================== PROJETOS - CARROSSEL ===================== */}
       <div id="projects">
         {/* ===================== PROJETOS - DESCRIÇÃO ===================== */}
         <Card height="full" background="transparent" useBar={false}>
-          <div className="flex flex-col text-center gap-6">
+          <div className="mt-20 flex flex-col text-center gap-6">
             <Text size="2.5em" height="bold">
               Conheça nossos{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AF7EDD] to-[#EFC3A6]">
