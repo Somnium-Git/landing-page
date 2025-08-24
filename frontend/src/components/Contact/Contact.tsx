@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Text from "../Text/Text";
 import styles from "./Contact.module.css";
 import { FaFacebook, FaXTwitter } from "react-icons/fa6";
@@ -8,6 +8,9 @@ import Button from "../Button/Button";
 import Swal from "sweetalert2";
 
 function Contact() {
+
+  const [isSending, setIsSending] = useState(false);
+
   const newStyleCommon = {
     width: "100%",
     height: "50px",
@@ -26,6 +29,7 @@ function Contact() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setIsSending(true);
 
     const form = event.currentTarget;
 
@@ -59,6 +63,7 @@ function Contact() {
         text: "Mensagem enviada com sucesso!",
         ...swalOptions,
       });
+      setIsSending(false);
       form.reset();
     } else {
       Swal.fire({
@@ -67,6 +72,7 @@ function Contact() {
         text: "Erro ao enviar a mensagem. Tente novamente mais tarde.",
         ...swalOptions,
       });
+      setIsSending(false);
     }
   }
 
@@ -148,11 +154,15 @@ function Contact() {
           />
 
           <textarea placeholder="Sua Mensagem..." className={styles.textarea} />
+           
+
+
 
           <Button
             text="Enviar"
             styleCommon={newStyleCommon}
             styleHover={newStyleHover}
+            disabled={isSending}
           ></Button>
 
           {/* <button className={styles.btn} type="submit">

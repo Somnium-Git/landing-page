@@ -9,6 +9,7 @@ type ButtonProps = {
   classCommon?: string;
   classHover?: string;
   click?: () => void;
+  disabled?: boolean;
   text?: string;
   // image?: string;
   // typeButton?: string;
@@ -39,6 +40,7 @@ function Button({
   styleHover = defaultStyleHover,
   classCommon = defaultClassCommon,
   classHover = defaultClassHover,
+  disabled = false,
   click = () => console.log("mouse clicked!"),
   text = "",
   // image = "",
@@ -80,6 +82,7 @@ function Button({
         onMouseLeave={handleUnhover}
         onClick={click}
         type="submit"
+        disabled={disabled}
       >
         <Text size="1.2em" isGradient={isGradient}>
           {text}
