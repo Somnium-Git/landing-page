@@ -24,6 +24,16 @@ export default function Header() {
   const [position, setPosition] = useState(0);
   const [linePosition, setLinePosition] = useState(0);
   const [width, setWidth] = useState(40);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+      // Função para tirar o scroll
+      useEffect(() => {
+        if (isMenuOpen) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "";
+        }
+      }, [isMenuOpen]);
 
   useEffect(() => {
     const updateLinePosition = () => {
@@ -213,6 +223,7 @@ export default function Header() {
           <DialogTrigger asChild>
             <div
               className="
+                hidden md:flex
                 w-[50px] h-[50px] rounded-full bg-[rgba(60,9,108,0.2)]
                 flex justify-center items-center cursor-pointer font-medium text-xl border-1 border-[#737373]
                 hover:bg-[rgba(60,9,108,1)] hover:border-[#C77DFF] transition-all duration-200"
@@ -237,6 +248,52 @@ export default function Header() {
           desenvolvimento.
         </p>
       </Modal>
+
+         {/* Menu Hamburguer */}
+        <button
+          className="md:hidden w-[50px] h-[50px] rounded-full bg-[rgba(60,9,108,0.2)]
+            flex justify-center items-center cursor-pointer font-medium text-xl border border-[#737373]
+            hover:bg-[rgba(60,9,108,1)] hover:border-[#C77DFF] transition-all duration-200"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          ☰
+        </button>
+
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+
+      <div
+  className={`fixed top-0 right-0 h-full w-3/4 bg-[#040013] text-white transform transition-transform duration-300 z-50 shadow-xl shadow-black/50 rounded-l-2xl
+  ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+>
+
+        <ul className="flex flex-col gap-6 p-6 overflow-y-auto">
+          {[
+            { id: "home", label: "Início" },
+            { id: "about", label: "Sobre" },
+            { id: "projects", label: "Projetos" },
+            { id: "partners", label: "Parceiros" },
+            { id: "contact", label: "Contato" },
+          ].map(({ id, label }) => (
+            <li key={id}>
+              <button
+                onClick={() => {
+                  changeScreen(id);
+                  setIsMenuOpen(false);
+                }}
+                className="text-left w-full text-lg"
+              >
+                {label}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+
     </header>
   );
 }
