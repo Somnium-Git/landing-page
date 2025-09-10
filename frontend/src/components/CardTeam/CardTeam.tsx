@@ -24,7 +24,7 @@ export default function CardTeam({
   image = "",
 }: CardTeamProps ) {
   return (
-    <div className="w-[300px] h-[450px] flex flex-col justify-between gap-8 p-4 rounded-2xl bg-gradient-to-b from-[#050013] to-[#0C0420] outline-4 outline-[#040013]">
+    <div className="w-[300px] h-[450px] flex flex-col justify-between gap-8 p-4 rounded-2xl border-t-2 border-[#240046] bg-gradient-to-b from-[#050013] to-[#0C0420] outline-4 outline-[#040013]">
       <Image
         src={image}
         alt={`Foto de ${name}`}

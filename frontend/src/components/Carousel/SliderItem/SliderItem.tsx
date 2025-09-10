@@ -18,7 +18,7 @@ export default function SliderItem({
   repositoryLink = "",
 }: SliderItemProps) {
   return (
-    <div className="w-[380px] h-[520px] flex flex-col justify-between p-8 rounded-2xl bg-gradient-to-b from-[#050013] to-[#0C0420]">
+    <div className="w-[380px] h-[520px] flex flex-col justify-between p-8 rounded-2xl border-t-2 border-[#3C096C] bg-gradient-to-b from-[#10002B] to-[#0C0420]">
       <div className="text-justify space-y-2">
         {children}
         <Text color="#A8AFC1">
