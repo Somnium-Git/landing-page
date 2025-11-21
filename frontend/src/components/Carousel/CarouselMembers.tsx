@@ -12,7 +12,7 @@ export default function CarouselMembers() {
       githubLink: "https://github.com/EuAndersonDev/",
       instagramLink: "https://www.instagram.com/oandersondev",
       linkedinLink: "https://www.linkedin.com/in/anderson-reis-5407311b3/",
-      image: "/equipe/anderson reis.jpeg",
+      image: "/equipe/Anderson.png",
     },
     {
       name: "Felipe Daniel",
@@ -20,7 +20,7 @@ export default function CarouselMembers() {
       githubLink: "https://github.com/FelpsBZ",
       instagramLink: "https://www.instagram.com/felps_bz",
       linkedinLink: "",
-      image: "/equipe/felipe daniel.jpeg",
+      image: "/equipe/Felipe.jpg",
     },
     {
       name: "Gabriel Lima",
@@ -28,7 +28,7 @@ export default function CarouselMembers() {
       githubLink: "https://github.com/gabriellimao7500",
       instagramLink: "https://www.instagram.com/gabriel_limao7500/",
       linkedinLink: "",
-      image: "/equipe/gabriel lima.jpeg",
+      image: "/equipe/Gabriel Lima.jpg",
     },
     {
       name: "Gabriel Ortiz",
@@ -36,7 +36,7 @@ export default function CarouselMembers() {
       githubLink: "https://github.com/GMarsura",
       instagramLink: "https://www.instagram.com/gabriel_marsura/",
       linkedinLink: "https://www.linkedin.com/in/gabriel-marsura-4bb6732a9/",
-      image: "/equipe/gabriel ortiz.jpeg",
+      image: "/equipe/Gabriel Ortiz.jpg",
     },
     {
       name: "Guilherme Custódio",
@@ -44,7 +44,7 @@ export default function CarouselMembers() {
       githubLink: "https://github.com/GuilhermeCustodioNieto",
       instagramLink: "https://www.instagram.com/guih_nieto/",
       linkedinLink: "https://www.linkedin.com/in/guilherme-custodio-nieto",
-      image: "/equipe/guilherme custodio.jpeg",
+      image: "/equipe/Guilherme.png",
     },
     {
       name: "João Pedro",
@@ -52,7 +52,7 @@ export default function CarouselMembers() {
       githubLink: "https://github.com/Joao2007Pedro",
       instagramLink: "https://www.instagram.com/_.joao7.__?igsh=NjZ5d2x3Y3JzZTRj",
       linkedinLink: "",
-      image: "/equipe/joao pedro.jpeg",
+      image: "/equipe/Joao.jpg",
     },
     {
       name: "Lucas Caribé",
@@ -60,7 +60,7 @@ export default function CarouselMembers() {
       githubLink: "https://github.com/LucasCaribeAraujo",
       instagramLink: "https://www.instagram.com/lucas.caribe_",
       linkedinLink: "",
-      image: "/equipe/lucas caribe.jpeg",
+      image: "/equipe/Lucas Caribe.jpg",
     },
     {
       name: "Matheus Vinícius",
@@ -68,7 +68,7 @@ export default function CarouselMembers() {
       githubLink: "https://github.com/matheusviniciusbrito",
       instagramLink: "https://www.instagram.com/mavinous",
       linkedinLink: "https://www.linkedin.com/in/matheusviniciusbrito/",
-      image: "/equipe/matheus vinicius.jpeg",
+      image: "/equipe/Matheus.jpg",
     },
     {
       name: "Nathan Fioravanti",
@@ -76,15 +76,15 @@ export default function CarouselMembers() {
       githubLink: "https://github.com/Nathan-Fioravanti",
       instagramLink: "https://www.instagram.com/nathanfer1",
       linkedinLink: "",
-      image: "/equipe/nathan fioravanti.jpeg",
+      image: "/equipe/Nathan.jpg",
     },
     {
       name: "Thiago Moreira",
       role: "Dev Fullstack",
       githubLink: "https://github.com/ethior0",
-      instagramLink: "",
+      instagramLink: "https://www.instagram.com/tdsm.thiago/",
       linkedinLink: "",
-      image: "/equipe/thiago moreira.jpeg",
+      image: "/equipe/Thiago.jpg",
     },
   ];
 
